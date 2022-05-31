@@ -7,6 +7,11 @@
   pointer-events: none;
 } */
 
+sup {
+  font-size: 80%;
+  vertical-align: text-top;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -17,4 +22,16 @@
 .grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.flex-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flex-footer section {
+  padding: 20px;
+  text-align: left;
 }

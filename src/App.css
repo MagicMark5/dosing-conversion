@@ -22,6 +22,10 @@ p {
   margin: 0 auto;
 }
 
+ol, ul {
+  padding-inline-start: 20px;
+}
+
 sup {
   font-size: 100%;
   vertical-align: text-top;
@@ -32,9 +36,4 @@ sup {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.DosingInvegaSustenna {
-  width: 90%;
-  margin: 0 auto;
 }

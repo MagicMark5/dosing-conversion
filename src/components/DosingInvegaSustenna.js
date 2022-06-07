@@ -1,3 +1,5 @@
+import './DosingInvegaSustenna.css';
+
 import Nav from './Nav';
 import Accordion from './Accordion';
 import BalanceSustenna from './balance/BalanceSustenna';
@@ -16,10 +18,32 @@ export default function DosingInvegaSustenna({ reg }) {
       </p>
       <div className="wrapper">
         <Accordion title={<span>Switch from <u>Other</u> Oral Antipsychotics</span>}>
-          Sunlight reaches Earth's atmosphere and is scattered in all directions by
-          all the gases and particles in the air. Blue light is scattered more than
-          the other colors because it travels as shorter, smaller waves. This is why
-          we see a blue sky most of the time.
+          <span>When starting INVEGA SUSTENNA{reg}</span>
+          <ol>
+            <li>Gradually discontinue the previous oral antipsychotic in accordance with the appropriate prescribing information. </li>
+            <li>Initiate INVEGA SUSTENNA{reg} according to the recommended initiation dosing regimen below: </li>
+          </ol>
+          <table className='table1'>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Day 1</strong><br/>
+                  Deltoid Muscle<br/>
+                  150 mg
+                </td>
+                <td>
+                  1 week +/- 4 days*
+                </td>
+                <td>
+                  <strong>Day 8</strong><br/>
+                  Deltoid Muscle<br/>
+                  100 mg
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+          <small>* In order to avoid a missed dose<br/>Adapted from the INVEGA SUSTENNA{reg} Product Monograph.</small>
         </Accordion>
         <Accordion title={<span>Switch from INVEGA{reg} Extended-Release Tablets</span>}>
           It's really hot inside Jupiter! No one knows exactly how hot, but

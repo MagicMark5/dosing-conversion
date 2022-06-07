@@ -9,12 +9,11 @@ import DosingInvegaSustenna from './components/DosingInvegaSustenna';
 import DosingInvegaTrinza from './components/DosingInvegaTrinza';
 
 function App() {
-
   // the route for '/dosing-tool-invega-sustenna' is for converting doses from "Oral Antipsychotics to Invega Sustenna", (<DosingInvegaSustenna />)
   // the route for '/dosing-tool-invega-trinza' is for converting doses from "Invega Sustenna to Invega Trinza", (<DosingInvegaTrinza />)
-
   return (
     <div className="App">
+      
       <Routes>
         <Route element={<Layout />}>
           {<Route path="/" element={<Home />} />}

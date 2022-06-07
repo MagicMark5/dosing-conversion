@@ -15,14 +15,8 @@ sup {
   line-height: 110%;
 }
 
-.flex-footer {
+.flex-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.flex-footer section {
-  padding: 20px;
-  text-align: left;
+  align-items: center;
 }

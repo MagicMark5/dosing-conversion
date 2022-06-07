@@ -1,0 +1,21 @@
+.footer, .logos {
+  background-color: #5B9BD5;
+  justify-content: space-between;
+}
+
+.legal {
+  text-align: center;
+  color: #FFF;
+  font-size: 0.8em;
+  margin: 40px auto 20px;
+}
+
+.legal a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logos img {
+  margin: 20px auto;
+}
+

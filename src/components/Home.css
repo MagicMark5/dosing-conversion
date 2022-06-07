@@ -14,6 +14,7 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 10%;
   row-gap: 30px;
+  margin-bottom: 100px;
 }
 
 .bg-yellow {
@@ -35,4 +36,12 @@
 
 .btn:hover {
   opacity: 1;
+}
+
+.balance {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
 }

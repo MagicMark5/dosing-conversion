@@ -4,10 +4,23 @@
   font-size: 1.2em;
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+p {
+  text-align: left;
+  width: 75%;
+  margin: 0 auto;
+}
 
 sup {
   font-size: 100%;
@@ -19,4 +32,9 @@ sup {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.DosingInvegaSustenna {
+  width: 90%;
+  margin: 0 auto;
 }

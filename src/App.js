@@ -9,6 +9,7 @@ import DosingInvegaSustenna from './components/DosingInvegaSustenna';
 import DosingInvegaTrinza from './components/DosingInvegaTrinza';
 
 function App() {
+  const reg = <sup>&reg;</sup>; // ®
   // the route for '/dosing-tool-invega-sustenna' is for converting doses from "Oral Antipsychotics to Invega Sustenna", (<DosingInvegaSustenna />)
   // the route for '/dosing-tool-invega-trinza' is for converting doses from "Invega Sustenna to Invega Trinza", (<DosingInvegaTrinza />)
   return (
@@ -17,8 +18,8 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           {<Route path="/" element={<Home />} />}
-          <Route path="/dosing-tool-invega-sustenna" element={<DosingInvegaSustenna />} />
-          <Route path="/dosing-tool-invega-trinza" element={<DosingInvegaTrinza />} />
+          <Route path="/dosing-tool-invega-sustenna" element={<DosingInvegaSustenna reg={reg} />} />
+          <Route path="/dosing-tool-invega-trinza" element={<DosingInvegaTrinza reg={reg} />} />
         </Route>
       </Routes>
     </div>

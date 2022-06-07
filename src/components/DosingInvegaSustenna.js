@@ -1,5 +1,6 @@
 import Nav from './Nav';
 import Accordion from './Accordion';
+import BalanceSustenna from './balance/BalanceSustenna';
 
 export default function DosingInvegaSustenna({ reg }) {
   
@@ -30,6 +31,12 @@ export default function DosingInvegaSustenna({ reg }) {
           light -- can escape from it.
         </Accordion>
       </div>
+      <p>
+        There are no systematically collected efficacy or safety data to specifically address switching patients with schizophrenia or schizoaffective disorder from other antipsychotics to INVEGA SUSTENNA® or concerning concomitant administration with other antipsychotics.
+      </p>
+      <br/>
+      <BalanceSustenna />
+      <br/><br/>
     </section>
   )
 };

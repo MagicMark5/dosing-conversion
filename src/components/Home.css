@@ -33,11 +33,3 @@
 .btn:hover {
   opacity: 1;
 }
-
-.balance {
-  text-align: left;
-  width: 90%;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: flex-start;
-}

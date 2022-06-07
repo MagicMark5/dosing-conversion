@@ -1,0 +1,38 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home h1 {
+  font-size: 3.5em;
+}
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+  row-gap: 30px;
+}
+
+.bg-yellow {
+  background-color: #FFC000;
+}
+
+.bg-blue {
+  background-color: #5B9BD5;
+}
+
+.btn {
+  padding: 20px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.btn:hover {
+  opacity: 1;
+}

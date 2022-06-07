@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: Calibri;
+  font-size: 1.2em;
 }
 
 /* .App-logo {
@@ -8,20 +10,9 @@
 } */
 
 sup {
-  font-size: 80%;
+  font-size: 100%;
   vertical-align: text-top;
-}
-
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.grid-2x2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  line-height: 110%;
 }
 
 .flex-footer {

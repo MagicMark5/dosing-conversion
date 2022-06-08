@@ -23,6 +23,7 @@ p {
 }
 
 ol, ul {
+  margin-block-start: 0em;
   padding-inline-start: 20px;
 }
 
@@ -32,8 +33,32 @@ sup {
   line-height: 110%;
 }
 
+table { 
+  border: 1px solid #000; 
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 1em;
+  border-left: 1px solid #000;
+}
+
+table td:first-child { 
+  border-left: none; 
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.Dosing-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 75%;
+  margin: 50px auto;
 }

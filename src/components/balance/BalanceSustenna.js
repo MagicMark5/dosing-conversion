@@ -9,6 +9,7 @@ export default function BalanceSustenna({ reg }) {
         <br/><br/>
         INVEGA SUSTENNA{reg} is indicated for the maintenance treatment of schizoaffective disorder in adult patients.
       </p>
+      <br/>
       <ProductMonograph />
     </section>    
   )

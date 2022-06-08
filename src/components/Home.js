@@ -17,7 +17,9 @@ export default function Home() {
         <Link className="bg-blue btn" to="/dosing-tool-invega-trinza">INVEGA SUSTENNA® to INVEGA&nbsp;TRINZA®<br/> Dosing Conversion Guide</Link>
       </div>
       <BalanceSustenna reg={reg} />
+      <br/><br/>
       <BalanceTrinza reg={reg} />
+      <br/><br/>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import './DosingInvegaSustenna.css';
+// import './DosingInvegaSustenna.css';
 
 import Nav from './Nav';
 import Accordion from './Accordion';
@@ -15,7 +15,7 @@ export default function DosingInvegaSustenna({ reg }) {
   };
   
   return (
-    <section className="DosingInvegaSustenna">
+    <section className="Dosing-section">
       <Nav />
       <h2>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA{reg} Conversion Tool</h2>
       <h3>Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications</h3>
@@ -65,8 +65,10 @@ export default function DosingInvegaSustenna({ reg }) {
           <small>* Note: 25 mg dose is not available in Canada<br/>Adapted from the INVEGA SUSTENNA{reg} Product Monograph.</small>
         </Accordion>
         <Accordion title={<span>INVEGA SUSTENNA{reg} Monthly Maintenance Dosing</span>}>
-          A black hole is an area of such immense gravity that nothing -- not even
-          light -- can escape from it.
+          <span>To avoid missed monthly doses, patients may be given their monthly maintenance injection +/- 7 days from the monthly time point</span>
+          <br/><br/>
+          <span>Note: For patients with schizophrenia, the recommended monthly maintenance dose is 75 mg, with a range of 25-150 mg based on individual patient tolerability and/or efficacy. The 25 mg dose is not available in Canada. For patients with schizoaffective disorder, the recommended monthly maintenance dose is within the range of 50-150 mg based on tolerability and/or efficacy.
+                Please see the Product Monograph for complete dosing information.</span>
         </Accordion>
       </div>
       <p>

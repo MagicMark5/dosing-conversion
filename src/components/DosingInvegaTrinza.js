@@ -1,4 +1,3 @@
-import Nav from './Nav';
 import DoseCalc from './DoseCalc';
 import BalanceSustenna from './balance/BalanceSustenna';
 import BalanceTrinza from './balance/BalanceTrinza';
@@ -15,7 +14,6 @@ export default function DosingInvegaTrinza({ reg }) {
 
   return (
     <section className="Dosing-section">
-      <Nav />
       <h2>INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}<br/> Dosing Conversion Guide</h2>
       <h3>Switching from INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}</h3>
       <p>

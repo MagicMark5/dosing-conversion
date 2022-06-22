@@ -14,7 +14,6 @@ function App() {
   // the route for '/dosing-tool-invega-trinza' is for converting doses from "Invega Sustenna to Invega Trinza", (<DosingInvegaTrinza />)
   return (
     <div className="App">
-      
       <Routes>
         <Route element={<Layout />}>
           {<Route path="/" element={<Home />} />}

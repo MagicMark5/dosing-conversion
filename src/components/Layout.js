@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Nav from "./Nav";
 import Footer from "./Footer";
 
 export default function Layout() {
@@ -6,6 +7,7 @@ export default function Layout() {
   // Components in Layout will wil render in every route
   return (
     <>
+      <Nav />
       <Outlet />
       <Footer />
     </>

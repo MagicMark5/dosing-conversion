@@ -18,7 +18,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
     <>
       <section className="DoseCalc">
         <div className='input label flex-col'>{inputLabel}</div>
-        <div className='input-buttons flex-col'>
+        <div className='input-buttons flex-col grid-row-2-col-1'>
           {inputs.map((input, index) => {
             return <button key={index} className={dose === index ? `selected` : `not-selected`} onClick={doseChange}>{input}</button>
           })}

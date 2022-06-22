@@ -5,12 +5,10 @@
   align-items: center;
 }
 
-.grid-2x2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.home-grid {
   column-gap: 10%;
   row-gap: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 100px;  
 }
 
 .bg-yellow {

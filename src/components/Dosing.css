@@ -1,0 +1,58 @@
+/* --- Styling responsible for dosing cards ---  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.dosing {
+  height: 130px;
+  width: 361px;
+  /* background-image: url('../assets/bg.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: -8px -8px 20px 0px rgba(0,0,0,0.1);
+  flex-flow: row wrap;
+}
+
+.dose-label {
+  width: 60%;
+  height: 12%;
+  padding: 1.5% 0px 1% 6px;
+  background-color: #FFF;
+  color: #F58220;
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.curve {
+  width: 8%;
+  height: 19%;
+}
+
+.circle {
+  height: 158px;
+  position: relative;
+  left: 25%;
+  bottom: 145px;
+}
+
+.dose-values {
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding-left: 5%;
+}
+
+.double-dagger {
+  font-size: 40%;
+}
+
+.grid-dosing {
+  height: 60px;
+  width: 55%;
+  column-gap: 20px;
+  padding-left: 15%;
+  padding-bottom: 3%;
+}
+
+.units {
+  font-size: 85%;
+}

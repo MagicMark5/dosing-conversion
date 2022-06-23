@@ -5,6 +5,13 @@
   align-items: center;
 }
 
+.home-bg {
+  width: 100%;
+  background-image: url("../assets/bg-main.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .home-grid {
   column-gap: 10%;
   row-gap: 30px;

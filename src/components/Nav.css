@@ -1,8 +1,7 @@
 nav {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  height: 100px;
+  justify-content: space-between;
 }
 
 .toprow {

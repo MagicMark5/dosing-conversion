@@ -1,19 +1,15 @@
 .App {
   text-align: center;
-  font-family: Calibri;
+  font-family: 'Apex Sans Book', 'Open Sans';
   font-size: 1.2em;
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 2em;
 }
 
 h2 {
   font-size: 2em;
-}
-
-nav {
-  margin-top: 20px;
 }
 
 p {
@@ -28,10 +24,10 @@ ol, ul {
 }
 
 sup {
-  font-size: 100%;
-  vertical-align: text-top;
-  line-height: 110%;
+  font-size: 60%;
+  font-family: 'Open Sans';
 }
+
 
 table { 
   border: 1px solid #000; 

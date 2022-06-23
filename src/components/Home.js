@@ -12,9 +12,15 @@ export default function Home() {
     <div className="home">
       <div className="home-bg">
         <Chevron heading={<h1 className="chevron-text">INVEGA SUSTENNA{reg}<br/> Dosing Conversion Guides</h1>} />
-        <div className="grid-2x2 home-grid">
-          <Link className="bg-yellow btn" to="/dosing-tool-invega-sustenna">Oral Antipsychotics to INVEGA&nbsp;SUSTENNA®<br/> Dosing Conversion Guide</Link>
-          <Link className="bg-blue btn" to="/dosing-tool-invega-trinza">INVEGA SUSTENNA® to INVEGA&nbsp;TRINZA®<br/> Dosing Conversion Guide</Link>
+        <div className="buttons">
+          <Link className="btn left" to="/dosing-tool-invega-sustenna">
+            <div className="ghost-arrow arrow-left"></div>
+            <p>Oral Antipsychotics to INVEGA&nbsp;SUSTENNA®<br/> Dosing Conversion Guide</p>
+          </Link>
+          <Link className="btn right" to="/dosing-tool-invega-trinza">
+            <div className="ghost-arrow arrow-right"></div>
+            <p>INVEGA SUSTENNA® to INVEGA&nbsp;TRINZA®<br/> Dosing Conversion Guide</p>
+          </Link>
         </div>
       </div>
       <BalanceSustenna reg={reg} />

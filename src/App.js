@@ -16,9 +16,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route element={<Layout />}>
-          {<Route path="/" element={<Home />} />}
-          <Route path="/dosing-tool-invega-sustenna" element={<DosingInvegaSustenna reg={reg} />} />
-          <Route path="/dosing-tool-invega-trinza" element={<DosingInvegaTrinza reg={reg} />} />
+          {<Route path="/dosing-tool" element={<Home />} />}
+          <Route path="/dosing-tool/1" element={<DosingInvegaSustenna reg={reg} />} />
+          <Route path="/dosing-tool/2" element={<DosingInvegaTrinza reg={reg} />} />
         </Route>
       </Routes>
     </div>

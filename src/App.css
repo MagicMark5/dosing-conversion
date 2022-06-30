@@ -109,6 +109,23 @@ table td:first-child {
   text-align: right;
 }
 
+.bold {
+  font-family: 'Apex Sans', 'Open Sans', 'Calibri', 'Arial';
+  font-weight: 800;
+}
+
+.trinza-color {
+  color: #00AABE;
+}
+
+.sustenna-color {
+  color: #B01C2E;
+}
+
+.blur {
+  filter: opacity(0.9);
+  filter: blur(3px);
+}
 
 @media screen and (max-width: 600px) {
   .grid-2x2 {

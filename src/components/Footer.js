@@ -1,12 +1,12 @@
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer({modal}) {
 
   // Balance stays visible on every page of the app
 
   return (
     <>
-      <section className="footer flex-col">
+      <footer className={modal ? "blur footer flex-col" : "footer flex-col"}>
         <p className="legal">
           © 2022 Janssen Inc.<br/><br/>
           All trademarks used under license.<br/>
@@ -34,7 +34,7 @@ export default function Footer() {
             width="180"
           />          
         </div>
-      </section>
+      </footer>
     </>
   )
 }

@@ -30,3 +30,6 @@ code {
     monospace;
 }
 
+a {
+  color: inherit;
+}

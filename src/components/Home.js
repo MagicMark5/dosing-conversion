@@ -2,15 +2,11 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 import Chevron from './materials/Chevron';
-import BalanceSustenna from './balance/BalanceSustenna';
-import BalanceTrinza from './balance/BalanceTrinza';
 
-export default function Home() {
-  const reg = <sup>&reg;</sup>; // ®
-
+export default function Home({modal}) {
   return (
     <div className="home">
-      <div className="home-bg">
+      <div className={modal ? "blur home-bg" : "home-bg"}>
         <Chevron heading={<h1 className="chevron-text">Dosing Conversion Guides</h1>} />
         <div className="buttons">
           <Link className="btn left" to="/dosing-tool/1">
@@ -23,10 +19,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <BalanceSustenna reg={reg} />
-      <br/><br/>
-      <BalanceTrinza reg={reg} />
-      <br/><br/>
     </div>
   )
 }

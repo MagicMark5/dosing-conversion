@@ -15,7 +15,7 @@ import {
 import BalanceSustenna from './balance/BalanceSustenna';
 import DoseCalc from './DoseCalc';
 
-export default function DosingInvegaSustenna({ reg }) {
+export default function DosingInvegaSustenna({ reg, modal }) {
 
   // conversions of once-daily INVEGA dose to Once-monthly Sustenna maintenance dose
   const doses = {
@@ -27,7 +27,7 @@ export default function DosingInvegaSustenna({ reg }) {
   const units = (text) => <span className='units'>{text}</span>;
   
   return (
-    <section className="Dosing-section">
+    <section className={modal ? "blur Dosing-section" : "Dosing-section"}>
       <h2>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA{reg} Conversion Tool</h2>
       <h3>Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications</h3>
       <p>

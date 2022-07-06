@@ -24,7 +24,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route element={<Layout modal={modal} closeModal={closeModal} toggle={toggle} />}>
-          {<Route path="/dosing-tool" element={<Home modal={modal} />} />}
+          {<Route path="/" element={<Home modal={modal} />}>
+            <Route path="/dosing-tool" />
+          </Route>}
           <Route path="/dosing-tool/1" element={<DosingInvegaSustenna modal={modal} reg={reg} />} />
           <Route path="/dosing-tool/2" element={<DosingInvegaTrinza modal={modal} reg={reg} />} />
         </Route>

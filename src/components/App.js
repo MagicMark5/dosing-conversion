@@ -1,13 +1,10 @@
-// import logo from './logo.svg';
-import './App.css';
-// react-router-dom node package 
+import '../styles/App.scss';
 import { Routes, Route } from "react-router-dom";
 import { useState } from 'react';
-// custom components
-import Layout from './components/Layout';
-import Home from './components/Home';
-import DosingInvegaSustenna from './components/DosingInvegaSustenna';
-import DosingInvegaTrinza from './components/DosingInvegaTrinza';
+import Layout from './Layout';
+import Home from './Home';
+import DosingInvegaSustenna from './DosingInvegaSustenna';
+import DosingInvegaTrinza from './DosingInvegaTrinza';
 
 function App() {
   const [modal, setModal] = useState(true);

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import './Accordion.css';
+import '../styles/Accordion.scss';
 
 const Accordion = ({ title, children }) => {
   const [isOpen, setOpen] = useState(false);

@@ -1,4 +1,4 @@
-import './Footer.css';
+import '../styles/Footer.scss';
 
 export default function Footer({modal}) {
 

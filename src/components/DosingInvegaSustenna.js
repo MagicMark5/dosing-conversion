@@ -1,8 +1,8 @@
-import './Dosing.css';
+import '../styles/Dosing.scss';
 import curve from '../assets/curve.png';
 // import circle from '../assets/circle-4x.png';
 
-import './AccessibleAccordion.css';
+import '../styles/AccessibleAccordion.scss';
 import {
   Accordion,
   AccordionItem,

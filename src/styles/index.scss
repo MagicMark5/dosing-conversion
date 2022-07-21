@@ -1,15 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
+@import "./variables.scss";
+@import "./typography.scss";
+@import "./mixins.scss";
+
 @font-face {
   font-family: 'Apex Sans Book';
-  src: url('./fonts/ApexSansBook-Regular.woff2') format('woff2'),
-      url('./fonts/ApexSansBook-Regular.woff') format('woff');
+  src: url('../fonts/ApexSansBook-Regular.woff2') format('woff2'),
+      url('../fonts/ApexSansBook-Regular.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Apex Sans Bold';
-  src: url('./fonts/ApexSansBook-Regular.woff2') format('woff2'),
-      url('./fonts/ApexSansBook-Regular.woff') format('woff');
+  src: url('../fonts/ApexSansBook-Regular.woff2') format('woff2'),
+      url('../fonts/ApexSansBook-Regular.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -32,4 +37,11 @@ code {
 
 a {
   color: inherit;
+}
+
+button:focus,
+.btn:focus,
+.home-icon:focus {
+  box-shadow: rgb(0 0 0) 10px 10px 15px 2px;
+  outline: dotted;
 }

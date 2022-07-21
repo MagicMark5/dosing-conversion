@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import "./DoseCalc.css";
+import "../styles/DoseCalc.scss";
 
 export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
   // state for index of dose selected

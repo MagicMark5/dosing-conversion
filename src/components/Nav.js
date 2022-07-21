@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 // import { useState } from "react";
-import "./Nav.css";
+import "../styles/Nav.scss";
 // design images
 import home from "../assets/home.png";
 import topLine from "../assets/topLine.png";
@@ -26,7 +26,6 @@ export default function Nav({ modal, toggle, closeModal, }) {
       </div>
       <div className={modal ? "blur botrow" : "botrow"}>
         <Link to="/dosing-tool"><img className="home-icon" src={home} alt="Home" aria-label="Home" role="button" /></Link>
-        
         <button className="modal-button si-button" onClick={() => toggle()}>
           Safety Information
         </button>

@@ -1,8 +1,9 @@
+@import "./variables.scss";
+
 .chevron-wrapper {
   display: flex;
   position: absolute;
-  top: 122px;
-  left: 22%;
+  left: 25%;
   width: 50%;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,28 +13,12 @@
 
 .chevron-container {
   width: 100%;
-  background-color: rgba(255, 255, 255, 1); /* needs full opacity */
-  box-shadow: 0px -10px 25px 0px rgba(0,0,0,0.1);
-  /* background-color: black; */
-}
-
-.chevron-logos {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.sustenna-logo {
-  height: 5.5vmin;
-}
-
-.trinza-logo {
-  height: 5.5vmin;
+  background-color: $sustenna-red;
+  opacity: 1; /* needs full opacity */
 }
 
 .heading {
-  background-color: #FFF;
+  background-color: $sustenna-red;
   width: 100%;
   padding: 35px 0px 30px;
   /* background-color: black; */
@@ -42,7 +27,7 @@
 .chevron-text {
   margin: 0 auto;
   font-size: 3vmax;
-  color: #B01C2E;
+  color: #fff;
   font-family: 'Apex Sans', 'Open Sans';
   font-weight: 900;
 }
@@ -55,22 +40,14 @@
   border-right: 25vmax  solid transparent;
   /* height of chevron is border-top */
   /* border-top: 40px solid black; */
-  border-top: 40px solid white;
+  border-top: 40px solid $sustenna-red;
 }
-
-
 
 @media screen and (max-width: 1200px) {
   .chevron-wrapper {
     position: revert;
     width: 100%;
   }
-  .sustenna-logo {
-    height: 6.5vmin;
-  }
-  .trinza-logo {
-    height: 6.5vmin;
-  }  
   .chevron {
     display: none;
   }
@@ -81,13 +58,7 @@
   }  
 }
 
-@media screen and (max-width: 400px) {
-  .sustenna-logo {
-    height: 9vmin;
-  }
-  .trinza-logo {
-    height: 9vmin;
-  }    
+@media screen and (max-width: 400px) {  
   .chevron-text {
     font-size: 20px;
   }  

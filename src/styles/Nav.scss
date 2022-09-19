@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 nav {
   display: flex;
   flex-direction: column;
@@ -54,23 +56,53 @@ nav {
   opacity: 1;
 }
 
-@media screen and (max-width: 805px) {
-  .nav-logos img {
-    height: 30px;
-    padding: 10px;
-    margin-top: 10px;
-    margin-right: 0px;
+// Logos
+.chevron-logos {
+  display: flex;
+  justify-content: center;
+  img {
+    margin: 0 25px;
   }
 }
 
-@media screen and (max-width: 600px) {
+.trinza-logo,
+.sustenna-logo {
+  height: 5vmin;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .sustenna-logo {
+    height: 4vmin;
+  }
+  .trinza-logo {
+    height: 4vmin;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  .chevron-logos {
+    img { height: 5vmin; }
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }  
   .botrow, .nav-logos {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
-  nav {
-    height: auto;
-  }
+}
+
+@media screen and (max-width: 400px) {
+  .chevron-logos {
+    img { 
+      height: 6.5vmin; 
+      margin: 0px;
+    }
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }  
   .sustenna-logo {
     position: relative;
     right: 10px;

@@ -20,12 +20,12 @@
 .heading {
   background-color: $red;
   width: 100%;
-  padding: 35px 0px 30px;
+  padding: 25px 0px 20px;
   /* background-color: black; */
 }
 
 .chevron-text {
-  font-size: 3vmax;
+  font-size: 2.5vmax;
   color: #fff;
   font-family: 'Apex Sans', 'Open Sans';
   font-weight: 900;
@@ -39,7 +39,7 @@
   border-right: 25vmax  solid transparent;
   /* height of chevron is border-top */
   /* border-top: 40px solid black; */
-  border-top: 40px solid $red;
+  border-top: 45px solid $red;
 }
 
 @media screen and (max-width: 1200px) {

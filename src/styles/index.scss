@@ -39,9 +39,11 @@ a {
   color: inherit;
 }
 
-button:focus,
-.btn:focus,
-.home-icon:focus {
-  box-shadow: rgb(0 0 0) 10px 10px 15px 2px;
-  outline: dotted;
+// button and link focus states
+*:focus {
+  outline: 3px solid black;
+}
+button:focus {
+  outline-offset: 10px;
+  border-radius: 0;
 }

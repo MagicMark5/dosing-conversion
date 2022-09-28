@@ -27,15 +27,15 @@ export default function Nav({ modal, toggle, closeModal, }) {
       <div className={modal ? "blur toprow" : "toprow"}>
         <img src={topLine} alt="" />
       </div>
-      <div className={modal ? "blur botrow" : "botrow"}>
-        <Link to="/dosing-tool"><img className="home-icon" src={home} alt="Home" aria-label="Home" role="button" /></Link>
-        <div className='chevron-logos'>
-          <img className="sustenna-logo" src={sustenna} alt="ONCE-MONTHLY INVEGA SUSTENNA® paliperidone palmitate PROLONGED-RELEASE INJECTABLE SUSPENSION" />
-          <img className="trinza-logo" src={trinza} alt="PRINVEGA TRINZA® paliperidone palmitate prolonged-release injectable suspension 175 mg, 263 mg, 350 mg, 525 mg" />
-        </div>        
-        <button className="modal-button si-button" onClick={() => toggle()}>
-          Safety Information
-        </button>
+      <div className="desktop-row">
+        <Link className="home-link" to="/dosing-tool"><img className="home-icon" src={home} alt="Home" aria-label="Home" role="button" /></Link>
+        <div className="nav-btn">
+          <button className="modal-button si-button" onClick={() => toggle()}>
+            Safety Information
+          </button>
+        </div>
+        <img className="nav-logo sustenna-logo" src={sustenna} alt="ONCE-MONTHLY INVEGA SUSTENNA® paliperidone palmitate PROLONGED-RELEASE INJECTABLE SUSPENSION" />
+        <img className="nav-logo trinza-logo" src={trinza} alt="PRINVEGA TRINZA® paliperidone palmitate prolonged-release injectable suspension 175 mg, 263 mg, 350 mg, 525 mg" />
       </div>
       <Modal show={modal} closeModal={closeModal}/>
     </nav>

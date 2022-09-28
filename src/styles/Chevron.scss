@@ -13,12 +13,12 @@
 
 .chevron-container {
   width: 100%;
-  background-color: $sustenna-red;
+  background-color: $red;
   opacity: 1; /* needs full opacity */
 }
 
 .heading {
-  background-color: $sustenna-red;
+  background-color: $red;
   width: 100%;
   padding: 35px 0px 30px;
   /* background-color: black; */
@@ -40,7 +40,7 @@
   border-right: 25vmax  solid transparent;
   /* height of chevron is border-top */
   /* border-top: 40px solid black; */
-  border-top: 40px solid $sustenna-red;
+  border-top: 40px solid $red;
 }
 
 @media screen and (max-width: 1200px) {

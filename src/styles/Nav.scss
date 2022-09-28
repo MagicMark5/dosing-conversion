@@ -98,10 +98,10 @@ img.nav-logo {
     }
   }
   .modal-button {
-    font-size: 0.7em;
+    font-size: 2.8vmin;
     line-height: 1em;
-    height: 40px;
-    width: 100px;
-    padding: 0px 10px;
+    height: min-content;
+    width: 65%;
+    padding: 5px 15px;
   }
 }

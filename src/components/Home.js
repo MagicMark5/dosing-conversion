@@ -14,8 +14,8 @@ export default function Home({modal}) {
             <p>Oral Antipsychotics to INVEGA&nbsp;SUSTENNA®<br/> Dosing Conversion Guide</p>
           </Link>
           <Link className="btn right" to="/dosing-tool/2">
-            <div className="ghost-arrow arrow-right"></div>
             <p>INVEGA SUSTENNA® to INVEGA&nbsp;TRINZA®<br/> Dosing Conversion Guide</p>
+            <div className="ghost-arrow arrow-right"></div>
           </Link>
         </div>
       </div>

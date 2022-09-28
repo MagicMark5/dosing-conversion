@@ -12,6 +12,7 @@ function App() {
 
   const closeModal = () => {
     setModal(false);
+    window.scrollTo(0,0);
   };
 
   const reg = <sup>&reg;</sup>; // ®

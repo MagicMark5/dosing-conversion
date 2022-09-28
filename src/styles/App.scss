@@ -123,8 +123,7 @@ table td:first-child {
 }
 
 .blur {
-  filter: opacity(0.9);
-  filter: blur(3px);
+  filter: opacity(0.6);
 }
 
 @media screen and (max-width: 600px) {

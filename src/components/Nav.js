@@ -21,13 +21,12 @@ export default function Nav({ modal, toggle, closeModal, }) {
 
   // const blurClass = (classes) => modal ? `blur ${classes}` : classes;
 
-
   return (
     <nav>
       <div className={modal ? "blur toprow" : "toprow"}>
         <img src={topLine} alt="" />
       </div>
-      <div className="desktop-row">
+      <div className={modal ? "blur desktop-row" : "desktop-row"}>
         <Link className="home-link" to="/dosing-tool"><img className="home-icon" src={home} alt="Home" aria-label="Home" role="button" /></Link>
         <div className="nav-btn">
           <button className="modal-button si-button" onClick={() => toggle()}>

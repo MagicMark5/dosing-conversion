@@ -27,7 +27,7 @@ export default function Nav({ modal, toggle, closeModal, }) {
         <img src={topLine} alt="" />
       </div>
       <div className={modal ? "blur desktop-row" : "desktop-row"}>
-        <Link className="home-link" to="/dosing-tool"><img className="home-icon" src={home} alt="Home" aria-label="Home" role="button" /></Link>
+        <Link className="home-link" to="/"><img className="home-icon" src={home} alt="Home" aria-label="Home" role="button" /></Link>
         <div className="nav-btn">
           <button className="modal-button si-button" onClick={() => toggle()}>
             Safety Information

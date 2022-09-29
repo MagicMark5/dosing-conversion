@@ -1,4 +1,5 @@
 import '../styles/Footer.scss';
+import { Link } from 'react-router-dom';
 // images
 import divider from "../assets/divider.png";
 import janssen from "../assets/janssen.png";
@@ -16,29 +17,34 @@ export default function Footer({modal}) {
         <p className="legal">
           <strong>References:</strong> 1. INVEGA SUSTENNA® Product Monograph. Janssen Inc. December 17, 2020. 2. INVEGA TRINZA® Product Monograph. Janssen Inc. December 17, 2020.<br/><br/>
           © 2022 Janssen Inc. {bar} All trademarks used under license.<br/><br/>
-          Privacy Policy {bar} Terms of Use<br/><br/>
+          <a href="https://www.janssen.com/canada/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> {bar} 
+          <Link to="/terms-of-use">Terms of Use</Link><br/><br/>
           Janssen Inc.<br/>
-          19 Green Belt Drive {bar} Toronto, Ontario  M3C 1L9<br/>
+          19 Green Belt Drive {bar} Toronto,&nbsp;Ontario  M3C&nbsp;1L9<br/>
           <a href="https://www.janssen.com/canada" rel="noreferrer" target="_blank">www.janssen.com/canada</a>
+          <div className='legal mobile project-code'>
+            <br/><br/>
+            CP-312685E
+          </div>          
         </p>
         <div className="logos">
-          <img alt="Member of Innovative Medicines Canada logo" 
-            height="auto" 
+          <img alt="Member of Innovative Medicines Canada logo"
+            className="imc-logo"
             src={imc}
             title="Member of Innovative Medicines Canada logo"
           />
-          <img alt="PAAB" 
-            height="auto" 
+          <img alt="PAAB"
+            className="paab-logo"
             src={paab}
           />
-          <img alt="Janssen Pharmaceutical Companies of Johnson &#x26; Johnson" 
-            height="auto" 
+          <img alt="Janssen Pharmaceutical Companies of Johnson &#x26; Johnson"
+            className="janssen-logo"
             src={janssen} 
             title="Janssen Pharmaceutical Companies of Johnson &#x26; Johnson" 
-          />          
+          />
         </div>
       </div>
-      <div className='legal project-code'>
+      <div className='legal desktop project-code'>
         CP-312685E
       </div>
     </footer>

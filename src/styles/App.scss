@@ -15,9 +15,7 @@ h2 {
 }
 
 p {
-  text-align: left;
-  width: 75%;
-  margin: 0 auto;
+  color: $grey;
 }
 
 ol, ul {
@@ -29,7 +27,6 @@ sup {
   font-size: 60%;
   font-family: 'Open Sans';
 }
-
 
 table { 
   border: 1px solid #000; 
@@ -59,11 +56,6 @@ table td:first-child {
 .flex-around {
   display: flex;
   justify-content: space-around;  
-}
-
-.Dosing-section {
-  width: 90%;
-  margin: 0 auto;
 }
 
 .wrapper {
@@ -116,16 +108,19 @@ table td:first-child {
   font-weight: 800;
 }
 
-.trinza-color {
-  color: #00AABE;
+.font-red {
+  color: $red;
 }
-
-.sustenna-color {
-  color: #B01C2E;
+.font-orange {
+  color: $orange;
 }
 
 .blur {
   filter: opacity(0.6);
+}
+
+.nav-shadow {
+  box-shadow: $nav-shadow;
 }
 
 @media screen and (min-width: $breakpoint) {

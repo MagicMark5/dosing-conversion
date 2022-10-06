@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+.chevron-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg {
+  width: 25%;
+  height: 150px;
+  background-origin: padding-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: $nav-shadow;
+}
+
+.bg-orange {
+  background-color: $orange;
+  background-image: url("../assets/left_bg.png");
+}
+.bg-red {
+  background-color: $red;
+  background-image: url("../assets/right_bg.png");
+}
+
+.silver-border {
+  height: 10px;
+  margin-bottom: 150px;
+  border-bottom: 2px solid $silver;
+}
+
+@media screen and (max-width: 1200px) {
+  .bg, .silver-border {
+    display: none;
+  }
+}

@@ -5,9 +5,17 @@ $grey: #595959;
 $red: #B01C2E;
 $blue: #00ACCD;
 $orange: #F5821F;
+$silver: #CBCDCE;
 
 // Spacing
 $margins: 10%;
 
 // Breakpoint
 $breakpoint: 1000px;
+
+// Responsive font-size (minimum font-size is the value in px)
+$heading-font-size: calc(12px + 1.5vw);
+$heading-line-height: calc(16px + 2vw);
+
+// Shadows
+$nav-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.3);

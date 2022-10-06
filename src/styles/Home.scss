@@ -13,12 +13,14 @@
   background-image: url("../assets/bg-main.png");
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.3);
+  box-shadow: $nav-shadow;
 }
 
 .buttons {
+  width: 60%;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 612px;
 }
@@ -41,17 +43,18 @@
 }
 
 .left {
-  margin-right: 30px;
+  margin-right: 10px;
 }
 .right {
   margin-left: 10px;
-}
+}  
+
 .btn p {
   width: 100%;
   text-align: center;
 }
 .left p {
-  margin-right: 8px;
+  margin-right: 0px;
 }
 .right p {
   margin-left: 10px;
@@ -76,10 +79,29 @@
   margin-right: 8px;
 }
 
+@media screen and (max-width: 1200px) {
+  .buttons {
+    width: auto;
+    margin: 0;
+  }
+  .left {
+    margin-left: 20px;
+  }
+  .right {
+    margin-right: 20px;
+  }  
+}
+
 @media screen and (max-width: $breakpoint) {
   .home-bg {
     background: linear-gradient(to right, #E97D34, #BB422E);
     box-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.3);
+  }
+  .left {
+    margin-right: 20px;
+  }
+  .right {
+    margin-left: 20px;
   }  
   .btn p {
     margin: 0;

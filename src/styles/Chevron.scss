@@ -25,7 +25,10 @@
 }
 
 .chevron-text {
-  font-size: 2.5vmax;
+  // font-size: 2.5vmax;
+  font-size: $heading-font-size;
+  line-height: $heading-line-height;
+  padding: 0 20px;
   color: #fff;
   font-family: 'Apex Sans', 'Open Sans';
   font-weight: 900;
@@ -52,13 +55,6 @@
   }
   .chevron-text {
     margin: 0 auto;
-    font-size: 2em;
     padding: 0 20px;
-  }  
-}
-
-@media screen and (max-width: 400px) {  
-  .chevron-text {
-    font-size: 20px;
   }  
 }

@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  font-family: 'Apex Sans Book', 'Open Sans';
+  font-family: $font-stack;
   font-size: 1.2em;
 }
 
@@ -12,10 +12,6 @@ h1 {
 
 h2 {
   font-size: 2em;
-}
-
-p {
-  color: $grey;
 }
 
 ol, ul {
@@ -56,11 +52,6 @@ table td:first-child {
 .flex-around {
   display: flex;
   justify-content: space-around;  
-}
-
-.wrapper {
-  max-width: 75%;
-  margin: 50px auto;
 }
 
 .grid-2x2 {

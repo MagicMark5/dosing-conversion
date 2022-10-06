@@ -1,0 +1,54 @@
+@import "./variables";
+
+.panel-a-ol > li {
+  padding-left: 1em;
+}
+
+figure {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-muscle {
+  font-family: $font-bold;
+  text-align: center;
+  .day {
+    font-size: 24px;
+    color: $orange;
+  }
+  .muscle {
+    font-size: 16px;
+    color: #A1A3A6;
+  }
+}
+
+.join-label {
+  text-align: center;
+  color: #BE2034;
+  font-size: 24px;
+  font-weight: 700;
+  .week {
+    font-family: $font-bold;
+  }
+  hr {
+    border-top: 3px dotted #F58220;
+    border-top-width: 5px;
+    border-bottom: 0;    
+    // /*Horizontal*/
+    // background-image: linear-gradient(to right, #F58220 33%, #F58220 0%);
+    // background-position: bottom;
+    // background-size: 5px 3px;
+    // background-repeat: repeat-x;
+    // /*Vertical*/
+    // background-image: linear-gradient(#F58220 33%, #F58220 0%);
+    // background-position: right;
+    // background-size: 1px 3px;
+    // background-repeat: repeat-y;    
+  }
+  span {
+    color: #F58220;
+  }
+}

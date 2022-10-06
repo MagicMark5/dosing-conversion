@@ -13,8 +13,8 @@
 }
 @font-face {
   font-family: 'Apex Sans Bold';
-  src: url('../fonts/ApexSansBook-Regular.woff2') format('woff2'),
-      url('../fonts/ApexSansBook-Regular.woff') format('woff');
+  src: url('../fonts/ApexSans-Bold.woff2') format('woff2'),
+      url('../fonts/ApexSans-Bold.woff2') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -45,7 +45,6 @@ a {
 }
 button:focus {
   outline-offset: 10px;
-  border-radius: 0;
 }
 
 .buttons > .btn:focus {

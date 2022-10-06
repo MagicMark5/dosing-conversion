@@ -22,10 +22,10 @@ export default function Footer({modal}) {
           Janssen Inc.<br/>
           19 Green Belt Drive {bar} Toronto,&nbsp;Ontario  M3C&nbsp;1L9<br/>
           <a href="https://www.janssen.com/canada" rel="noreferrer" target="_blank">www.janssen.com/canada</a>
-          <div className='legal mobile project-code'>
+          <span className='legal mobile project-code'>
             <br/><br/>
             CP-312685E
-          </div>          
+          </span>          
         </p>
         <div className="logos">
           <img alt="Member of Innovative Medicines Canada logo"

@@ -1,5 +1,18 @@
 @import "./variables";
 
+article {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  footer {
+    display: flex; 
+    flex-direction: column;
+    font-size: 0.8em;
+  }
+}
+
+
 .panel-a-ol > li {
   padding-left: 1em;
 }
@@ -15,8 +28,10 @@ figure {
 .day-muscle {
   font-family: $font-bold;
   text-align: center;
+  line-height: 0.9em;
   .day {
     font-size: 24px;
+    line-height: 1.8em;
     color: $orange;
   }
   .muscle {
@@ -26,6 +41,7 @@ figure {
 }
 
 .join-label {
+  width: 15%;
   text-align: center;
   color: #BE2034;
   font-size: 24px;
@@ -33,22 +49,52 @@ figure {
   .week {
     font-family: $font-bold;
   }
+  .days { 
+    white-space: nowrap; 
+  }
   hr {
-    border-top: 3px dotted #F58220;
-    border-top-width: 5px;
+    border-style: dotted none none;
+    border-top: 1px dotted #F58220;
     border-bottom: 0;    
-    // /*Horizontal*/
-    // background-image: linear-gradient(to right, #F58220 33%, #F58220 0%);
-    // background-position: bottom;
-    // background-size: 5px 3px;
-    // background-repeat: repeat-x;
-    // /*Vertical*/
-    // background-image: linear-gradient(#F58220 33%, #F58220 0%);
-    // background-position: right;
-    // background-size: 1px 3px;
-    // background-repeat: repeat-y;    
+    width: 100%;
+    border-width: 5px;
+    margin: 15px auto;
   }
   span {
     color: #F58220;
+  }
+}
+
+@media (max-width: 1530px) {
+  figure {
+    flex-direction: column;
+  }
+  .day-muscle {
+    position: relative;
+    right: 20px;
+  }
+  .join-label {
+    width: 275px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    hr {
+      -webkit-transform: rotate(90deg);
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  figure > img {
+    width: 80vw;
+  }
+  .join-label {
+    font-size: 16px;
+    width: 200px;
+    .week {
+      font-family: $font-stack;
+      line-height: 40px;
+    }
   }
 }

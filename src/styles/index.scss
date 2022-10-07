@@ -43,10 +43,16 @@ a {
 *:focus {
   outline: 3px solid black;
 }
+
+// Don't show focus outlines while things are being clicked
+*:active {
+  outline: none;
+}
+
+// Give the outline box some padding on buttons
 button:focus {
   outline-offset: 10px;
 }
-
 .buttons > .btn:focus {
   outline-offset: 10px;
 }

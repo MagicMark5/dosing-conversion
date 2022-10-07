@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .Dosing-section {
   text-align: left;
@@ -61,4 +62,8 @@
 
 .units {
   font-size: 85%;
+}
+
+@media screen and (max-width: 1530px) {
+  @include change($margin: 5%);
 }

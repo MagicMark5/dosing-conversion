@@ -12,14 +12,16 @@ import trinza from "../assets/trinza.png";
 
 
 export default function Nav({ modal, toggle, closeModal, }) {
-  // const [modal, setModal] = useState(true);
-  // const toggle = () => setModal(!modal);
 
-  // const closeModal = () => {
-  //   setModal(false);
-  // };
+  const toggleModal = (e) => {
+    e.target.blur();
+    toggle();
+  };
 
-  // const blurClass = (classes) => modal ? `blur ${classes}` : classes;
+  const handleHomeClick = (e) => {
+    // remove focus on a.home-link element after click
+    e.nativeEvent.path[1].blur();
+  }
 
   return (
     <nav>
@@ -27,9 +29,9 @@ export default function Nav({ modal, toggle, closeModal, }) {
         <img src={topLine} alt="" />
       </div>
       <div className={modal ? "blur desktop-row" : "desktop-row"}>
-        <Link className="home-link" to="/"><img className="home-icon" src={home} alt="Home" aria-label="Home" role="button" /></Link>
+        <Link className="home-link" to="/" onClick={handleHomeClick}><img className="home-icon" src={home} alt="Home" aria-label="Home" role="button" /></Link>
         <div className="nav-btn">
-          <button className="modal-button si-button" onClick={() => toggle()}>
+          <button className="modal-button si-button" onClick={toggleModal}>
             Safety Information
           </button>
         </div>

@@ -9,23 +9,46 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
   const inputs = Object.keys(doseIO);
   const output = Object.values(doseIO);
 
-  function doseChange(e) {    
+  function doseChange(e) {
+    e.target.blur(); // remove focus outline after click
     let index = inputs.indexOf(e.target.innerHTML);
     setDose(index);
   }
   
   return (
-    <>
-      <section className="DoseCalc">
-        <div className='input label flex-col'>{inputLabel}</div>
-        <div className='input-buttons flex-col grid-row-2-col-1'>
-          {inputs.map((input, index) => {
-            return <button key={index} className={dose === index ? `selected` : `not-selected`} onClick={doseChange}>{input}</button>
-          })}
-        </div>
-        <div className='output label'>{outputLabel}</div>
-        <div className='output-cell flex-col'>{output[dose]}</div>
-      </section>
-    </>
+    <table className="DoseCalc">
+      <tr>
+        <th scope='col' className='input label'>
+          {inputLabel}
+        </th>
+        <th scope='col' className='output label'>
+          {outputLabel}
+        </th>
+      </tr>
+      {inputs.map((input, index) => {
+        const bg = doseIO[input].bgColor; // class name for background-color
+        const color = doseIO[input].fontColor; // class name for font color
+        const array = bg.split("-");
+        const pointColor = array[array.length - 1];
+        return (
+          <tr key={index}>
+            <td className={dose === index ? `selected ${bg}` : `not-selected`}>
+              <button 
+                onClick={doseChange} 
+                className={dose !== index ? color : ''}
+                >
+                {input}
+              </button>
+              <div className={`right-pointer ${pointColor}`}></div>
+            </td>
+            {index === 0 && (
+              <td rowSpan={3} className='output-cell' style={{ borderTop: 0 }}>
+                {output[dose].value}
+              </td>
+            )}
+          </tr>
+        )
+      })}
+    </table>
   )
 }

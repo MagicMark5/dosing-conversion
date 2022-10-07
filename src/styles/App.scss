@@ -7,10 +7,6 @@
   font-size: 1.2em;
 }
 
-h1 {
-  font-size: 2em;
-}
-
 h2 {
   font-size: 2em;
 }
@@ -21,22 +17,44 @@ ol, ul {
 }
 
 sup {
-  font-size: 60%;
-  font-family: 'Open Sans';
-}
-
-table { 
-  border: 1px solid #000; 
-  border-collapse: collapse;
-}
-
-table td {
-  padding: 1em;
-  border-left: 1px solid #000;
+  font-size: 100%;
+  vertical-align: text-top;
 }
 
 table td:first-child { 
   border-left: none; 
+}
+
+// commonly used font colors
+.font-red {
+  color: $red;
+}
+.font-orange {
+  color: $orange;
+}
+.font-light-orange {
+  color: $light_orange;
+}
+.font-grey {
+  color: $grey;
+}
+.font-light-grey {
+  color: $light_grey;
+}
+// background colours 
+.bg-light-orange {
+  background-color: $light_orange;
+}
+.bg-light-grey {
+  background-color: $light_grey;
+}
+.bg-red {
+  background-color: $red;
+}
+
+// Class to apply Apex-Sans Bold
+.font-bold {
+  font-family: $font-bold;
 }
 
 .flex-col {
@@ -93,18 +111,6 @@ table td:first-child {
 }
 .text-right {
   text-align: right;
-}
-
-.bold {
-  font-family: 'Apex Sans', 'Open Sans', 'Calibri', 'Arial';
-  font-weight: 800;
-}
-
-.font-red {
-  color: $red;
-}
-.font-orange {
-  color: $orange;
 }
 
 .blur {

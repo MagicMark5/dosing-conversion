@@ -15,7 +15,7 @@ export default function Footer({modal}) {
       <img className="footer-divider" src={divider} alt="footer divider" />
       <div className='legal-logos-container'>
         <p className="legal">
-          <strong>References:</strong> 1. INVEGA SUSTENNA® Product Monograph. Janssen Inc. December 17, 2020. 2. INVEGA TRINZA® Product Monograph. Janssen Inc. December 17, 2020.<br/><br/>
+          <strong>References:</strong> 1.&nbsp;INVEGA SUSTENNA® Product Monograph. Janssen Inc. December 17, 2020. 2.&nbsp;INVEGA TRINZA® Product Monograph. Janssen Inc. December 17, 2020.<br/><br/>
           © 2022 Janssen Inc. {bar} All trademarks used under license.<br/><br/>
           <a href="https://www.janssen.com/canada/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> {bar} 
           <Link to="/terms-of-use">Terms of Use</Link><br/><br/>

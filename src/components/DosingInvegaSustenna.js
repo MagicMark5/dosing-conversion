@@ -24,16 +24,28 @@ export default function DosingInvegaSustenna({ reg, modal }) {
 
   // conversions of once-daily INVEGA dose to Once-monthly Sustenna maintenance dose
   const doses = {
-    "12 mg": "150 mg",
-    "6 mg": "75 mg",
-    "3 mg": "25*-50 mg",
+    "12 mg": {
+      value: "150 mg",
+      bgColor: "bg-light-grey",
+      fontColor: "font-light-grey",
+    },
+    "6 mg": {
+      value: "75 mg",
+      bgColor: "bg-light-orange",
+      fontColor: "font-light-orange",
+    },
+    "3 mg": {
+      value: <span>25<sup>‡</sup>-50 mg</span>,
+      bgColor: "bg-red",
+      fontColor: "font-red",
+    }
   };
   
   return (
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
       <ChevronHeader text={<>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA{reg} Conversion Guide</>} />
       <section className="Dosing-section">
-        <h3 className="font-orange bold">Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications</h3>
+        <h3 className="font-orange font-bold">Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications</h3>
         <p>
           For patients who have never taken oral paliperidone or oral/injectable risperidone, tolerability should be established with oral paliperidone or oral risperidone prior to initiating treatment with INVEGA SUSTENNA{reg}.
           <br/><br/>

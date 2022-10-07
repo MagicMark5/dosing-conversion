@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Accordion,
   AccordionItem,
@@ -18,11 +17,10 @@ import PanelC from './accordion/PanelC';
 
 
 export default function DosingInvegaSustenna({ reg, modal }) {
-  const [openOne, setOpenOne] = useState(false);
-  const [openTwo, setOpenTwo] = useState(false);
-  const [openThree, setOpenThree] = useState(false);
+  // Blur focus outline after a click
+  const blurTarget = (e) => e.target.blur();
 
-  const ariaLevelForAccordionHeadings = 3;
+  const ariaLevel = 3;
 
   // conversions of once-daily INVEGA dose to Once-monthly Sustenna maintenance dose
   const doses = {
@@ -49,50 +47,32 @@ export default function DosingInvegaSustenna({ reg, modal }) {
             allowZeroExpanded={true}
           >
             <AccordionItem>
-              <AccordionItemHeading 
-                onClick={(e) => {
-                  setOpenOne(!openOne);
-                  e.target.blur();
-                }} 
-                aria-level={ariaLevelForAccordionHeadings}
-              >
+              <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
                 <AccordionItemButton>
                   Switching from Other Oral Antipsychotics
                 </AccordionItemButton>
               </AccordionItemHeading>
-              <AccordionItemPanel className={openOne ? "accordion__panel accordion__open" : "accordion__panel" }>
+              <AccordionItemPanel>
                 <PanelA />
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem>
-              <AccordionItemHeading 
-                onClick={(e) => {
-                  setOpenTwo(!openTwo);
-                  e.target.blur();
-                }}
-                aria-level={ariaLevelForAccordionHeadings}
-              >
+              <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
                 <AccordionItemButton>
                   Switching from INVEGA® Extended-release Tablets
                 </AccordionItemButton>
               </AccordionItemHeading>
-              <AccordionItemPanel className={openTwo ? "accordion__panel accordion__open" : "accordion__panel" }>
+              <AccordionItemPanel>
                 <PanelB doses={doses} />
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem>
-              <AccordionItemHeading 
-                onClick={(e) => {
-                  setOpenThree(!openThree);
-                  e.target.blur();
-                }}
-                aria-level={ariaLevelForAccordionHeadings}
-              >
+              <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
                 <AccordionItemButton>
                   INVEGA SUSTENNA® Monthly Maintenance Dosing
                 </AccordionItemButton>
               </AccordionItemHeading>
-              <AccordionItemPanel className={openThree ? "accordion__panel accordion__open" : "accordion__panel" }>
+              <AccordionItemPanel>
                 <PanelC />
               </AccordionItemPanel>
             </AccordionItem>              

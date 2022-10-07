@@ -7,17 +7,13 @@
   width: 100%;
 }
 
-.accordion__open {
-  box-shadow: $box-shadow;
-}
-
 .accordion__item + .accordion__item {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin: 1.5em 0;
 }
 
 .accordion__button {
-  background: linear-gradient(to right, #B01C2E 16%, #F5821F 89%);
+  background: linear-gradient(to right, #B01C2E 40%, #e4592b 89%);
   color: #fff;
   font-size: 22px;
   font-family: $font-bold;
@@ -64,6 +60,10 @@
 .accordion__panel {
   padding: 20px;
   animation: fadein 0.35s ease-in;
+}
+// Show box-shadow when the accordion item is open
+.accordion__panel[aria-hidden='false'] {
+  box-shadow: $box-shadow;
 }
 
 /* -------------------------------------------------- */

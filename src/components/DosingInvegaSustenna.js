@@ -51,8 +51,8 @@ export default function DosingInvegaSustenna({ reg, modal }) {
             <AccordionItem>
               <AccordionItemHeading 
                 onClick={(e) => {
+                  setOpenOne(!openOne);
                   e.target.blur();
-                  setOpenOne(!openOne) 
                 }} 
                 aria-level={ariaLevelForAccordionHeadings}
               >
@@ -67,8 +67,8 @@ export default function DosingInvegaSustenna({ reg, modal }) {
             <AccordionItem>
               <AccordionItemHeading 
                 onClick={(e) => {
+                  setOpenTwo(!openTwo);
                   e.target.blur();
-                  setOpenTwo(!openTwo) 
                 }}
                 aria-level={ariaLevelForAccordionHeadings}
               >
@@ -83,8 +83,8 @@ export default function DosingInvegaSustenna({ reg, modal }) {
             <AccordionItem>
               <AccordionItemHeading 
                 onClick={(e) => {
+                  setOpenThree(!openThree);
                   e.target.blur();
-                  setOpenThree(!openThree) 
                 }}
                 aria-level={ariaLevelForAccordionHeadings}
               >

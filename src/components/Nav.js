@@ -14,7 +14,8 @@ import trinza from "../assets/trinza.png";
 export default function Nav({ modal, toggle, closeModal, }) {
 
   const toggleModal = (e) => {
-    e.target.blur();
+    // remove focus from safety information button after click
+    e.target.blur(); 
     toggle();
   };
 

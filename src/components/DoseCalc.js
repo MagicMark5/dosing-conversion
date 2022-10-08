@@ -25,7 +25,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
           {outputLabel}
         </th>
       </tr>
-      {inputs.map((input, index) => {
+      {inputs.map((input, index, inputs) => {
         const bg = doseIO[input].bgColor; // class name for background-color
         const color = doseIO[input].fontColor; // class name for font color
         const array = bg.split("-");
@@ -42,7 +42,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
               <div className={`right-pointer ${pointColor}`}></div>
             </td>
             {index === 0 && (
-              <td rowSpan={3} className='output-cell' style={{ borderTop: 0 }}>
+              <td rowSpan={inputs.length} className='output-cell' style={{ borderTop: 0 }}>
                 {output[dose].value}
               </td>
             )}

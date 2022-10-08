@@ -4,12 +4,29 @@ import BalanceTrinza from './balance/BalanceTrinza';
 
 export default function DosingInvegaTrinza({ reg }) {
   // dosing conversions of sustenna to trinza
+  
   const doses = {
-    "50 mg": "175 mg",
-    "75 mg": "263 mg",
-    "100 mg": "350 mg",
-    "150 mg": "525 mg", 
-  };
+    "50 mg": {
+      value: "175 mg",
+      bgColor: "bg-light-grey",
+      fontColor: "font-light-grey",
+    },
+    "75 mg": {
+      value: "263 mg",
+      bgColor: "bg-light-orange",
+      fontColor: "font-light-orange",
+    },
+    "100 mg": {
+      value: "350 mg",
+      bgColor: "bg-red",
+      fontColor: "font-red",
+    },
+    "150 mg": {
+      value: "525 mg",
+      bgColor: "bg-light-grey",
+      fontColor: "font-light-grey",
+    },    
+  };  
 
 
   return (

@@ -17,66 +17,62 @@
 }
 
 .buttons {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 612px;
+  height: 612px; // height of the div below the chevron
 }
 
 .btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   color: white;
   font-family: 'Apex Sans', 'Open Sans', 'Calibri', 'Arial';
   font-weight: bold;
   text-decoration: none;
-  opacity: 0.8;
-  border-radius: 60px;
+  border-radius: 100px;
   border: 2px solid white;
 }
-.btn:hover {
-  opacity: 1;
-}
 
+// Position the left and right button's text and ghost-arrows inside their containers
 .left {
   margin-right: 10px;
+  padding: 12px 35px 12px 15px;
 }
 .right {
   margin-left: 10px;
+  padding: 12px 15px 12px 35px;
 }  
 
+// Keeps the buttons and their paragraphs centered
 .btn p {
   width: 100%;
-  text-align: center;
-}
-.left p {
-  margin-right: 0px;
-}
-.right p {
-  margin-left: 10px;
 }
 
+// Semi-transparent arrow divs inside buttons on left and right
 .ghost-arrow { 
   background: rgb(255,255,255, 0.26);
   background: linear-gradient(45deg, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.13) 25%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 90px;
+  position: relative;
 }
 .arrow-left {  
   -ms-transform: rotate(45deg); /* IE 9 */
   -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
   transform: rotate(45deg); /* Standard syntax */
-  margin-left: 8px;
+  left: 15px;
+  bottom: 5px;
 }
 .arrow-right {
   -ms-transform: rotate(-135deg); /* IE 9 */
   -webkit-transform: rotate(-135deg); /* Chrome, Safari, Opera */
   transform: rotate(-135deg); /* Standard syntax */
-  margin-right: 8px;
+  right: 15px;
+  top: 5px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -96,29 +92,51 @@
   .home-bg {
     background: linear-gradient(to right, #E97D34, #BB422E);
     box-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.3);
-  }
-  .left {
-    margin-right: 20px;
-  }
-  .right {
-    margin-left: 20px;
-  }  
+  } 
   .btn p {
-    margin: 0;
+    margin: 15px 0px;
   }
   .buttons {
     font-size: calc(12px + 1.5vw);
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: auto;
-    min-height: 300px;
+    min-height: 300px; // height of the buttons div under the Chevron
   }
   .btn {
     width: 80%;
-    margin: 10px 0px;
-    padding: 10px;
+    margin: 15px 0px;
+    padding: 0px 20px;
+  }
+
+  // Repositions button paragraphs and ghost-arrows
+  .left p {
+    position: relative;
+    right: 30px;
+  }
+  .right p {
+    position: relative;
+    left: 30px;
   }
   .ghost-arrow {
+    height: 65px;
+    width: 65px;
+  }  
+  .arrow-left {
+    left: 1%;
+  }
+  .arrow-right {
+    right: 1%;
+  }  
+}
+
+// Remove Ghost arrows for small screens
+@media screen and (max-width: 300px) {
+  .ghost-arrow {
     display: none;
+  }
+  .left p, .right p {
+    position: revert;
   }
 }

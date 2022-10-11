@@ -19,11 +19,15 @@ $margins: 10%;
 // Breakpoint
 $breakpoint: 1030px;
 
-// Responsive font-size (minimum font-size is the value in px)
+// Responsive font-sizes (minimum font-size is the value in px)
 $heading-font-size: calc(14px + 2vw);
 $heading-line-height: calc(20px + 2vw);
+// Safety information button
 $modal-btn-font-size: calc(12px + 1vw);
 $modal-btn-line-height: calc(16px + 1vw);
+// Chevron header in Sustenna/Trinza pages
+$page-font-size: calc(14px + 1.2vw);
+$page-line-height: calc(20px + 1.2vw);
 
 // Shadows
 $nav-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.3);
@@ -33,10 +37,8 @@ $bottom-border-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
 $output-cell-top-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.2);
 
 // Chevron dimensions - Desktop
-$chevron-rectangle-width: 45%;
-$chevron-triangle-width: 22.5vmax;
-// Position from left
-$chevron-left: 25%;
+$chevron-rectangle-width: 50%;
+$chevron-triangle-width: 25vmax;
 
 // Chevron dimensions - Mobile
 $chevron-triangle-width-mobile: 42vmax;

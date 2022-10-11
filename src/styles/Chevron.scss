@@ -2,7 +2,7 @@
 
 .chevron-wrapper {
   display: flex;
-  width: $chevron-rectangle-width; // 50%
+  width: $chevron-rectangle-width;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -22,8 +22,6 @@
 }
 
 .chevron-text {
-  font-size: $heading-font-size;
-  line-height: $heading-line-height;
   padding: 0 20px;
   color: #fff;
   font-family: 'Apex Sans', 'Open Sans';

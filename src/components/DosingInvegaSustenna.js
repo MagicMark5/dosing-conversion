@@ -43,7 +43,7 @@ export default function DosingInvegaSustenna({ reg, modal }) {
   
   return (
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
-      <ChevronHeader text={<>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA{reg} Conversion Guide</>} />
+      <ChevronHeader text={<>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA{reg} Conversion&nbsp;Guide</>} />
       <section className="Dosing-section">
         <h3 className="font-orange font-bold">Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications</h3>
         <p>

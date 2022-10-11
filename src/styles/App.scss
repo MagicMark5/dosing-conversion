@@ -25,6 +25,18 @@ table td:first-child {
   border-left: none; 
 }
 
+// Home page heading size
+.home-header-size {
+  font-size: $heading-font-size;
+  line-height: $heading-line-height;
+}
+
+// Sustenna/Trinza page heading size
+.page-header-size {
+  font-size: $page-font-size;
+  line-height: $page-line-height;
+}
+
 // commonly used font colors
 .font-red {
   color: $red;
@@ -41,6 +53,7 @@ table td:first-child {
 .font-light-grey {
   color: $light_grey;
 }
+
 // background colours 
 .bg-light-orange {
   background-color: $light_orange;
@@ -99,18 +112,6 @@ table td:first-child {
 .grid-row-2-col-2 {
   grid-row: 2;
   grid-column: 2;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.width-75 {
-  width: 75%;
-}
-
-.width-70 {
-  width: 70%;
 }
 
 .text-left {

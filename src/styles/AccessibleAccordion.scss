@@ -39,6 +39,8 @@
   content: '';
   height: 10px;
   width: 10px;
+  min-width: 10px;
+  min-height: 10px;
   margin-right: 12px;
   border-bottom: 3px solid currentColor;
   border-right: 3px solid currentColor;
@@ -63,6 +65,12 @@
 // Show box-shadow when the accordion item is open
 .accordion__panel[aria-hidden='false'] {
   box-shadow: $box-shadow;
+}
+
+@media all and (max-width: $breakpoint) {
+  .accordion__panel {
+    padding: 10px;
+  }
 }
 
 /* -------------------------------------------------- */

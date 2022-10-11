@@ -92,3 +92,21 @@
     border-left: $pointer-width solid $light_grey;
   }
 }
+
+@media all and (max-width: $breakpoint) {
+  .DoseCalc {
+    max-width: 99%;
+    th {
+      font-size: 14px;
+    }
+    .label {
+      padding: 10px;
+    }
+    td button {
+      font-size: 16px;
+    }
+    .output-cell {
+      font-size: 1.5em;
+    }
+  }
+}

@@ -67,3 +67,7 @@
 @media screen and (max-width: 1530px) {
   @include change($margin: 5%);
 }
+
+@media screen and (max-width: 400px) {
+  @include change($margin: 3%);
+}

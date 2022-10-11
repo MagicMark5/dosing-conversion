@@ -17,11 +17,13 @@ $silver: #CBCDCE;
 $margins: 10%;
 
 // Breakpoint
-$breakpoint: 1000px;
+$breakpoint: 1030px;
 
 // Responsive font-size (minimum font-size is the value in px)
-$heading-font-size: calc(12px + 1.5vw);
-$heading-line-height: calc(16px + 2vw);
+$heading-font-size: calc(14px + 2vw);
+$heading-line-height: calc(20px + 2vw);
+$modal-btn-font-size: calc(12px + 1vw);
+$modal-btn-line-height: calc(16px + 1vw);
 
 // Shadows
 $nav-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.3);
@@ -29,6 +31,17 @@ $box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.5);
 $dose-calc-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);;
 $bottom-border-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
 $output-cell-top-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.2);
+
+// Chevron dimensions - Desktop
+$chevron-rectangle-width: 45%;
+$chevron-triangle-width: 22.5vmax;
+// Position from left
+$chevron-left: 25%;
+
+// Chevron dimensions - Mobile
+$chevron-triangle-width-mobile: 42vmax;
+$chevron-triangle-width-portait: 42vmin; // switch to vmin when height is >= width
+$chevron-triangle-height-mobile: 20px;
 
 // Dimensions of the DoseCalc pointer div
 $pointer-height: 30px;

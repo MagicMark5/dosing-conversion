@@ -9,6 +9,7 @@
 
 .home-bg {
   width: 100%;
+  max-height: 635px;
   background-color: #B01C2E;
   background-image: url("../assets/bg-main.png");
   background-size: cover;
@@ -16,12 +17,15 @@
   box-shadow: $nav-shadow;
 }
 
+// buttons container
 .buttons {
+  position: relative;
+  right: 10px;
   width: 65%;
-  margin: 0 auto;
+  margin: 50px auto 30px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
   height: 612px; // height of the div below the chevron
 }
 
@@ -78,7 +82,7 @@
 @media screen and (max-width: 1200px) {
   .buttons {
     width: auto;
-    margin: 0;
+    // margin: 0;
   }
   .left {
     margin-left: 20px;
@@ -99,10 +103,10 @@
   .buttons {
     font-size: calc(12px + 1.5vw);
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: auto;
-    min-height: 300px; // height of the buttons div under the Chevron
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
   .btn {
     width: 80%;

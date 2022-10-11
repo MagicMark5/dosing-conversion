@@ -62,7 +62,7 @@ img.nav-logo {
 }
 
 // Desktop
-@media screen and (min-width: $breakpoint) {
+@media screen and (min-width: $nav-min-width-bp) {
   nav {
     margin: 0px $margins 10px;
   }
@@ -85,13 +85,15 @@ img.nav-logo {
 }
 
 // Mobile
-@media screen and (max-width: $breakpoint) {
+@media all and (max-width: $nav-max-width-bp) {
   .desktop-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     a.home-link,
     div.nav-btn {
-      margin: 0px 10% 0px 5%;
+      margin: 0px 5%;
     }
     a.home-link {
       text-align: left;
@@ -101,18 +103,24 @@ img.nav-logo {
     }
     img.nav-logo {
       margin: 10px auto 15px;
-      height: 9vmin;
+      height: 8vmin;
     }
   }
+  div.nav-btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
   .modal-button {
+    border-width: 2px;
     font-size: $modal-btn-font-size;
     line-height: $modal-btn-line-height;
     width: min-content;
     height: min-content;
-    padding: 5px 15px;
+    padding: 2px 15px;
   }
   .home-icon {
-    height: 80px;
+    height: 60px;
   }
   .sustenna-logo {
     position: revert;

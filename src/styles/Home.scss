@@ -81,8 +81,8 @@
 
 @media screen and (max-width: 1200px) {
   .buttons {
+    position: revert;
     width: auto;
-    // margin: 0;
   }
   .left {
     margin-left: 20px;

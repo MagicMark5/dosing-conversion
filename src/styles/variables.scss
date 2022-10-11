@@ -16,8 +16,10 @@ $silver: #CBCDCE;
 // Spacing
 $margins: 10%;
 
-// Breakpoint
+// Breakpoints
 $breakpoint: 1030px;
+$nav-min-width-bp: 921px;
+$nav-max-width-bp: 920px;
 
 // Responsive font-sizes (minimum font-size is the value in px)
 $heading-font-size: calc(14px + 2vw);

@@ -1,52 +1,56 @@
+// images
+import seven_days from "../../assets/seven_days.png";
+import dose_maintenance_1 from "../../assets/dose_maintenance_1.png";
+import dose_maintenance_2 from "../../assets/dose_maintenance_2.png";
+// styles
+import "../../styles/panels.scss";
+
 export default function PanelC() {
 
-  const units = (text) => <span className='units'>{text}</span>;
-
   return (
-    <article>
-      <div className='grid-2x2'>
-        <div className="grid-row-spans-all-cols">
-          <span>To avoid missed monthly doses,<br/> patients may be given their monthly maintenance injection +/- 7 days from the monthly time point</span>
-        </div>
-        <br/><br/>
-        <div className='grid-row-2-col-1'>
+    <article className="maintenance">
+      <header className="maintenance">
+        <img
+          src={seven_days} 
+          alt="+/- 7 days"
+        />
+        <p>To avoid missed monthly doses, patients may be given their monthly maintenance injection <strong style={{ whiteSpace: "nowrap" }}>+/- 7&nbsp;days</strong> from the monthly time point</p>
+      </header>
 
-          <div className='dose-card'>
-            <div className='dosing flex-row'>
-              <div className='dose-label'>Maintenance Dose for Schizophrenia</div>
-              <div className='dose-values width-75 flex-col'>
-                <div className='flex-around full-width'>
-                  <span>25 {units(`mg`)}</span>
-                  <span>50 {units(`mg`)}</span>
-                  <span><strong>75 {units(`mg`)}<sup className='double-dagger'>&dagger;&dagger;</sup></strong></span>
-                </div>
-                <div className='flex-around width-70'>
-                  <span>100 {units(`mg`)}</span>
-                  <span>150 {units(`mg`)}</span>
-                </div>
-              </div>
-            </div>
-            {/* <img className='circle' src={circle} alt=""  /> */}
-          </div>
+      <section className="maintenance">
+        <div className="day-muscle">
+          <label className="day">MONTHLY</label>
+          <br/>
+          <label className="muscle">DELTOID OR GLUTEAL MUSCLE<sup>§</sup></label>
+        </div>
 
-          <div className='dose-card'>
-            <div className='dosing flex-row'>
-              <div className='dose-label'>Maintenance Dose for Schizophrenia</div>
-              <div className='dose-values grid-2x2 grid-dosing'>
-                <span className='text-right'>50 {units(`mg`)}</span>
-                <span className='text-left'>75 {units(`mg`)}</span>
-                <span className='text-right'>100 {units(`mg`)}</span>
-                <span className='text-left'>150 {units(`mg`)}</span>
-              </div>
-            </div>
-            {/* <img className='circle' src={circle} alt=""  /> */}
-          </div>              
-          
-        </div>
-        <div className="grid-row-2-col-2">
-          <span>Note: For patients with schizophrenia, the recommended monthly maintenance dose is 75 mg, with a range of 25-150 mg based on individual patient tolerability and/or efficacy. The 25 mg dose is not available in Canada. For patients with schizoaffective disorder, the recommended monthly maintenance dose is within the range of 50-150 mg based on tolerability and/or efficacy. Please see the Product Monograph for complete dosing information.</span>
-        </div>
-      </div>  
+        <figure className="maintenance">
+          <h5>Maintenance Dose for Schizophrenia</h5>
+          <img
+            className="maintenance-dose-card"
+            src={dose_maintenance_1}
+            alt="25 mg  50 mg  75 mg‖  100 mg  150 mg"
+          />
+          <footer>
+            <small><sup>‖</sup> Recommended dose</small>
+          </footer>
+        </figure>
+
+        <figure className="maintenance">
+          <h5>Maintenance Dose for Schizoaffective Disorder</h5>
+          <img
+            className="maintenance-dose-card"
+            src={dose_maintenance_2}
+            alt="50 mg 	75 mg  100 mg   150 mg"
+          />
+        </figure>        
+      </section>
+
+      <footer>
+        <small>§ See details about needle selection based on selected injection area and patient weight in the product monograph.</small>
+        <br/>
+        <small>Note: For patients with schizophrenia, the recommended monthly maintenance dose is <span style={{ whiteSpace: "nowrap" }}>75 mg</span>, with a range of <span style={{ whiteSpace: "nowrap" }}>25-150 mg</span> based on individual patient tolerability and/or efficacy. The <span style={{ whiteSpace: "nowrap" }}>25 mg</span> dose is not available in Canada. For patients with schizoaffective disorder, the recommended monthly maintenance dose is within the range of <span style={{ whiteSpace: "nowrap" }}>50-150 mg</span> based on tolerability and/or efficacy. Please see the Product Monograph for complete dosing information.</small>
+      </footer>
     </article>
   )
 }

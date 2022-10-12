@@ -30,6 +30,12 @@ $modal-btn-line-height: calc(16px + 1vw);
 // Chevron header in Sustenna/Trinza pages
 $page-font-size: calc(14px + 1.2vw);
 $page-line-height: calc(20px + 1.2vw);
+// Maintenance dose headers
+$dose-heading: calc(10px + 1.2vw);
+$dose-line-height: calc(12px + 1vw);
+// Maintenance dose footer
+$dose-heading-foot: calc(12px + 0.6vw);
+
 
 // Shadows
 $nav-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.3);
@@ -37,6 +43,7 @@ $box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.5);
 $dose-calc-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);;
 $bottom-border-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
 $output-cell-top-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.2);
+$dose-card-shadow: -30px 0px 50px 0px rgba(0,0,0,0.1);
 
 // Chevron dimensions - Desktop
 $chevron-rectangle-width: 50%;

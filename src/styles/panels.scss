@@ -1,7 +1,6 @@
-@import "./variables";
+@import "./variables.scss";
 
 article {
-  overflow: scroll;
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
@@ -10,6 +9,74 @@ article {
     flex-direction: column;
     font-size: 0.8em;
   }
+}
+
+// For PanelC: INVEGA SUSTENNA® Monthly Maintenance Dosing
+article.maintenance {
+  align-items: center;
+  justify-content: center;
+}
+header.maintenance {
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  color: $red;
+  p {
+    padding: 30px 30px 30px 0px;
+    background: linear-gradient(to right, #FFF, rgb(245, 130, 31, 0.1) 70%);
+    border-radius: 20px;
+  }
+  img {
+    height: 120px;
+  }
+}
+// For PanelC
+section.maintenance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div.day-muscle {
+    width: 150px;
+    .day { 
+      font-size: 1.1em;
+    }
+    .muscle {
+      font-size: 0.8em;
+      line-height: 1em;
+    }
+    sup {
+      font-size: 0.6em;
+      vertical-align: super;
+    }
+  }
+  figure {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h5, footer {
+      position: relative;
+      padding-left: 15px;
+      color: $red;
+      font-family: $font-bold;      
+    }
+    h5 {
+      width: 96%;
+      margin: 0;
+      top: 15px;
+      word-break: break-word;
+    }
+    footer {
+      width: 96%;
+      bottom: 15px; 
+    }  
+  }
+}
+
+img.maintenance-dose-card {
+  height: 150px;
 }
 
 .panel-a-ol > li {
@@ -39,6 +106,7 @@ figure {
   }
 }
 
+// For PanelA
 .join-label {
   width: 15%;
   text-align: center;
@@ -65,8 +133,32 @@ figure {
 }
 
 @media (max-width: 1530px) {
-  figure {
+  figure, 
+  section.maintenance,
+  header.maintenance {
     flex-direction: column;
+  }
+  section.maintenace {
+    figure {
+      align-items: flex-start;
+    }
+  }
+  header.maintenance {
+    // +/- 7 days image
+    img {
+      height: 150px;
+    }
+    p {
+      margin: 0;
+      padding: 0 0 30px 0;
+      background: none;
+      font-size: 1.2em;
+    }
+  }
+  section.maintenance {
+    div.day-muscle {
+      position: revert;
+    }
   }
   .day-muscle {
     position: relative;
@@ -85,8 +177,31 @@ figure {
 }
 
 @media (max-width: 460px) {
+  img.maintenance-dose-card {
+    height: auto;
+    width: auto;
+    margin: 5px 0px;
+  }  
   figure > img {
     width: 80vw;
+  }
+  section.maintenance {
+    width: 100%;
+    figure {
+      width: 100%;
+      align-items: unset;
+      h5, footer { 
+        width: 100%;
+        padding-left: 10px;
+      }
+      h5 {
+        font-size: $dose-heading;
+        line-height: $dose-line-height;
+      }
+      footer {
+        font-size: $dose-heading-foot;
+      }
+    }
   }
   .join-label {
     font-size: 16px;

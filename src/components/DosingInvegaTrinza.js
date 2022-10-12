@@ -2,7 +2,9 @@ import DoseCalc from './DoseCalc';
 import BalanceSustenna from './balance/BalanceSustenna';
 import BalanceTrinza from './balance/BalanceTrinza';
 
-export default function DosingInvegaTrinza({ reg }) {
+import ChevronHeader from './materials/ChevronHeader';
+
+export default function DosingInvegaTrinza({ reg, modal }) {
   // dosing conversions of sustenna to trinza
   
   const doses = {
@@ -30,8 +32,11 @@ export default function DosingInvegaTrinza({ reg }) {
 
 
   return (
-    <section className="Dosing-section">
-      <h2>INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}<br/> Dosing Conversion Guide</h2>
+    <main className={`nav-shadow ${modal ? "blur" : ""}`}>
+      <ChevronHeader 
+        text={<>INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}<br/> Dosing Conversion Guide</>}
+      />
+      
       <h3>Switching from INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}</h3>
       <p>
         INVEGA&nbsp;TRINZA{reg} is to be used only after INVEGA&nbsp;SUSTENNA{reg} has been established as adequate treatment for at least four months. To establish a consistent maintenance dose, it is recommended that the last two doses of INVEGA&nbsp;SUSTENNA{reg} be the same dosage strength before starting INVEGA&nbsp;TRINZA{reg}.
@@ -58,6 +63,6 @@ export default function DosingInvegaTrinza({ reg }) {
       <br/><br/>
       <BalanceTrinza reg={reg} />
       <br/><br/>
-    </section>
+    </main>
   )
 };

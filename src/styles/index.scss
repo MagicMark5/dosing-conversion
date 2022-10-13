@@ -4,10 +4,18 @@
 @import "./mixins.scss";
 
 @font-face {
-  font-family: 'Apex Sans Book';
+  font-family: 'Apex Sans Regular';
   src: url('../fonts/ApexSansBook-Regular.woff2') format('woff2'),
       url('../fonts/ApexSansBook-Regular.woff') format('woff');
-  font-weight: 500;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Apex Sans Book';
+  src: url('../fonts/ApexSansBook.woff2') format('woff2'),
+      url('../fonts/ApexSansBook.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -15,7 +23,7 @@
   font-family: 'Apex Sans Bold';
   src: url('../fonts/ApexSans-Bold.woff2') format('woff2'),
       url('../fonts/ApexSans-Bold.woff2') format('woff');
-  font-weight: 900;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }

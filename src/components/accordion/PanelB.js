@@ -9,6 +9,8 @@ export default function PanelB({ doses }) {
         inputLabel={<span>If the <span className="nowrap">once-daily</span> <span className="font-red font-bold">INVEGA&reg;</span> dose is:</span>}
         outputLabel={<span>The Once-monthly <span className="font-red font-bold">INVEGA&nbsp;SUSTENNA&reg;</span> maintenance dose needed to attain similar steady-state paliperidone exposure during maintenance treatment is:<br/><br/></span>}
         doseIO={doses}
+        bgOutput={'bg-peach'}
+        colorOutput={'font-light-orange'}
       />
       <br/><br/>
       <footer>

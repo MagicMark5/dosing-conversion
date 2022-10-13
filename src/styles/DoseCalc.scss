@@ -5,9 +5,6 @@
   max-width: 80%;
   margin: 0 auto;
   box-shadow: $dose-calc-shadow;
-  th.input {
-    width: 33%;
-  }
   th.input, th.output {
     vertical-align: top;
     color: #6D6E71;
@@ -16,6 +13,7 @@
     box-shadow: $bottom-border-shadow;
   }
   th {
+    text-align: left;
     border-right: 2px solid #EBECEC;
   }
   th:last-child {
@@ -51,11 +49,9 @@
 
 .output-cell {
   text-align: center;
-  font-size: 2.2em;
+  font-size: 3em;
   font-family: $font-bold;
-  background-color: #F9DCD1;
   box-shadow: $output-cell-top-shadow;
-  color: #E15217;
   font-weight: bold;
   sup {
     font-size: 60%;
@@ -91,6 +87,9 @@
   .grey {
     border-left: $pointer-width solid $light_grey;
   }
+  .blue {
+    border-left: $pointer-width solid $blue_trinza;
+  }
 }
 
 @media all and (max-width: $breakpoint) {
@@ -98,6 +97,9 @@
     max-width: 99%;
     th {
       font-size: 14px;
+    }
+    .width-50p {
+      width: 25%;
     }
     .label {
       padding: 10px;
@@ -107,6 +109,12 @@
     }
     .output-cell {
       font-size: 1.5em;
+    }
+  }
+  .selected {
+    div.right-pointer {
+      left: 16px;
+      border-left-width: 15px;
     }
   }
 }

@@ -41,6 +41,9 @@ table td:first-child {
 .font-red {
   color: $red;
 }
+.font-light-red {
+  color: $light_red;
+}
 .font-orange {
   color: $orange;
 }
@@ -53,16 +56,42 @@ table td:first-child {
 .font-light-grey {
   color: $light_grey;
 }
+.font-trinza-blue {
+  color: $blue_trinza;
+}
+.font-dark-blue {
+  color: $dark_blue;
+}
 
-// background colours 
+// background colours
+.bg-peach {
+  background-color: #F9DCD1;
+}
+.bg-light-blue {
+  background-color: $light_blue;
+}
+.bg-trinza-blue {
+  background-color: $blue_trinza;
+}
 .bg-light-orange {
   background-color: $light_orange;
 }
 .bg-light-grey {
   background-color: $light_grey;
 }
+// bg colour classes for red chevron
 .bg-red {
   background-color: $red;
+}
+.red-triangle {
+  border-top: 45px solid $red; // bg color of triangle
+}
+// bg colour classes for blue chevron
+.bg-blue {
+  background-color: $blue;
+}
+.blue-triangle {
+  border-top: 45px solid $blue; // bg color of triangle
 }
 
 // Class to apply Apex-Sans Bold
@@ -72,6 +101,15 @@ table td:first-child {
 
 .nowrap {
   white-space: nowrap;
+}
+
+// Positioning classes
+
+.width-33p {
+  width: 33%;
+}
+.width-50p {
+  width: 50%;
 }
 
 .flex-col {

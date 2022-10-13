@@ -25,7 +25,7 @@ header.maintenance {
   color: $red;
   p {
     padding: 30px 30px 30px 0px;
-    background: linear-gradient(to right, #FFF, rgb(245, 130, 31, 0.1) 70%);
+    background: $alert_gradient;
     border-radius: 20px;
   }
   img {

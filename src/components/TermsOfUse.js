@@ -1,7 +1,13 @@
-export default function TermsOfUse() {
+import ChevronHeader from "./materials/ChevronHeader";
+
+export default function TermsOfUse({ modal }) {
   return (
-    <>
-      <h1>Terms of Use</h1>
-    </>
+    <main className={`nav-shadow ${modal ? "blur" : ""}`}>
+      <ChevronHeader
+        bgLeft={'bg-header-orange'}
+        text={<><br/>Terms of Use</>}
+        bgRight={'bg-header-red'}
+      />
+    </main>
   )
 }

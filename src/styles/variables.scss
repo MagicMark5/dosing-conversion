@@ -1,5 +1,5 @@
 // Font stack
-$font-stack: 'Apex Sans Book', 'Open Sans';
+$font-stack: 'Apex Sans Book', 'Apex Sans Regular', 'Open Sans';
 $font-bold: 'Apex Sans Bold', 'Open Sans';
 
 // Colours
@@ -8,10 +8,19 @@ $black: #000;
 $grey: #595959;
 $light_grey: #808080;
 $red: #b01c2e;
+$light_red: #CF2030;
 $blue: #00ACCD;
+$blue_trinza: #00A3BA;
+$light_blue: #E5F6F9;
+$dark_blue: #0288A9;
 $orange: #F5821F;
 $light_orange: #E15217;
 $silver: #CBCDCE;
+$peach: #F9DCD1;
+
+// Gradients
+$alert_gradient: linear-gradient(to right, #FFF, rgb(245, 130, 31, 0.1) 35%);
+$trinza_gradient: linear-gradient(to right, #B01C2E 0%, #BC2237 49%, #F58220 66%, #00AABE 100%);
 
 // Spacing
 $margins: 10%;

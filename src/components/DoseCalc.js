@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import "../styles/DoseCalc.scss";
 
-export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
+export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, colorOutput, colWidth }) {
   // state for index of dose selected
   const [ dose, setDose ] = useState(0);
 
@@ -18,7 +18,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
   return (
     <table className="DoseCalc">
       <tr>
-        <th scope='col' className='input label'>
+        <th scope='col' className={`input label ${colWidth || "width-33p"}`}>
           {inputLabel}
         </th>
         <th scope='col' className='output label'>
@@ -30,6 +30,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
         const color = doseIO[input].fontColor; // class name for font color
         const array = bg.split("-");
         const pointColor = array[array.length - 1];
+        
         return (
           <tr key={index}>
             <td className={dose === index ? `selected ${bg}` : `not-selected`}>
@@ -42,7 +43,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO }) {
               <div className={`right-pointer ${pointColor}`}></div>
             </td>
             {index === 0 && (
-              <td rowSpan={inputs.length} className='output-cell' style={{ borderTop: 0 }}>
+              <td rowSpan={inputs.length} className={`output-cell ${bgOutput} ${colorOutput}`} style={{ borderTop: 0 }}>
                 {output[dose].value}
               </td>
             )}

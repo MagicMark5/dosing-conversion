@@ -11,12 +11,10 @@
 
 .chevron-container {
   width: 100%;
-  background-color: $red;
   opacity: 1; /* needs full opacity */
 }
 
 .heading {
-  background-color: $red; // bg colour of rectangle
   width: 100%;
   padding: 25px 0px 20px;
 }
@@ -36,7 +34,7 @@
   border-left: $chevron-triangle-width solid transparent; // 25vmax
   border-right: $chevron-triangle-width  solid transparent;
   /* height of chevron is border-top */
-  border-top: 45px solid $red;
+  // border-top: 45px solid $red; // bg color of triangle
 }
 
 @media all and (max-width: $breakpoint) {

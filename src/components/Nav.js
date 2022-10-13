@@ -39,7 +39,7 @@ export default function Nav({ modal, toggle, closeModal, }) {
             Safety Information
           </button>
         </div>
-        {page !== "conversionguide2" && <img className="nav-logo sustenna-logo" src={sustenna} alt="ONCE-MONTHLY INVEGA SUSTENNA® paliperidone palmitate PROLONGED-RELEASE INJECTABLE SUSPENSION" />}
+        <img className="nav-logo sustenna-logo" src={sustenna} alt="ONCE-MONTHLY INVEGA SUSTENNA® paliperidone palmitate PROLONGED-RELEASE INJECTABLE SUSPENSION" />
         {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={trinza} alt="PRINVEGA TRINZA® paliperidone palmitate prolonged-release injectable suspension 175 mg, 263 mg, 350 mg, 525 mg" />}
       </div>
       <Modal show={modal} closeModal={closeModal}/>

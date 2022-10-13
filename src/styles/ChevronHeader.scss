@@ -14,6 +14,7 @@
   box-shadow: $nav-shadow;
 }
 
+// Bg images for sustenna page /conversionguide1
 .bg-header-orange {
   background-color: $orange;
   background-image: url("../assets/left_bg.png");
@@ -22,6 +23,16 @@
   background-color: $red;
   background-image: url("../assets/right_bg.png");
 }
+// Bg images for trinza page /conversionguide2
+.bg-trinza-left {
+  background-color: $orange;
+  background-image: url("../assets/bg_trinza_left.png");
+}
+.bg-trinza-right {
+  background-color: $blue_trinza;
+  background-image: url("../assets/bg_trinza_right.png");
+}
+
 
 .silver-border {
   position: relative;

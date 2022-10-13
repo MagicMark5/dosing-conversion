@@ -23,6 +23,7 @@ export default function DosingInvegaSustenna({ reg, modal }) {
   const ariaLevel = 3;
 
   // conversions of once-daily INVEGA dose to Once-monthly Sustenna maintenance dose
+  // The last word of the snake-case css class must be the color (see DoseCalc.js)
   const doses = {
     "12 mg": {
       value: "150 mg",
@@ -43,7 +44,11 @@ export default function DosingInvegaSustenna({ reg, modal }) {
   
   return (
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
-      <ChevronHeader text={<>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA{reg} Conversion&nbsp;Guide</>} />
+      <ChevronHeader
+        bgLeft={'bg-header-orange'}
+        text={<>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA{reg} Conversion&nbsp;Guide</>}
+        bgRight={'bg-header-red'}
+      />
       <section className="Dosing-section">
         <h3 className="font-orange font-bold">Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications</h3>
         <p>

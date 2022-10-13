@@ -26,6 +26,11 @@
   align-items: center;
 }
 
+// Give panelD a different bg gradient (on the /conversionguide2 page)
+.panelD-button {
+  background: $trinza_gradient;
+}
+
 .accordion__button:focus {
   outline-offset: 10px;
 }
@@ -47,6 +52,18 @@
   transform: rotate(45deg);
 }
 
+// remove the open/close icon for panelD
+.panelD-button:after {
+  display: none;
+}
+// remove the button-like behaviour for panelD since it is always open
+.panelD-button {
+  cursor: auto;
+}
+.panelD-button:focus {
+  outline: none;
+}
+
 .accordion__button[aria-expanded='true']::after,
 .accordion__button[aria-selected='true']::after {
   transform: rotate(-135deg);
@@ -63,7 +80,9 @@
   animation: fadein 0.35s ease-in;
 }
 // Show box-shadow when the accordion item is open
-.accordion__panel[aria-hidden='false'] {
+// panelD is the section in the /conversionguide2 page that is always open
+.accordion__panel[aria-hidden='false'],
+.panelD {
   box-shadow: $box-shadow;
 }
 

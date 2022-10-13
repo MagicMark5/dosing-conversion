@@ -16,7 +16,7 @@ export default function Modal({ show, closeModal }) {
             <br/>
             <BalanceTrinza reg={reg} />
             <footer className="modal-footer">
-              <button autoFocus={true} className="modal-button continue-button" onClick={() => closeModal()}>
+              <button className="modal-button continue-button" onClick={() => closeModal()}>
                 Continue to website
               </button>
             </footer>

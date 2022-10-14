@@ -40,7 +40,7 @@ export default function Nav({ modal, toggle, closeModal, }) {
           </button>
         </div>
         <img className="nav-logo sustenna-logo" src={sustenna} alt="ONCE-MONTHLY INVEGA SUSTENNA® paliperidone palmitate PROLONGED-RELEASE INJECTABLE SUSPENSION" />
-        {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={trinza} alt="PRINVEGA TRINZA® paliperidone palmitate prolonged-release injectable suspension 175 mg, 263 mg, 350 mg, 525 mg" />}
+        {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={trinza} alt="INVEGA TRINZA® paliperidone palmitate prolonged-release injectable suspension 175 mg, 263 mg, 350 mg, 525 mg" />}
       </div>
       <Modal show={modal} closeModal={closeModal}/>
     </nav>

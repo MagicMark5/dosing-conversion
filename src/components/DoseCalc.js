@@ -17,39 +17,41 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
   
   return (
     <table className="DoseCalc">
-      <tr>
-        <th scope='col' className={`input label ${colWidth || "width-33p"}`}>
-          {inputLabel}
-        </th>
-        <th scope='col' className='output label'>
-          {outputLabel}
-        </th>
-      </tr>
-      {inputs.map((input, index, inputs) => {
-        const bg = doseIO[input].bgColor; // class name for background-color
-        const color = doseIO[input].fontColor; // class name for font color
-        const array = bg.split("-");
-        const pointColor = array[array.length - 1];
-        
-        return (
-          <tr key={index}>
-            <td className={dose === index ? `selected ${bg}` : `not-selected`}>
-              <button 
-                onClick={doseChange} 
-                className={dose !== index ? color : ''}
-                >
-                {input}
-              </button>
-              <div className={`right-pointer ${pointColor}`}></div>
-            </td>
-            {index === 0 && (
-              <td rowSpan={inputs.length} className={`output-cell ${bgOutput} ${colorOutput}`} style={{ borderTop: 0 }}>
-                {output[dose].value}
+      <tbody>
+        <tr>
+          <th scope='col' className={`input label ${colWidth || "width-33p"}`}>
+            {inputLabel}
+          </th>
+          <th scope='col' className='output label'>
+            {outputLabel}
+          </th>
+        </tr>
+        {inputs.map((input, index, inputs) => {
+          const bg = doseIO[input].bgColor; // class name for background-color
+          const color = doseIO[input].fontColor; // class name for font color
+          const array = bg.split("-");
+          const pointColor = array[array.length - 1];
+          
+          return (
+            <tr key={index}>
+              <td className={dose === index ? `selected ${bg}` : `not-selected`}>
+                <button 
+                  onClick={doseChange} 
+                  className={dose !== index ? color : ''}
+                  >
+                  {input}
+                </button>
+                <div className={`right-pointer ${pointColor}`}></div>
               </td>
-            )}
-          </tr>
-        )
-      })}
+              {index === 0 && (
+                <td rowSpan={inputs.length} className={`output-cell ${bgOutput} ${colorOutput}`} style={{ borderTop: 0 }}>
+                  {output[dose].value}
+                </td>
+              )}
+            </tr>
+          )
+        })}
+      </tbody>
     </table>
   )
 }

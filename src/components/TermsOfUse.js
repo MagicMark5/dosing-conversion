@@ -3,6 +3,9 @@ import ChevronHeader from "./materials/ChevronHeader";
 import "../styles/TermsOfUse.scss";
 
 export default function TermsOfUse({ modal }) {
+  // ensure page is scrolled to top upon mount
+  window.scrollTo(0,0);
+
   return (
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
       <ChevronHeader
@@ -36,21 +39,23 @@ export default function TermsOfUse({ modal }) {
           <strong className="font-bold">4. Jurisdictional Issues.</strong> The Services may not be appropriate or available for use in some jurisdictions. Any use of the Services is at your own risk, and you must comply with all applicable laws, rules and regulations in doing so. We may limit the availability of the Services at any time, in whole or in part, to any person or geographic area that we choose, in our sole discretion, for valid reasons (e.g., to comply with relevant laws and regulatory requirements, to protect the security of the Services or to implement reasonable technical adjustments).<br/>
           <br/>
           <strong className="font-bold">5. Acceptable Use and Rules of Conduct.</strong> You must not:
-          <ul className="terms-bullet-list">
-            <li><span>Post, transmit or otherwise make available through or in connection with the Services any materials that are or may be: (a) threatening, harassing, degrading, hateful, intimidating, or otherwise fail to respect the rights and dignity of others; (b) defamatory, libelous or fraudulent; (c) obscene, indecent, pornographic or otherwise objectionable; or (d) protected by copyright, trademark, trade secret, right of publicity or privacy or any other proprietary right, without the express prior written consent of the applicable owner.</span></li>
-            <li><span>Post, transmit or otherwise make available through or in connection with the Services any virus, worm, Trojan horse, Easter egg, time bomb, spyware or other computer code, file or program that is or is potentially harmful or invasive or intended to damage or hijack the operation of, or to monitor the use of, any hardware, software or equipment (each, a “Virus”).</span></li>
-            <li><span>Use the Services for any commercial purpose, including use for your commercial purposes or any commercial purposes that will benefit you in any way.</span></li>
-            <li><span>Use the Services for any purpose that is fraudulent or otherwise unlawful.</span></li>
-            <li><span>Collect information about users of the Services in any way, including through reverse engineering.</span></li>
-            <li><span>Interfere with the operation of the Services or the servers or networks used to make the Services available, including by hacking or defacing any portion of the Services, or violate any requirement or policy of such servers or networks.</span></li>
-            <li><span>Restrict or inhibit any other person from using the Services.</span></li>
-            <li><span>Reproduce, modify, adapt, translate, create derivative works of, sell, rent, lease, loan, timeshare, distribute or otherwise exploit any portion of (or any use of) the Services except as expressly authorized under this Agreement, without our express prior written consent.</span></li>
-            <li><span>Reverse engineer, decompile or disassemble any portion of the Services, except where such restriction is expressly prohibited by applicable law.</span></li>
-            <li><span>Remove any copyright, trademark or other proprietary rights notice from the Services.</span></li>
-            <li><span>Incorporate any portion of the Services into any product or service, without our express prior written consent.</span></li>
-            <li><span>Systematically download and store Services content.</span></li>
-            <li><span>Use any robot, spider, site search/retrieval application or other manual or automatic device to retrieve, index, “scrape,” “data mine” or otherwise gather Services content, or reproduce or circumvent the navigational structure or presentation of the Services, without our express prior written consent. Notwithstanding the foregoing, and subject to compliance with any instructions posted in the robots.txt file located in the root directory of the Services, we grant to the operators of public search engines permission to use spiders to copy materials from the Services for the sole purpose of (and solely to the extent necessary for) creating publicly available, searchable indices of such materials, but not caches or archives of such materials. We reserve the right to revoke such permission either generally or in specific cases, at any time and without notice. </span></li>
-          </ul>
+        </p>
+        <ul className="terms-bullet-list">
+          <li><span>Post, transmit or otherwise make available through or in connection with the Services any materials that are or may be: (a) threatening, harassing, degrading, hateful, intimidating, or otherwise fail to respect the rights and dignity of others; (b) defamatory, libelous or fraudulent; (c) obscene, indecent, pornographic or otherwise objectionable; or (d) protected by copyright, trademark, trade secret, right of publicity or privacy or any other proprietary right, without the express prior written consent of the applicable owner.</span></li>
+          <li><span>Post, transmit or otherwise make available through or in connection with the Services any virus, worm, Trojan horse, Easter egg, time bomb, spyware or other computer code, file or program that is or is potentially harmful or invasive or intended to damage or hijack the operation of, or to monitor the use of, any hardware, software or equipment (each, a “Virus”).</span></li>
+          <li><span>Use the Services for any commercial purpose, including use for your commercial purposes or any commercial purposes that will benefit you in any way.</span></li>
+          <li><span>Use the Services for any purpose that is fraudulent or otherwise unlawful.</span></li>
+          <li><span>Collect information about users of the Services in any way, including through reverse engineering.</span></li>
+          <li><span>Interfere with the operation of the Services or the servers or networks used to make the Services available, including by hacking or defacing any portion of the Services, or violate any requirement or policy of such servers or networks.</span></li>
+          <li><span>Restrict or inhibit any other person from using the Services.</span></li>
+          <li><span>Reproduce, modify, adapt, translate, create derivative works of, sell, rent, lease, loan, timeshare, distribute or otherwise exploit any portion of (or any use of) the Services except as expressly authorized under this Agreement, without our express prior written consent.</span></li>
+          <li><span>Reverse engineer, decompile or disassemble any portion of the Services, except where such restriction is expressly prohibited by applicable law.</span></li>
+          <li><span>Remove any copyright, trademark or other proprietary rights notice from the Services.</span></li>
+          <li><span>Incorporate any portion of the Services into any product or service, without our express prior written consent.</span></li>
+          <li><span>Systematically download and store Services content.</span></li>
+          <li><span>Use any robot, spider, site search/retrieval application or other manual or automatic device to retrieve, index, “scrape,” “data mine” or otherwise gather Services content, or reproduce or circumvent the navigational structure or presentation of the Services, without our express prior written consent. Notwithstanding the foregoing, and subject to compliance with any instructions posted in the robots.txt file located in the root directory of the Services, we grant to the operators of public search engines permission to use spiders to copy materials from the Services for the sole purpose of (and solely to the extent necessary for) creating publicly available, searchable indices of such materials, but not caches or archives of such materials. We reserve the right to revoke such permission either generally or in specific cases, at any time and without notice. </span></li>
+        </ul>
+        <p>
           You are responsible for obtaining, maintaining and paying for all hardware, telecommunications and other services needed for you to use the Services.<br/>
           <br/>
           <strong className="font-bold">6. Electronic Communications.</strong>The information communicated as part of the Services may constitute an electronic communication. When you communicate with us through the Services or via other forms of electronic media, such as e-mail, you are communicating with us electronically. You agree that we may communicate electronically, subject to local privacy and Anti-Spam laws, and that such communications, as well as notices, disclosures, agreements, and other communications that we provide to you electronically, are equivalent to communications in writing and shall have the same force and effect as if they were in writing and signed by the party sending the communication.<br/>

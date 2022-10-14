@@ -41,8 +41,14 @@
   border-bottom: 2px solid $silver;
 }
 
+@media screen and (max-width: 1400px) {
+  .silver-border {
+    display: none;
+  }  
+}
+
 @media screen and (max-width: $chevron-header-bp) {
-  .bg, .silver-border {
+  .bg {
     display: none;
   }
 }

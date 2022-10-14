@@ -46,7 +46,7 @@ export default function DosingInvegaSustenna({ reg, modal }) {
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
       <ChevronHeader
         bgLeft={'bg-header-orange'}
-        text={<>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA{reg} Conversion&nbsp;Guide</>}
+        text={<>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA<sup className="safari_only">&reg;</sup> Conversion&nbsp;Guide</>}
         bgRight={'bg-header-red'}
       />
       <section className="Dosing-section">

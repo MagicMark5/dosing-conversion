@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dosing-conversion/static/css/main.9c363389.css",
-    "main.js": "/dosing-conversion/static/js/main.07d492a3.js",
+    "main.js": "/dosing-conversion/static/js/main.215c37bd.js",
     "static/media/bg-main.png": "/dosing-conversion/static/media/bg-main.b1b404ce51a110bd3648.png",
     "static/media/ApexSansBook.woff": "/dosing-conversion/static/media/ApexSansBook.6f1749548e5e4964716c.woff",
     "static/media/ApexSansBook-Regular.woff": "/dosing-conversion/static/media/ApexSansBook-Regular.13d6a8f45cac8068bdca.woff",
@@ -23,10 +23,10 @@
     "static/media/icon_syringe.png": "/dosing-conversion/static/media/icon_syringe.f7f85aa8a38f18abb83e.png",
     "index.html": "/dosing-conversion/index.html",
     "main.9c363389.css.map": "/dosing-conversion/static/css/main.9c363389.css.map",
-    "main.07d492a3.js.map": "/dosing-conversion/static/js/main.07d492a3.js.map"
+    "main.215c37bd.js.map": "/dosing-conversion/static/js/main.215c37bd.js.map"
   },
   "entrypoints": [
     "static/css/main.9c363389.css",
-    "static/js/main.07d492a3.js"
+    "static/js/main.215c37bd.js"
   ]
 }

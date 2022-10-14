@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dosing-conversion/static/css/main.9c363389.css",
+    "main.css": "/dosing-conversion/static/css/main.1c27fb10.css",
     "main.js": "/dosing-conversion/static/js/main.215c37bd.js",
     "static/media/bg-main.png": "/dosing-conversion/static/media/bg-main.b1b404ce51a110bd3648.png",
     "static/media/ApexSansBook.woff": "/dosing-conversion/static/media/ApexSansBook.6f1749548e5e4964716c.woff",
@@ -22,11 +22,11 @@
     "static/media/icon_reminder.png": "/dosing-conversion/static/media/icon_reminder.542f2de698585e8f0ab5.png",
     "static/media/icon_syringe.png": "/dosing-conversion/static/media/icon_syringe.f7f85aa8a38f18abb83e.png",
     "index.html": "/dosing-conversion/index.html",
-    "main.9c363389.css.map": "/dosing-conversion/static/css/main.9c363389.css.map",
+    "main.1c27fb10.css.map": "/dosing-conversion/static/css/main.1c27fb10.css.map",
     "main.215c37bd.js.map": "/dosing-conversion/static/js/main.215c37bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c363389.css",
+    "static/css/main.1c27fb10.css",
     "static/js/main.215c37bd.js"
   ]
 }

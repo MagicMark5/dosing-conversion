@@ -25,6 +25,9 @@
   font-family: 'Apex Sans', 'Open Sans';
   font-weight: 900;
   text-align: center;
+  sup {
+    -webkit-text-size-adjust: none;
+  }
 }
 
 .chevron {
@@ -37,7 +40,7 @@
   // border-top: 45px solid $red; // bg color of triangle
 }
 
-@media all and (max-width: $breakpoint) {
+@media all and (max-width: $chevron-header-bp) {
   .chevron-wrapper {
     position: revert;
     width: 85%;

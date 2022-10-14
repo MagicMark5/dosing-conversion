@@ -28,6 +28,12 @@
   font-display: swap;
 }
 
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 body {
   background-color: $red;
   margin: 0;
@@ -63,4 +69,11 @@ button:focus {
 }
 .buttons > .btn:focus {
   outline-offset: 10px;
+}
+
+// Prevent Safari from adjusting font size when it thinks the font is too small
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: none;
+  }
 }

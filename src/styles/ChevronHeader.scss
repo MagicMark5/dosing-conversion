@@ -41,7 +41,7 @@
   border-bottom: 2px solid $silver;
 }
 
-@media screen and (max-width: $breakpoint) {
+@media screen and (max-width: $chevron-header-bp) {
   .bg, .silver-border {
     display: none;
   }

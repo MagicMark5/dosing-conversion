@@ -4,7 +4,7 @@ import "../../styles/ChevronHeader.scss";
 export default function ChevronHeader({ text, bgLeft, bgRight, bgRectangle, bgTriangle }) {
   return (
     <>
-      <div className="chevron-header">
+      <header className="chevron-header">
         <div className={`bg ${bgLeft}`}>
         </div>
         <Chevron 
@@ -14,7 +14,7 @@ export default function ChevronHeader({ text, bgLeft, bgRight, bgRectangle, bgTr
         />
         <div className={`bg ${bgRight}`}>
         </div>
-      </div>
+      </header>
       <div className="silver-border"></div>
     </>
   )

@@ -12,7 +12,7 @@ export default function Footer({modal}) {
 
   return (
     <footer className={modal ? "blur page-footer" : "page-footer"}>
-      <img className="footer-divider" src={divider} alt="footer divider" />
+      <img className="footer-divider" src={divider} alt="" />
       <div className='legal-logos-container'>
         <p className="legal">
           <strong>References:</strong> 1.&nbsp;INVEGA SUSTENNA® Product Monograph. Janssen Inc. December 17, 2020. 2.&nbsp;INVEGA TRINZA® Product Monograph. Janssen Inc. December 17, 2020.<br/><br/>
@@ -31,7 +31,6 @@ export default function Footer({modal}) {
           <img alt="Member of Innovative Medicines Canada logo"
             className="imc-logo"
             src={imc}
-            title="Member of Innovative Medicines Canada logo"
           />
           <img alt="PAAB"
             className="paab-logo"
@@ -39,8 +38,7 @@ export default function Footer({modal}) {
           />
           <img alt="Janssen Pharmaceutical Companies of Johnson &#x26; Johnson"
             className="janssen-logo"
-            src={janssen} 
-            title="Janssen Pharmaceutical Companies of Johnson &#x26; Johnson" 
+            src={janssen}
           />
         </div>
       </div>

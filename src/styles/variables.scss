@@ -10,10 +10,11 @@ $light_grey: #808080;
 $red: #b01c2e;
 $light_red: #CF2030;
 $blue: #00ACCD;
-$blue_trinza: #00A3BA;
+$blue_trinza: #00A3BA; // #058293 for AAA standard of contrast ratio
 $light_blue: #E5F6F9;
 $dark_blue: #0288A9;
-$orange: #F5821F;
+$orange: #F5821F; // does not meet AAA standard for 4.5:1 contrast ratio on white background
+//$orange: #D34406; // this does meet the requirement (4.57:1) for bold text
 $light_orange: #E15217;
 $silver: #CBCDCE;
 $peach: #F9DCD1;

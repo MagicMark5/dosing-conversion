@@ -58,9 +58,9 @@ export default function DosingInvegaTrinza({ reg, modal }) {
         bgTriangle={'blue-triangle'}        
       />
       <section className='Dosing-section'>
-        <h3 className='font-red font-bold'>
+        <h2 className='font-red font-bold'>
           Switching from INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}
-        </h3>
+        </h2>
         <header className="sustenna-to-trinza">
           <div>
             <img

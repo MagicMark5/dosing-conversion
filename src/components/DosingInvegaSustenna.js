@@ -50,7 +50,9 @@ export default function DosingInvegaSustenna({ reg, modal }) {
         bgRight={'bg-header-red'}
       />
       <section className="Dosing-section">
-        <h3 className="font-orange font-bold">Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications</h3>
+        <h2 className="font-orange font-bold">
+          Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications
+        </h2>
         <p>
           For patients who have never taken oral paliperidone or oral/injectable risperidone, tolerability should be established with oral paliperidone or oral risperidone prior to initiating treatment with INVEGA SUSTENNA{reg}.
           <br/><br/>

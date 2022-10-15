@@ -16,6 +16,7 @@ article.maintenance {
   align-items: center;
   justify-content: center;
 }
+
 header.maintenance {
   width: 80%;
   margin-top: 20px;
@@ -56,13 +57,14 @@ section.maintenance {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h5, footer {
+    h4, footer {
       position: relative;
       padding-left: 15px;
       color: $red;
       font-family: $font-bold;      
     }
-    h5 {
+    h4 {
+      font-size: 16px;
       width: 96%;
       margin: 0;
       top: 15px;
@@ -74,10 +76,15 @@ section.maintenance {
   }
 }
 
+.panel-C-footer {
+  padding-top: 30px;
+}
+
 img.maintenance-dose-card {
   height: 150px;
 }
 
+// for panel A
 .panel-a-ol > li {
   padding-left: 1em;
 }
@@ -189,13 +196,9 @@ figure {
     figure {
       width: 100%;
       align-items: unset;
-      h5, footer { 
+      h4, footer {
         width: 100%;
         padding-left: 10px;
-      }
-      h5 {
-        font-size: $dose-heading;
-        line-height: $dose-line-height;
       }
       footer {
         font-size: $dose-heading-foot;

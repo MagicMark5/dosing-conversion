@@ -25,7 +25,7 @@ export default function PanelC() {
         </div>
 
         <figure className="maintenance">
-          <h5>Maintenance Dose for Schizophrenia</h5>
+          <h4>Maintenance Dose for Schizophrenia</h4>
           <img
             className="maintenance-dose-card"
             src={dose_maintenance_1}
@@ -36,17 +36,17 @@ export default function PanelC() {
           </footer>
         </figure>
 
-        <figure className="maintenance">
-          <h5>Maintenance Dose for Schizoaffective Disorder</h5>
+        <figure className="maintenance" style={{ paddingBottom: "16px" }}>
+          <h4>Maintenance Dose for Schizoaffective&nbsp;Disorder</h4>
           <img
             className="maintenance-dose-card"
             src={dose_maintenance_2}
             alt="50 mg 	75 mg  100 mg   150 mg"
           />
-        </figure>        
+        </figure>       
       </section>
 
-      <footer>
+      <footer className="panel-C-footer">
         <small>§ See details about needle selection based on selected injection area and patient weight in the product monograph.</small>
         <br/>
         <small>Note: For patients with schizophrenia, the recommended monthly maintenance dose is <span style={{ whiteSpace: "nowrap" }}>75 mg</span>, with a range of <span style={{ whiteSpace: "nowrap" }}>25-150 mg</span> based on individual patient tolerability and/or efficacy. The <span style={{ whiteSpace: "nowrap" }}>25 mg</span> dose is not available in Canada. For patients with schizoaffective disorder, the recommended monthly maintenance dose is within the range of <span style={{ whiteSpace: "nowrap" }}>50-150 mg</span> based on tolerability and/or efficacy.<br/> Please see the Product Monograph for complete dosing information.</small>

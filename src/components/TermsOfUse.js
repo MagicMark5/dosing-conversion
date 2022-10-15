@@ -14,7 +14,7 @@ export default function TermsOfUse({ modal }) {
         bgRight={'bg-header-red'}
       />
       <article className="terms">
-        <h3 className="font-orange font-bold">TERMS OF SERVICE</h3>
+        <h2 className="font-orange font-bold">TERMS OF SERVICE</h2>
         <p>
           Last Updated: April 29, 2019<br/>
           <br/>

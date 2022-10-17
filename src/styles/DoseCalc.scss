@@ -16,9 +16,9 @@
     text-align: left;
     border-right: 2px solid #EBECEC;
   }
-  th:last-child {
-    border-right: 0px;
-  }
+  // th:last-child {
+  //   border-right: 0px;
+  // }
   td {
     // text-align: center;
     border-right: 2px solid #EBECEC;
@@ -34,10 +34,10 @@
       border: 0;
     }
   }
-  td:last-child {
-    border-top: 2px solid #EBECEC;
-    border-bottom: 0px;
-  }
+  // td:last-child {
+  //   border-top: 2px solid #EBECEC;
+  //   border-bottom: 0px;
+  // }
   td.not-selected {
     padding: 15px 0px;
   }

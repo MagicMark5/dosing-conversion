@@ -6,10 +6,12 @@ import App from './components/App';
 // react-router-dom node package
 import { BrowserRouter as Router } from 'react-router-dom';
 
+const baseURL = process.env.production ? process.env.PUBLIC_URL : '/';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={baseURL}>
       <App />
     </Router>
   </React.StrictMode>

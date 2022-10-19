@@ -6,21 +6,28 @@ import Home from './Home';
 import DosingInvegaSustenna from './DosingInvegaSustenna';
 import DosingInvegaTrinza from './DosingInvegaTrinza';
 import TermsOfUse from './TermsOfUse';
+import useLanguage from '../hooks/useLanguage';
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async"; // Helmet allows us to change the index.html <head>
 
 function App() {
+  useLanguage();
+  const { t } = useTranslation();
   const [modal, setModal] = useState(true);
   const toggle = () => setModal(!modal);
-
+  
+  const reg = <sup>&reg;</sup>; // ®
+  
   const closeModal = () => {
     setModal(false);
     window.scrollTo(0,0);
   };
-
-  const reg = <sup>&reg;</sup>; // ®
-
-
+  
   return (
     <div className="App">
+      <Helmet>
+          <title>{t("htmlTitle")}</title>
+      </Helmet>
       <Routes>
         <Route element={<Layout modal={modal} closeModal={closeModal} toggle={toggle} />}>
           <Route path="/" element={<Home modal={modal} />} />

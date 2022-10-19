@@ -44,7 +44,7 @@ export default function DosingInvegaTrinza({ reg, modal }) {
       value: "525 mg",
       bgColor: "bg-red",
       fontColor: "font-red",
-    },    
+    },
   };  
 
 
@@ -54,7 +54,7 @@ export default function DosingInvegaTrinza({ reg, modal }) {
         bgLeft={"bg-trinza-left"}
         text={<>INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}<br/> Dosing Conversion Guide</>}
         bgRight={"bg-trinza-right"}
-        bgRectangle={'bg-blue'}
+        bgRectangle={'bg-trinza-blue'}
         bgTriangle={'blue-triangle'}        
       />
       <section className='Dosing-section'>

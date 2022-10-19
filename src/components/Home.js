@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom';
 import '../styles/Home.scss';
-
+import { Link } from 'react-router-dom';
 import Chevron from './materials/Chevron';
+import { useTranslation } from "react-i18next";
+
 
 export default function Home({modal}) {
+
+  const { t } = useTranslation();
+
   return (
     <div className="home">
       <div className={modal ? "blur home-bg" : "home-bg"}>

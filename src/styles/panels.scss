@@ -108,7 +108,7 @@ figure {
   }
   .muscle {
     font-size: 16px;
-    color: #A1A3A6;
+    color: $grey; // A1A3A6 in layout
   }
 }
 
@@ -123,18 +123,18 @@ figure {
     font-family: $font-bold;
   }
   .days { 
-    white-space: nowrap; 
+    white-space: nowrap;
   }
   hr {
     border-style: dotted none none;
-    border-top: 1px dotted #F58220;
+    border-top: 1px dotted $orange;
     border-bottom: 0;    
     width: 100%;
     border-width: 5px;
     margin: 15px auto;
   }
   span {
-    color: #F58220;
+    color: $orange;
   }
 }
 

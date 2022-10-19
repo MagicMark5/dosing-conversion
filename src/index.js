@@ -2,15 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.scss';
 import App from './components/App';
-
-// react-router-dom node package
 import { HashRouter as Router } from 'react-router-dom';
+import { HelmetProvider } from "react-helmet-async"; // Helmet allows us to change the index.html <head>
+// Import localization for french translations
+import "./locales";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router basename="/" hashType="noslash">
-      <App />
-    </Router>
+    <React.Suspense fallback="Loading...">
+      <Router basename="/" hashType="noslash">
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
+      </Router>
+    </React.Suspense>
   </React.StrictMode>
 );

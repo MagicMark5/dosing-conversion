@@ -32,11 +32,13 @@
 .legal a {
   color: inherit;
   text-decoration: underline;
+  white-space: nowrap;
 }
 
 .logos {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
   // Footer image spacing
   img {
@@ -46,11 +48,8 @@
     margin-right: 0px;
   }
   // Footer image sizes
-  .janssen-logo { height: 80px; }
-  .paab-logo { 
-    height: 60px;
-    margin-top: 12px;
-  }
+  .janssen-logo { height: 70px; }
+  .paab-logo { height: 60px; }
   .imc-logo { height: 70px; }
 }
 

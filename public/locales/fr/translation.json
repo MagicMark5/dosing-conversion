@@ -23,7 +23,19 @@
   "home": {
     "title": "Guides de conversion posologique",
     "btn_1a": "Guide de conversion posologique pour le passage à",
-    "btn_1b": "à partir d’antipsychotiques oraux",
-    "btn_2a": ""
+    "btn_1b": "à partir d’antipsychotiques oraux"
+  },
+  "footer": {
+    "refs": "Références : ",
+    "pm_a": "Monographie de produit",
+    "pm_b": "Janssen Inc. 17 décembre 2020. ",
+    "tm": "Marques de commerce utilisées sous licence.",
+    "pp": "Politique de confidentialité",
+    "pp_url": "https://www.janssen.com/canada/fr/privacy",
+    "terms": "Conditions d’utilisation",
+    "city": "Toronto (Ontario)",
+    "company_url": "https://www.janssen.com/canada/fr",
+    "paab": "Révisé par CCPP",
+    "imc": "Membre de médicaments novateurs Canada"
   }
 }

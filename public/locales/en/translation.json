@@ -20,7 +20,18 @@
   "home": {
     "title": "Dosing Conversion Guides",
     "btn_1a": "Oral Antipsychotics to",
-    "btn_1b": "Dosing Conversion Guide",
-    "btn_2a": ""
+    "btn_1b": "Dosing Conversion Guide"
+  },
+  "footer": {
+    "refs": "References: ",
+    "pm": "Product Monograph. Janssen Inc. December 17, 2020. ",
+    "tm": "All trademarks used under license.",
+    "pp": "Privacy Policy",
+    "pp_url": "https://www.janssen.com/canada/privacy",
+    "terms": "Terms of Use",
+    "city": "Toronto, Ontario",
+    "company_url": "https://www.janssen.com/canada",
+    "paab": "Reviewed by PAAB",
+    "imc": "Member of Innovative Medicines Canada"
   }
 }

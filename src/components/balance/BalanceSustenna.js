@@ -20,7 +20,7 @@ export default function BalanceSustenna() {
         <br/>
         {sustenna} {t('modal.p_1a')} {lang === "fr" ? qu_sustenna : sustenna} {t('modal.p_1b')}
         <br/><br/>
-        INVEGA SUSTENNA® is indicated for the maintenance treatment of schizoaffective disorder in adult patients.
+        {sustenna} {t('modal.p_2a')}
         <br/><br/>
         <ProductMonograph />
       </p>

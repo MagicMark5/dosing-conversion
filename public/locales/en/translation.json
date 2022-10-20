@@ -1,11 +1,19 @@
 {
   "htmlTitle": "INVEGA SUSTENNA® dosing conversion guides",
   "sustenna": "INVEGA SUSTENNA®",
+  "trinza": "INVEGA TRINZA®",
   "modal": {
     "title": "Important Safety Information",
-    "heading_1": "INVEGA SUSTENNA® Safety Information",
     "p_1a": "(paliperidone palmitate) is indicated for the treatment of schizophrenia in adult patients. In controlled clinical trials, ",
     "p_1b": "was found to improve the symptoms of schizophrenia, including positive and negative symptoms.",
+    "p_2a": "is indicated for the maintenance treatment of schizoaffective disorder in adult patients.",
+    "p_3a": ", a 3-month injection, is indicated for the treatment of schizophrenia in adult patients.",
+    "p_3b": "is to be used only after",
+    "p_3c": "(1-month paliperidone palmitate prolonged-release injectable suspension) has been established as adequate treatment for at least four months. In order to establish a consistent maintenance dose, it is recommended that the last two doses of",
+    "p_3d": "be the same dosage strength before starting",
+    "pm_a": "Please consult the Product Monograph at ",
+    "pm_url": "https://www.janssen.com/canada/products",
+    "pm_b": " for contraindications, warnings, precautions, adverse reactions, interactions, dosing, and conditions of clinical use.",
     "continue": "Continue to website"
   },
   "safety_info": "Safety Information",

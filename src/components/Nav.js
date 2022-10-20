@@ -46,7 +46,7 @@ export default function Nav({ modal, toggle, closeModal, }) {
         </Link>       
         <div className="nav-btn">
           <button className="modal-button si-button" onClick={toggleModal}>
-            {t("nav.safety")}
+            {t("safety_info")}
           </button>
         </div>
         <img className="nav-logo sustenna-logo" src={sustenna} alt="ONCE-MONTHLY INVEGA SUSTENNA® paliperidone palmitate PROLONGED-RELEASE INJECTABLE SUSPENSION" />

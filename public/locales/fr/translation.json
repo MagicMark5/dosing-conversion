@@ -1,12 +1,16 @@
 {
   "htmlTitle": "Guides de conversion posologique d’INVEGA SUSTENNA®",
+  "d_apos_sustenna": "d’INVEGA SUSTENNA®",
+  "qu_apos_sustenna": "qu’INVEGA SUSTENNA®",
+  "sustenna": "INVEGA SUSTENNA®",
   "modal": {
     "title": "Renseignements importants sur l’innocuité",
+    "heading_1": "Renseignements sur l’innocuité d’INVEGA SUSTENNA®",
+    "p_1a": "(palmitate de palipéridone) est indiqué pour le traitement de la schizophrénie chez les patients adultes. Des essais cliniques contrôlés ont montré ",
+    "p_1b": "améliorait à la fois les symptômes positifs et négatifs de la schizophrénie.",
     "continue": "Continuer vers le site Web"
   },
-  "nav": {
-    "safety": "Renseignements sur l’innocuité"
-  },  
+  "safety_info": "Renseignements sur l’innocuité",
   "home": {
     "title": ""
   }

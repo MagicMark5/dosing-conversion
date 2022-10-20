@@ -5,14 +5,13 @@ import { useTranslation } from "react-i18next";
 
 
 export default function Home({modal}) {
-
   const { t } = useTranslation();
 
   return (
     <div className="home">
       <div className={modal ? "blur home-bg" : "home-bg"}>
         <div className="flex-center">
-          <Chevron heading={<h1 className="chevron-text home-header-size">Dosing Conversion Guides</h1>} />
+          <Chevron heading={<h1 className="chevron-text home-header-size">{t('home.title')}</h1>} />
         </div>
         <div className="buttons">
           <Link className="btn left" to="/conversionguide1">

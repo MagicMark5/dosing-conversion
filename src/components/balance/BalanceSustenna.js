@@ -1,12 +1,16 @@
+import { useContext } from "react";
+import TranslationContext from "../../context/TranslationContext";
 import ProductMonograph from "./ProductMonograph";
 import { useTranslation } from "react-i18next";
 
 export default function BalanceSustenna() {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage; // current language
-  const sustenna = <span className="nowrap">{t('sustenna')}</span>;
-  const d_sustenna = <span className="nowrap">{t('d_apos_sustenna')}</span>;
-  const qu_sustenna = <span className="nowrap">{t('qu_apos_sustenna')}</span>;
+  const { 
+    sustenna,
+    d_sustenna,
+    qu_sustenna,
+  } = useContext(TranslationContext);
   
   return (
     <section className="balance">

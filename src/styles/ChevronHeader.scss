@@ -33,18 +33,11 @@
   background-image: url("../assets/bg_trinza_right.png");
 }
 
-
 .silver-border {
   position: relative;
-  bottom: 5.2vw;
+  top: 130px;
   height: 10px;
   border-bottom: 2px solid $silver;
-}
-
-@media screen and (max-width: 1400px) {
-  .silver-border {
-    display: none;
-  }  
 }
 
 @media screen and (max-width: $chevron-header-bp) {

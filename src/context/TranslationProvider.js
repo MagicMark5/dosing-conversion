@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 export default function TranslationProvider({ children }) {
   const { i18n } = useTranslation();
   const lang = i18n.resolvedLanguage; // current language
+  const invega = <span className="uppercase">invega®</span>;
   const sustenna = <span className="nowrap uppercase">invega sustenna®</span>;
   const trinza = <span className="nowrap uppercase">invega trinza®</span>;
   const d_sustenna = <span className="nowrap">d’{sustenna}</span>;
@@ -14,6 +15,7 @@ export default function TranslationProvider({ children }) {
 
   const value = {
     enFr,
+    invega,
     sustenna,
     trinza,
     d_sustenna,

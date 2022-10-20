@@ -1,3 +1,11 @@
+import '../styles/Dosing.scss';
+import '../styles/AccessibleAccordion.scss';
+import '../styles/panels.scss';
+
+import { useTranslation } from "react-i18next";
+import { useContext } from 'react';
+import TranslationContext from '../context/TranslationContext';
+
 import {
   Accordion,
   AccordionItem,
@@ -8,15 +16,14 @@ import {
 
 import ChevronHeader from './materials/ChevronHeader';
 import PanelA from './accordion/PanelA';
-
-import '../styles/Dosing.scss';
-import '../styles/AccessibleAccordion.scss';
-import '../styles/panels.scss';
 import PanelB from './accordion/PanelB';
 import PanelC from './accordion/PanelC';
 
 
 export default function DosingInvegaSustenna({ reg, modal }) {
+  const { t } = useTranslation();
+  const { enFr, invega, sustenna, d_sustenna } = useContext(TranslationContext); // brand name strings
+
   // Blur focus outline after a click
   const blurTarget = (e) => e.target.blur();
 
@@ -46,19 +53,19 @@ export default function DosingInvegaSustenna({ reg, modal }) {
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
       <ChevronHeader
         bgLeft={'bg-header-orange'}
-        text={<>Oral Antipsychotic to INVEGA&nbsp;SUSTENNA<sup className="safari_only">&reg;</sup> Conversion&nbsp;Guide</>}
+        text={<>{t('guide1.h1_a')}{sustenna} {enFr("", " à partir ")}<span className='nowrap'>{t('guide1.h1_b')}</span></>}
         bgRight={'bg-header-red'}
       />
       <section className="Dosing-section">
         <h2 className="font-orange font-bold">
-          Switching to INVEGA SUSTENNA{reg} from Oral Antipsychotic Medications
+          {t('guide1.h2_a')} {sustenna} {t('guide1.h2_b')}
         </h2>
         <p>
-          For patients who have never taken oral paliperidone or oral/injectable risperidone, tolerability should be established with oral paliperidone or oral risperidone prior to initiating treatment with INVEGA SUSTENNA{reg}.
+          {t('guide1.p1_a')}{sustenna}.
           <br/><br/>
-          There are no systematically collected efficacy or safety data to specifically address switching patients with schizophrenia or schizoaffective disorder from other antipsychotics to INVEGA SUSTENNA{reg} or concerning concomitant administration with other antipsychotics.
+          {t('guide1.p2_a')}{enFr(sustenna, d_sustenna)}{t('guide1.p2_b')}{enFr("", d_sustenna)}{enFr("", t('guide1.p2_c'))}
           <br/><br/>
-          Very rare cases of severe hypersensitivity after injection with 1-month injectable paliperidone have been reported during post-marketing experience in patients who have previously tolerated oral paliperidone or oral risperidone. Care should be taken to avoid exposure to those that are suspected to be hypersensitive or have shown hypersensitivity reactions to any of the excipients.
+          {t('guide1.p3')}
         </p>
         
           <Accordion 
@@ -68,7 +75,10 @@ export default function DosingInvegaSustenna({ reg, modal }) {
             <AccordionItem>
               <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
                 <AccordionItemButton>
-                  Switching from Other Oral Antipsychotics
+                  {enFr(
+                    <span>{t('switching_from')} <span className='nowrap'>{t('guide1.panelA.h3')}</span></span>,
+                    <span>{t('switching_from')} {sustenna} à partir d’autres <span className='nowrap'>{t('guide1.panelA.h3')}</span></span>
+                  )}
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
@@ -78,7 +88,10 @@ export default function DosingInvegaSustenna({ reg, modal }) {
             <AccordionItem>
               <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
                 <AccordionItemButton>
-                  Switching from INVEGA® Extended-release Tablets
+                  {enFr(
+                      <span>{t('switching_from')} {invega} {t('guide1.panelB.h3')}</span>,
+                      <span>{t('switching_from')} {sustenna} à partir de comprimés {invega} à <span className='nowrap'>{t('guide1.panelB.h3')}</span></span>,
+                  )}
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
@@ -88,7 +101,10 @@ export default function DosingInvegaSustenna({ reg, modal }) {
             <AccordionItem>
               <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
                 <AccordionItemButton>
-                  INVEGA SUSTENNA® Monthly Maintenance Dosing
+                  {enFr(
+                    <span>{sustenna} {t('guide1.panelC.h3')}</span>,
+                    <span>{t('guide1.panelC.h3')} {d_sustenna}</span>,
+                  )}
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>

@@ -15,6 +15,7 @@
     "continue": "Continue to website"
   },
   "safety_info": "Safety Information",
+  "switching_from": "Switching from ",
   "nav": {
     "home": "Home",
     "alt_sustenna": "ONCE-MONTHLY INVEGA SUSTENNA® paliperidone palmitate PROLONGED-RELEASE INJECTABLE SUSPENSION",
@@ -24,6 +25,25 @@
     "title": "Dosing Conversion Guides",
     "btn_1a": "Oral Antipsychotics to",
     "btn_1b": "Dosing Conversion Guide"
+  },
+  "guide1": {
+    "h1_a": "Oral Antipsychotic to ",
+    "h1_b": "Conversion Guide",
+    "h2_a": "Switching to ",
+    "h2_b": "from Oral Antipsychotic Medications",
+    "p1_a": "For patients who have never taken oral paliperidone or oral/injectable risperidone, tolerability should be established with oral paliperidone or oral risperidone prior to initiating treatment with ",
+    "p2_a": "There are no systematically collected efficacy or safety data to specifically address switching patients with schizophrenia or schizoaffective disorder from other antipsychotics to ",
+    "p2_b": " or concerning concomitant administration with other antipsychotics.",
+    "p3": "Very rare cases of severe hypersensitivity after injection with 1-month injectable paliperidone have been reported during post-marketing experience in patients who have previously tolerated oral paliperidone or oral risperidone. Care should be taken to avoid exposure to those that are suspected to be hypersensitive or have shown hypersensitivity reactions to any of the excipients.",
+    "panelA": {
+      "h3": "Other Oral Antipsychotics"
+    },
+    "panelB": {
+      "h3": "Extended-release Tablets"
+    },
+    "panelC": {
+      "h3": "Monthly Maintenance Dosing"
+    }
   },
   "footer": {
     "refs": "References: ",

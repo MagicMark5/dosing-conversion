@@ -15,6 +15,7 @@
     "continue": "Continuer vers le site Web"
   },
   "safety_info": "Renseignements sur l’innocuité",
+  "switching_from": "Passage à ",
   "nav": {
     "home": "Accueil",
     "alt_sustenna": "UNE FOIS PAR MOIS ᴾᴿINVEGA SUSTENNA® palmitate de palipéridone EN SUSPENSION INJECTABLE À LIBÉRATION PROLONGÉE",
@@ -25,6 +26,26 @@
     "btn_1a": "Guide de conversion posologique pour le passage à",
     "btn_1b": "à partir d’antipsychotiques oraux"
   },
+  "guide1": {
+    "h1_a": "Guide de conversion pour le passage à ",
+    "h1_b": "d’antipsychotiques oraux",
+    "h2_a": "Passage à ",
+    "h2_b": "à partir d’antipsychotiques oraux",
+    "p1_a": "Chez les patients qui n’ont jamais pris de palipéridone par voie orale ou de rispéridone par voie orale/injectable, il faut déterminer la tolérabilité avec la palipéridone orale ou la rispéridone orale avant d’instaurer un traitement par ",
+    "p2_a": "Il n’y a pas de données recueillies systématiquement dans le but d’étudier spécifiquement l’efficacité ou l’innocuité ",
+    "p2_b": " lorsque celui-ci remplace d’autres antipsychotiques pour le traitement de la schizophrénie ou d’un trouble schizo-affectif ni de données concernant l’administration concomitante ",
+    "p2_c": " avec d’autres antipsychotiques.",
+    "p3": "De très rares cas d’hypersensibilité grave à la suite de l’utilisation de palipéridone injectable administrée 1 fois par mois ont été signalés dans le cadre de la pharmacovigilance après commercialisation, chez des patients ayant précédemment toléré la palipéridone orale ou la rispéridone orale. Des précautions doivent être prises pour éviter toute exposition chez les personnes ayant une hypersensibilité soupçonnée ou chez qui l’un des excipients a produit une réaction d’hypersensibilité.",
+    "panelA": {
+      "h3": "antipsychotiques oraux"
+    },
+    "panelB": {
+      "h3": "libération prolongée"
+    },
+    "panelC": {
+      "h3": "Dose d’entretien mensuelle"
+    }    
+  },  
   "footer": {
     "refs": "Références : ",
     "pm_a": "Monographie de produit",

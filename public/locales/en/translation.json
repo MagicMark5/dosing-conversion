@@ -1,7 +1,5 @@
 {
   "htmlTitle": "INVEGA SUSTENNA® dosing conversion guides",
-  "sustenna": "INVEGA SUSTENNA®",
-  "trinza": "INVEGA TRINZA®",
   "modal": {
     "title": "Important Safety Information",
     "p_1a": "(paliperidone palmitate) is indicated for the treatment of schizophrenia in adult patients. In controlled clinical trials, ",
@@ -17,6 +15,11 @@
     "continue": "Continue to website"
   },
   "safety_info": "Safety Information",
+  "nav": {
+    "home": "Home",
+    "alt_sustenna": "ONCE-MONTHLY INVEGA SUSTENNA® paliperidone palmitate PROLONGED-RELEASE INJECTABLE SUSPENSION",
+    "alt_trinza": "INVEGA TRINZA® paliperidone palmitate prolonged-release injectable suspension 175 mg, 263 mg, 350 mg, 525 mg"
+  },
   "home": {
     "title": "Dosing Conversion Guides",
     "btn_1a": "Oral Antipsychotics to",

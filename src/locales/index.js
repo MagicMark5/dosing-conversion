@@ -15,9 +15,6 @@ i18next
     //lng: 'en', // if you're using a language detector, do not define the lng option
     fallbackLng: "en",
     debug: dev, // console.log the config info and events
-    interpolation: {
-      escapeValue: false,
-    },
     backend: {
       loadPath: `${dev ? `http://localhost:3000` : `https://magicmark5.github.io`}${path}/locales/{{lng}}/{{ns}}.json`
    }

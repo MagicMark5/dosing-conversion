@@ -1,10 +1,5 @@
 {
   "htmlTitle": "Guides de conversion posologique d’INVEGA SUSTENNA®",
-  "d_apos_sustenna": "d’INVEGA SUSTENNA®",
-  "qu_apos_sustenna": "qu’INVEGA SUSTENNA®",
-  "sustenna": "INVEGA SUSTENNA®",
-  "trinza": "INVEGA TRINZA®",
-  "d_apos_trinza": "d’INVEGA TRINZA®",
   "modal": {
     "title": "Renseignements importants sur l’innocuité",
     "p_1a": "(palmitate de palipéridone) est indiqué pour le traitement de la schizophrénie chez les patients adultes. Des essais cliniques contrôlés ont montré ",
@@ -20,6 +15,11 @@
     "continue": "Continuer vers le site Web"
   },
   "safety_info": "Renseignements sur l’innocuité",
+  "nav": {
+    "home": "Accueil",
+    "alt_sustenna": "UNE FOIS PAR MOIS ᴾᴿINVEGA SUSTENNA® palmitate de palipéridone EN SUSPENSION INJECTABLE À LIBÉRATION PROLONGÉE",
+    "alt_trinza": "ᴾᴿINVEGA TRINZA® palmitate de palipéridone en suspension injectable à libération prolongée 175 mg, 263 mg, 350 mg ou 525 mg"
+  },
   "home": {
     "title": "Guides de conversion posologique",
     "btn_1a": "Guide de conversion posologique pour le passage à",

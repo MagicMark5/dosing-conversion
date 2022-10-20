@@ -19,7 +19,8 @@
   "safety_info": "Safety Information",
   "home": {
     "title": "Dosing Conversion Guides",
-    "btn_1": "",
-    "btn_2": ""
+    "btn_1a": "Oral Antipsychotics to",
+    "btn_1b": "Dosing Conversion Guide",
+    "btn_2a": ""
   }
 }

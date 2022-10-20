@@ -22,7 +22,8 @@
   "safety_info": "Renseignements sur l’innocuité",
   "home": {
     "title": "Guides de conversion posologique",
-    "btn_1": "",
-    "btn_2": ""
+    "btn_1a": "Guide de conversion posologique pour le passage à",
+    "btn_1b": "à partir d’antipsychotiques oraux",
+    "btn_2a": ""
   }
 }

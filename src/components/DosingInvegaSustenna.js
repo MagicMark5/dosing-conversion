@@ -76,8 +76,8 @@ export default function DosingInvegaSustenna({ reg, modal }) {
               <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
                 <AccordionItemButton>
                   {enFr(
-                    <span>{t('switching_from')} <span className='nowrap'>{t('guide1.panelA.h3')}</span></span>,
-                    <span>{t('switching_from')} {sustenna} à partir d’autres <span className='nowrap'>{t('guide1.panelA.h3')}</span></span>
+                    <span>{t('switching_from')} {t('guide1.panelA.h3')}</span>,
+                    <span>{t('switching_from')} {sustenna} à partir d’autres {t('guide1.panelA.h3')}</span>
                   )}
                 </AccordionItemButton>
               </AccordionItemHeading>
@@ -90,7 +90,7 @@ export default function DosingInvegaSustenna({ reg, modal }) {
                 <AccordionItemButton>
                   {enFr(
                       <span>{t('switching_from')} {invega} {t('guide1.panelB.h3')}</span>,
-                      <span>{t('switching_from')} {sustenna} à partir de comprimés {invega} à <span className='nowrap'>{t('guide1.panelB.h3')}</span></span>,
+                      <span>{t('switching_from')} {sustenna} à partir de comprimés {invega} à {t('guide1.panelB.h3')}</span>,
                   )}
                 </AccordionItemButton>
               </AccordionItemHeading>

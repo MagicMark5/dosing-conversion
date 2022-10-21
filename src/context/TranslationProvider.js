@@ -10,11 +10,12 @@ export default function TranslationProvider({ children }) {
   const d_sustenna = <span className="nowrap">d’{sustenna}</span>;
   const d_trinza = <span className="nowrap">d’{trinza}</span>;
   const qu_sustenna = <span className="nowrap">qu’{sustenna}</span>;
-
+  const mg = (num) => <span className="nowrap">{num} mg</span>;
   const enFr = (en, fr) => lang === "fr" ? fr : en;
 
   const value = {
     enFr,
+    mg,
     invega,
     sustenna,
     trinza,

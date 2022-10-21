@@ -16,10 +16,13 @@
   },
   "safety_info": "Renseignements sur l’innocuité",
   "switching_from": "Passage à ",
+  "product_m": "D’après la monographie",
+  "d_apos": "d’",
+  "est_colon": "est :",
   "nav": {
     "home": "Accueil",
-    "alt_sustenna": "UNE FOIS PAR MOIS ᴾᴿINVEGA SUSTENNA® palmitate de palipéridone EN SUSPENSION INJECTABLE À LIBÉRATION PROLONGÉE",
-    "alt_trinza": "ᴾᴿINVEGA TRINZA® palmitate de palipéridone en suspension injectable à libération prolongée 175 mg, 263 mg, 350 mg ou 525 mg"
+    "alt_sustenna": "UNE FOIS PAR MOIS ᴾᴿInvega Sustenna® palmitate de palipéridone EN SUSPENSION INJECTABLE À LIBÉRATION PROLONGÉE",
+    "alt_trinza": "ᴾᴿInvega Trinza® palmitate de palipéridone en suspension injectable à libération prolongée 175 mg, 263 mg, 350 mg ou 525 mg"
   },
   "home": {
     "title": "Guides de conversion posologique",
@@ -37,14 +40,56 @@
     "p2_c": " avec d’autres antipsychotiques.",
     "p3": "De très rares cas d’hypersensibilité grave à la suite de l’utilisation de palipéridone injectable administrée 1 fois par mois ont été signalés dans le cadre de la pharmacovigilance après commercialisation, chez des patients ayant précédemment toléré la palipéridone orale ou la rispéridone orale. Des précautions doivent être prises pour éviter toute exposition chez les personnes ayant une hypersensibilité soupçonnée ou chez qui l’un des excipients a produit une réaction d’hypersensibilité.",
     "panelA": {
-      "h3": "antipsychotiques oraux"
+      "h3": "antipsychotiques oraux",
+      "span": "Au moment de commencer à prendre ",
+      "li_1": "Arrêter progressivement l’antipsychotique oral précédent conformément aux renseignements thérapeutiques appropriés.",
+      "initiate": "Instaurer ",
+      "li_2": " conformément au schéma thérapeutique d’instauration recommandé ci-dessous : ",
+      "day": "Jour {{numOfDays}}",
+      "delt": "deltoïde",
+      "muscle": "Muscle",
+      "alt_dose_150": "Le jour 1, administrer la dose du schéma d’instauration de 150 mg dans le muscle deltoïde.",
+      "1_week": "1 semaine",
+      "4_days": "4 jours",
+      "alt_dose_100": "1 semaine +/- 4 jours plus tard, le jour 8, administrer la deuxième dose du schéma d’instauration de 100 mg dans le muscle deltoïde.",
+      "foot_a": "Pour connaître les détails sur le choix de l’aiguille en fonction de la zone d’injection sélectionnée et du poids du patient, veuillez consulter la monographie de produit.",
+      "foot_b": "Pour éviter d’oublier une dose"
     },
     "panelB": {
-      "h3": "libération prolongée"
+      "h3": "libération prolongée",
+      "span_a": "Après administration ",
+      "span_b": " selon le schéma d’instauration, les patients antérieurement stabilisés sous différentes doses de comprimés ",
+      "span_c": " à libération prolongée peuvent atteindre une exposition similaire à la palipéridone à l’état d’équilibre durant le traitement d’entretien avec les doses ",
+      "span_d": " présentées ci-dessous.",
+      "input_a": "Si la dose quotidienne ",
+      "output_a": "La dose d’entretien mensuelle ",
+      "output_b": " nécessaire pour atteindre une exposition similaire à la palipéridone à l’état d’équilibre durant le traitement d’entretien ",
+      "foot_a": "Remarque : La dose de 25 mg n’est pas offerte au Canada.",
+      "foot_b": ""
     },
     "panelC": {
-      "h3": "Dose d’entretien mensuelle"
-    }    
+      "h3": "Dose d’entretien mensuelle",
+      "p_a": "Pour éviter de manquer une dose mensuelle, les patients peuvent recevoir l’injection de leur dose d’entretien mensuelle jusqu’à ",
+      "seven_days": "7 jours",
+      "plus_minus": " avant ou après",
+      "p_b": " le délai d’un mois.",
+      "monthly_a": "Une fois",
+      "monthly_b": "par mois",
+      "delt_or_glut": "Muscle deltoïde ou fessier",
+      "h4_a": "Dose d’entretien pour la schizophrénie",
+      "alt_card_a": "Les doses d’entretien mensuelles doivent être administrées dans le muscle deltoïde ou fessier. Pour les patients atteints de schizophrénie, la dose d’entretien mensuelle recommandée est de 75 mg, se situant dans l’intervalle de 25 à 150 mg, en fonction de la tolérabilité et/ou de l’efficacité chez le patient. La dose de 25 mg n’est pas offerte au Canada.",
+      "card_foot": "Dose recommandée",
+      "h4_b": "Dose d’entretien pour le trouble",
+      "sad": "schizo-affectif",
+      "alt_card_b": "Pour les patients atteints d’un trouble schizo-affectif, la dose d’entretien mensuelle recommandée se situe dans l’intervalle de 50 à 150 mg, en fonction de la tolérabilité et/ou de l’efficacité.",
+      "foot_a": "Pour connaître les détails sur le choix de l’aiguille en fonction de la zone d’injection sélectionnée et du poids du patient, veuillez consulter la monographie de produit.",
+      "foot_b": "À noter : Pour les patients atteints de schizophrénie, la dose d’entretien mensuelle recommandée est de",
+      "foot_b2": "se situant dans l’intervalle de",
+      "foot_b3": ", en fonction de la tolérabilité et/ou de l’efficacité chez le patient. La dose de ",
+      "foot_b4": "n’est pas offerte au Canada. Pour les patients atteints d’un trouble schizo-affectif, la dose d’entretien mensuelle recommandée se situe dans l’intervalle de",
+      "foot_b5": ", en fonction de la tolérabilité et/ou de l’efficacité.",
+      "foot_b6": "Veuillez consulter la monographie de produit pour obtenir les renseignements posologiques complets."
+    }
   },  
   "footer": {
     "refs": "Références : ",

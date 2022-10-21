@@ -11,6 +11,58 @@ article {
   }
 }
 
+// for panel A
+.panel-a-ol > li {
+  padding-left: 0.75em;
+}
+
+figure {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// for panel A + C
+.day-muscle {
+  font-family: $font-bold;
+  text-align: center;
+  line-height: 0.9em;
+  label {  
+    text-transform: uppercase;
+  }
+  .day {
+    font-size: 24px;
+    line-height: 1em;
+    color: $orange;
+    white-space: nowrap;
+  }
+  .muscle {
+    font-size: 16px;
+    color: $grey; // A1A3A6 in layout
+  }
+}
+
+// For PanelA
+.join-label {
+  width: 15%;
+  text-align: center;
+  color: #BE2034;
+  font-size: 24px;
+  font-weight: 700;
+  hr {
+    border-style: dotted none none;
+    border-top: 1px dotted $orange;
+    border-bottom: 0;    
+    width: 100%;
+    border-width: 5px;
+    margin: 15px auto;
+  }
+  span {
+    color: $orange;
+  }
+}
+
 // For PanelC: INVEGA SUSTENNA® Monthly Maintenance Dosing
 article.maintenance {
   align-items: center;
@@ -84,60 +136,6 @@ img.maintenance-dose-card {
   height: 150px;
 }
 
-// for panel A
-.panel-a-ol > li {
-  padding-left: 1em;
-}
-
-figure {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.day-muscle {
-  font-family: $font-bold;
-  text-align: center;
-  line-height: 0.9em;
-  .day {
-    font-size: 24px;
-    line-height: 1.8em;
-    color: $orange;
-  }
-  .muscle {
-    font-size: 16px;
-    color: $grey; // A1A3A6 in layout
-  }
-}
-
-// For PanelA
-.join-label {
-  width: 15%;
-  text-align: center;
-  color: #BE2034;
-  font-size: 24px;
-  font-weight: 700;
-  .week {
-    font-family: $font-bold;
-  }
-  .days { 
-    white-space: nowrap;
-  }
-  hr {
-    border-style: dotted none none;
-    border-top: 1px dotted $orange;
-    border-bottom: 0;    
-    width: 100%;
-    border-width: 5px;
-    margin: 15px auto;
-  }
-  span {
-    color: $orange;
-  }
-}
-
 @media (max-width: 1530px) {
   figure, 
   section.maintenance,
@@ -182,7 +180,7 @@ figure {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 475px) {
   img.maintenance-dose-card {
     height: auto;
     width: auto;
@@ -190,6 +188,8 @@ figure {
   }  
   figure > img {
     width: 80vw;
+    position: relative;
+    right: 10px;
   }
   section.maintenance {
     width: 100%;
@@ -198,7 +198,7 @@ figure {
       align-items: unset;
       h4, footer {
         width: 100%;
-        padding-left: 10px;
+        padding-left: 0px;
       }
       footer {
         font-size: $dose-heading-foot;

@@ -1,55 +1,65 @@
 // images
 import seven_days from "../../assets/seven_days.png";
+import seven_days_fr from "../../assets/seven_days_fr.png";
 import dose_maintenance_1 from "../../assets/dose_maintenance_1.png";
 import dose_maintenance_2 from "../../assets/dose_maintenance_2.png";
 // styles
 import "../../styles/panels.scss";
+// Translation
+import { useTranslation } from "react-i18next";
+import { useContext } from 'react';
+import TranslationContext from '../../context/TranslationContext';
 
 export default function PanelC() {
+  const { t } = useTranslation();
+  const { enFr, mg } = useContext(TranslationContext); // brand name strings  
 
   return (
     <article className="maintenance">
       <header className="maintenance">
         <img
-          src={seven_days} 
-          alt="+/- 7 days"
+          src={enFr(seven_days, seven_days_fr)} 
+          alt={enFr("+/- 7 days", "+/- 7 jours")}
         />
-        <p>To avoid missed monthly doses, patients may be given their monthly maintenance injection <strong style={{ whiteSpace: "nowrap" }}>+/- 7&nbsp;days</strong> from the monthly time point</p>
+        <p>
+          {t('guide1.panelC.p_a')}<strong><span className="nowrap">{t('guide1.panelC.seven_days')}</span>{enFr("", t('guide1.panelC.plus_minus'))}</strong>{t('guide1.panelC.p_b')}
+        </p>
       </header>
 
       <section className="maintenance">
         <div className="day-muscle">
-          <label className="day">MONTHLY</label>
-          <br/>
-          <label className="muscle">DELTOID OR GLUTEAL MUSCLE<sup>§</sup></label>
+          <div className="m-10-bot">
+            <label className="day">{enFr(t('guide1.panelC.monthly'), <span className="lh-1">{t('guide1.panelC.monthly_a')}<br/>{t('guide1.panelC.monthly_b')}</span>)}</label>
+          </div>
+          <label className="muscle">{t('guide1.panelC.delt_or_glut')}<sup>§</sup></label>
         </div>
 
         <figure className="maintenance">
-          <h4>Maintenance Dose for Schizophrenia</h4>
+          <h4>{t('guide1.panelC.h4_a')}</h4>
           <img
             className="maintenance-dose-card"
             src={dose_maintenance_1}
-            alt="25 mg  50 mg  75 mg‖  100 mg  150 mg"
+            alt={t('guide1.panelC.alt_card_a')}
           />
           <footer>
-            <small><sup>‖</sup> Recommended dose</small>
+            <small><sup>‖</sup> {t('guide1.panelC.card_foot')}</small>
           </footer>
         </figure>
 
         <figure className="maintenance" style={{ paddingBottom: "16px" }}>
-          <h4>Maintenance Dose for Schizoaffective&nbsp;Disorder</h4>
+          <h4>{t('guide1.panelC.h4_b')} <span className="nowrap">{t('guide1.panelC.sad')}</span></h4>
           <img
             className="maintenance-dose-card"
             src={dose_maintenance_2}
-            alt="50 mg 	75 mg  100 mg   150 mg"
+            alt={t('guide1.panelC.alt_card_b')}
           />
         </figure>       
       </section>
 
       <footer className="panel-C-footer">
-        <small>§ See details about needle selection based on selected injection area and patient weight in the product monograph.</small>
+        <small>§ {t('guide1.panelC.foot_a')}</small>
         <br/>
-        <small>Note: For patients with schizophrenia, the recommended monthly maintenance dose is <span style={{ whiteSpace: "nowrap" }}>75 mg</span>, with a range of <span style={{ whiteSpace: "nowrap" }}>25-150 mg</span> based on individual patient tolerability and/or efficacy. The <span style={{ whiteSpace: "nowrap" }}>25 mg</span> dose is not available in Canada. For patients with schizoaffective disorder, the recommended monthly maintenance dose is within the range of <span style={{ whiteSpace: "nowrap" }}>50-150 mg</span> based on tolerability and/or efficacy.<br/> Please see the Product Monograph for complete dosing information.</small>
+        <small>{t('guide1.panelC.foot_b')} {mg(75)}, {t('guide1.panelC.foot_b2')} {enFr(mg("25-150"), mg("25 à 150"))}{t('guide1.panelC.foot_b3')} {mg(25)} {t('guide1.panelC.foot_b4')} {enFr(mg("50-150"), mg("50 à 150"))}{t('guide1.panelC.foot_b5')}<br/> {t('guide1.panelC.foot_b6')}</small>
       </footer>
     </article>
   )

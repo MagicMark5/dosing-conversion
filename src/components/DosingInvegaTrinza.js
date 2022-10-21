@@ -8,6 +8,7 @@ import '../styles/panels.scss';
 import icon_alert from '../assets/icon_alert.png';
 import icon_calendar from '../assets/icon_calendar.png';
 import icon_days from '../assets/icon_days.png';
+import seven_days_fr from '../assets/seven_days_fr.png';
 import icon_reminder from '../assets/icon_reminder.png';
 import icon_syringe from '../assets/icon_syringe.png';
 // Accordion 
@@ -19,8 +20,14 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 
+import { useTranslation } from "react-i18next";
+import { useContext } from 'react';
+import TranslationContext from '../context/TranslationContext';
+
 export default function DosingInvegaTrinza({ reg, modal }) {
   // dosing conversions of sustenna to trinza
+  const { t } = useTranslation();
+  const { enFr, sustenna, trinza, d_sustenna, d_trinza, qu_sustenna } = useContext(TranslationContext); // brand name strings  
   
   // Conversions of doses
   // The last word of the snake-case css class must be the color
@@ -45,31 +52,37 @@ export default function DosingInvegaTrinza({ reg, modal }) {
       bgColor: "bg-red",
       fontColor: "font-red",
     },
-  };  
-
+  };
 
   return (
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
       <ChevronHeader
         bgLeft={"bg-trinza-left"}
-        text={<>INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}<br/> Dosing Conversion Guide</>}
+        text={enFr(
+          <>{sustenna} to {trinza}<br/> {t('guide2.h1')}</>,
+          <>{t('guide2.h1')} {trinza} à partir {d_sustenna}</>
+        )}
+        sidePad="side-pad-60"
         bgRight={"bg-trinza-right"}
         bgRectangle={'bg-trinza-blue'}
         bgTriangle={'blue-triangle'}        
       />
       <section className='Dosing-section'>
         <h2 className='font-red font-bold'>
-          Switching from INVEGA&nbsp;SUSTENNA{reg} to INVEGA&nbsp;TRINZA{reg}
+          {enFr(
+            <>{t('switching_from')}{sustenna} {enFr("to", "à partir")} {trinza}</>,
+            <>{t('switching_from')}{trinza} {enFr("to", "à partir")} {sustenna}</>,
+          )}
         </h2>
         <header className="sustenna-to-trinza">
           <div>
             <img
               src={icon_alert} 
-              alt="!"
+              alt=""
             />
           </div>
           <p className='font-grey'>
-            <span className='nowrap'>INVEGA&nbsp;TRINZA{reg}</span> is to be used only after <span className='nowrap'>INVEGA&nbsp;SUSTENNA{reg}</span> has been established as adequate treatment for at least four months. To establish a consistent maintenance dose, it is recommended that the last two doses of <span className='nowrap'>INVEGA&nbsp;SUSTENNA{reg}</span> be the same dosage strength before starting <span className='nowrap'>INVEGA&nbsp;TRINZA{reg}</span>.
+            {trinza} {t('guide2.p_a')} {enFr(sustenna, qu_sustenna)} {t('guide2.p_b')} {enFr(sustenna, d_sustenna)} {t('guide2.p_c')} {trinza}.
           </p>
         </header>
 
@@ -78,38 +91,68 @@ export default function DosingInvegaTrinza({ reg, modal }) {
           <AccordionItem uuid={'trinza'}>
             <AccordionItemHeading>
               <AccordionItemButton className='accordion__button panelD-button'>
-                <strong>Recommended <span className='nowrap'>INVEGA&nbsp;TRINZA{reg}</span> dosing</strong>
+                <strong>
+                  {enFr(
+                    <>Recommended {trinza} dosing</>,
+                    <>Posologie recommandée {d_trinza}</>,
+                  )}
+                </strong>
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel className='panelD'>
               <article className='sustenna-to-trinza'>
-
+                
                 <div className='icon-text-wrapper'>
                   <div className='icon-text-pair'>
                     <img src={icon_calendar} alt="" />
-                    <p>Initiate <span className='nowrap'>INVEGA TRINZA®</span> in place of the next scheduled <span className='nowrap'>INVEGA SUSTENNA®</span> dose.</p>
+                    <p>{t('guide2.text_1a')} {trinza} {t('guide2.text_1b')} {enFr(sustenna, d_sustenna)}{enFr(" dose.", ".")}</p>
                   </div>
                   <div className='icon-text-pair'>
-                    <img src={icon_days} alt="+/- 7 days" />
-                    <p><span className='nowrap'>INVEGA TRINZA®</span> may be administered <span className='nowrap'>+/- 7 days</span> from the next scheduled <span className='nowrap'>INVEGA SUSTENNA®</span> dose.</p>
-                  </div>                  
+                    <img src={enFr(icon_days, seven_days_fr)} alt={enFr("+/- 7 days", "+/- 7 jours")} />
+                    <p>
+                      {enFr(
+                        <>{trinza} may be administered <span className='nowrap'>+/- 7 days</span> {t('guide2.text_3a')} {sustenna} dose.</>,
+                        <>{trinza} peut être administré jusqu’à <span className='nowrap'>7 jours</span> {t('guide2.text_3a')} {d_sustenna}.</>,
+                      )}
+                    </p>
+                  </div>             
                 </div>
 
                 <div className='icon-text-wrapper'>
                   <div className='icon-text-pair'>
                     <img src={icon_syringe} alt="" />
-                    <p><span className='nowrap'>INVEGA TRINZA®</span> dose should be based on the previous <span className='nowrap'>INVEGA SUSTENNA®</span> dose using the equivalent <span className='nowrap'>3.5-fold</span> multiplier.</p>
+                    <p>
+                      {enFr(
+                        <>{trinza} {t('guide2.text_2a')} {sustenna} dose using the equivalent <span className='nowrap'>3.5-fold</span> multiplier.</>,
+                        <>La dose {d_trinza} {t('guide2.text_2a')} {d_sustenna}, c’est-à-dire en multipliant par un facteur <span className='nowrap'>de 3,5.</span></>,
+                      )}
+                    </p>
                   </div>
                   <div className='icon-text-pair'>
                     <img src={icon_reminder} alt="" />
-                    <p>Following the initial <span className='nowrap'>INVEGA TRINZA®</span> dose, administer <span className='nowrap'>INVEGA TRINZA®</span> every 3 months. Dose can be adjusted at this interval between <span className='nowrap'>175 mg – 525 mg</span> based on individual tolerability and/or efficacy.</p>
+                    <p>
+                      {enFr(
+                        <>Following the initial {trinza} dose, administer {trinza} every <span className='nowrap'>3 months.</span> Dose can be adjusted at this interval between <span className='nowrap'>175 mg – 525 mg</span> based on individual tolerability and/or efficacy.</>,
+                        <>Après la dose initiale {d_trinza}, administrer {trinza} tous les <span className='nowrap'>3 mois.</span> La dose peut être ajustée à cet intervalle entre <span className='nowrap'>175 mg et 525 mg</span> en fonction de la tolérabilité et/ou de l’efficacité propre à chaque patient.</>,
+                      )}
+                    </p>
                   </div>                  
                 </div>                
 
                 <div className='sustenna-to-trinza-calc'>
                   <DoseCalc
-                    inputLabel={<span>If the last <span className='font-bold font-light-red'>INVEGA SUSTENNA{reg}</span> dose is:</span>}
-                    outputLabel={<span>Initiate <span className='font-bold font-trinza-blue nowrap'>INVEGA&nbsp;TRINZA{reg}</span> at the following dose:</span>}
+                    inputLabel={<span>
+                                  {enFr(
+                                    <>If the last <span className='font-bold font-light-red'>INVEGA SUSTENNA{reg}</span> dose is:</>,
+                                    <>Si la dernière dose d’<span className='font-bold font-light-red'>INVEGA SUSTENNA®</span> est <span className='nowrap'>de :</span></>,
+                                  )}
+                                </span>}
+                    outputLabel={<span>
+                                  {enFr(
+                                    <>Initiate <span className='font-bold font-trinza-blue nowrap'>INVEGA&nbsp;TRINZA{reg}</span> at the following dose:</>,
+                                    <>Instaurer <span className='font-bold font-trinza-blue nowrap'>INVEGA TRINZA®</span> à la dose <span className='nowrap'>suivante :</span></>,
+                                  )}
+                                </span>}
                     doseIO={doses}
                     bgOutput={'bg-light-blue'}
                     colorOutput={'font-dark-blue'}

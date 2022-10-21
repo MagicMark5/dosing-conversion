@@ -10,7 +10,7 @@ export default function TermsOfUse({ modal }) {
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
       <ChevronHeader
         bgLeft={'bg-header-orange'}
-        text={<><br/>Terms of Use</>}
+        text={<>Terms of Use</>}
         bgRight={'bg-header-red'}
       />
       <article className="terms">

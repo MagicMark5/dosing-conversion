@@ -1,7 +1,7 @@
 import Chevron from "./Chevron";
 import "../../styles/ChevronHeader.scss";
 
-export default function ChevronHeader({ text, bgLeft, bgRight, bgRectangle, bgTriangle }) {
+export default function ChevronHeader({ text, bgLeft, bgRight, bgRectangle, bgTriangle, sidePad = "side-pad-20" }) {
   return (
     <>
       <header className="chevron-header">
@@ -9,7 +9,7 @@ export default function ChevronHeader({ text, bgLeft, bgRight, bgRectangle, bgTr
           <div className="silver-border"></div>
         </div>
         <Chevron 
-          heading={<h1 className="chevron-text page-header-size">{text}</h1>}
+          heading={<h1 className={`chevron-text page-header-size ${sidePad}`}>{text}</h1>}
           bgRectangle={bgRectangle}
           bgTriangle={bgTriangle}
         />
@@ -17,7 +17,6 @@ export default function ChevronHeader({ text, bgLeft, bgRight, bgRectangle, bgTr
           <div className="silver-border"></div>
         </div>
       </header>
-      
     </>
   )
 }

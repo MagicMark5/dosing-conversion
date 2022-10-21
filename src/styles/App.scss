@@ -32,9 +32,10 @@ table td:first-child {
 .home-header-size {
   font-size: $heading-font-size;
   line-height: $heading-line-height;
+  margin-bottom: 40px;
 }
 
-// Sustenna/Trinza page heading size
+// Sustenna/Trinza/Terms of use page heading size
 .page-header-size {
   font-size: $page-font-size;
   line-height: $page-line-height;
@@ -113,6 +114,13 @@ table td:first-child {
 }
 
 // Positioning classes
+
+.side-pad-20 {
+  padding: 0 20px;
+}
+.side-pad-60 {
+  padding: 0 60px;
+}
 
 // 10px to bottom margin
 .m-10-bot {

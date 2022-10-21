@@ -89,6 +89,16 @@
       "foot_b6": "Please see the Product Monograph for complete dosing information."
     }
   },
+  "guide2": {
+    "h1": "Dosing Conversion Guide",
+    "p_a": "is to be used only after",
+    "p_b": "has been established as adequate treatment for at least four months. To establish a consistent maintenance dose, it is recommended that the last two doses of",
+    "p_c": "be the same dosage strength before starting",
+    "text_1a": "Initiate",
+    "text_1b": "in place of the next scheduled",
+    "text_2a": "dose should be based on the previous",
+    "text_3a": "from the next scheduled"
+  },
   "footer": {
     "refs": "References: ",
     "pm": "Product Monograph. Janssen Inc. December 17, 2020. ",

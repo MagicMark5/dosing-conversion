@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .chevron-wrapper {
   display: flex;
@@ -11,11 +12,12 @@
 
 .heading {
   width: 100%;
-  padding: 25px 0px 20px;
+  min-height: 120px;
+  @include center-flex;
+  padding: 25px 0px 0px;
 }
 
 .chevron-text {
-  padding: 0 20px;
   color: #fff;
   font-family: 'Apex Sans', 'Open Sans';
   font-weight: 900;
@@ -39,7 +41,8 @@
     margin: 0 auto;
   }
   .heading {
-    padding: 0px;
+    padding-top: 15px;
+    min-height: unset;
   }  
   .chevron {
     /* width is border left and right */

@@ -90,6 +90,16 @@
       "foot_b5": ", en fonction de la tolérabilité et/ou de l’efficacité.",
       "foot_b6": "Veuillez consulter la monographie de produit pour obtenir les renseignements posologiques complets."
     }
+  },
+  "guide2": {
+    "h1": "Guide de conversion posologique pour le passage à",
+    "p_a": "est à utiliser seulement après",
+    "p_b": "ait été déterminé comme étant un traitement adéquat pendant au moins quatre mois. Afin d’établir une dose d’entretien constante, il est recommandé que les deux dernières doses",
+    "p_c": "soient les mêmes avant de commencer",
+    "text_1a": "Instaurer ",
+    "text_1b": "à la date prévue de la prochaine dose",
+    "text_2a": "doit être établie en fonction de la dose précédente",
+    "text_3a": "avant ou après la date prévue de la prochaine dose"
   },  
   "footer": {
     "refs": "Références : ",

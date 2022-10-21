@@ -158,6 +158,14 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                     colorOutput={'font-dark-blue'}
                     colWidth={'width-50p'}
                   />
+                  <div className='calc-footer'>
+                    <small>
+                      {enFr(
+                        <>Adapted from the {trinza} Product Monograph.</>,
+                        <>D’après la monographie {d_trinza}.</>,
+                      )}
+                    </small>
+                  </div>
                 </div>
               </article>
             </AccordionItemPanel>

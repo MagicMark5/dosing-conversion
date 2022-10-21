@@ -1,9 +1,11 @@
 import '../styles/Home.scss';
 import { Link } from 'react-router-dom';
+
 import { useContext } from 'react';
 import TranslationContext from '../context/TranslationContext';
-import Chevron from './materials/Chevron';
 import { useTranslation } from "react-i18next";
+
+import Chevron from './materials/Chevron';
 
 
 export default function Home({modal}) {

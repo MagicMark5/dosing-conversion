@@ -2,43 +2,85 @@ import ChevronHeader from "./materials/ChevronHeader";
 
 import "../styles/TermsOfUse.scss";
 
+import { useContext } from 'react';
+import TranslationContext from '../context/TranslationContext';
+// import { useTranslation } from "react-i18next";
+
 export default function TermsOfUse({ modal }) {
-  // ensure page is scrolled to top upon mount
-  window.scrollTo(0,0);
+  // const { t, i18n } = useTranslation();
+  const { enFr, term } = useContext(TranslationContext);
+  window.scrollTo(0,0); // ensure page is scrolled to top upon mount
 
   return (
     <main className={`nav-shadow ${modal ? "blur" : ""}`}>
       <ChevronHeader
         bgLeft={'bg-header-orange'}
-        text={<>Terms of Use</>}
+        text={enFr(
+                <>Terms of Use</>,
+                <span className="uppercase">Conditions D’utilisation</span>,
+              )}
         bgRight={'bg-header-red'}
       />
       <article className="terms">
-        <h2 className="font-orange font-bold">TERMS OF SERVICE</h2>
+        <h2 className="font-orange font-bold uppercase">
+          {enFr(
+            <>Terms of Service</>,
+            <>Conditions D’utilisation</>
+          )}
+        </h2>
         <p>
-          Last Updated: April 29, 2019<br/>
-          <br/>
-          Please read these Terms of Service (the “<span className="underline">Agreement</span>”) carefully. By clicking or tapping “OK” or “Agree” (or a similar term) in connection with this Agreement, or by using the Services (as defined below), you agree to this Agreement. We recommend that you print a copy of this Agreement for future reference. We retain the right to make changes, as outlined below.<br/>
-          This Agreement is between you and Janssen Inc. (“<span className="underline">Company</span>” or “<span className="underline">we</span>” or “<span className="underline">us</span>” or “<span className="underline">our</span>”) concerning your use of the Dosing Conversion Guides site located at invegasustennahcp.ca (the “<span className="underline">Site</span>”) the mobile software application in connection with which you are accessing this Agreement (the “<span className="underline">App</span>” or the “<span className="underline">Services</span>”).<br/>
-          <br/>
-          If you are not willing to accept the terms and conditions in the Agreement, we ask that you not access or use the Services or post or submit any materials on it or order any items from it. Please review our Privacy Policy located at <a href="http://www.janssen.com/canada/privacy" target="_blank" rel="noreferrer">http://www.janssen.com/canada/privacy</a> for details about what information we collect and how we use it.<br/>
-          <br/>
-          THIS SITE IS INTENDED FOR AND DIRECTED TO RESIDENTS OF CANADA. YOU AFFIRM THAT YOU ARE OF LEGAL AGE TO ENTER INTO THIS AGREEMENT.<br/>
-          IF YOU ARE USING THE SERVICES ON BEHALF OF, OR FOR THE BENEFIT OF, ANY ORGANIZATION WITH WHICH YOU ARE ASSOCIATED, THEN YOU AGREE TO THE TERMS OF THIS AGREEMENT ON BEHALF OF YOURSELF AND SUCH ORGANIZATION, AND YOU CONFIRM THAT YOU HAVE THE LEGAL AUTHORITY TO BIND SUCH ORGANIZATION TO THIS AGREEMENT.<br/>
-          References to “you” and “your” in this Agreement will refer to both you and any such organization.<br/>
-          <br/>
-          <strong className="font-bold">1. Our Right to Make Changes.</strong> We may change this Agreement from time to time (for any reason, such as changes in the functions or services offered by this Site or to reflect a change in the law) by notifying you of such changes by any reasonable means and by making available a revised Agreement through the Services. Any such changes will not apply to any dispute between you and us arising prior to the date on which we posted the revised Agreement incorporating such changes or otherwise notified you of such changes. Your clicking or tapping “OK” or “Agree” (or a similar term) in connection with this Agreement or your use of the Services following any changes will constitute your acceptance of such changes. The “Last Updated” legend above indicates when this Agreement was last changed.<br/>
-          To the extent permitted by applicable law, we may, at any time and without liability, modify or discontinue all or part of the Services (e.g., to reflect changes in the relevant laws, to protect the security of the Services or to implement reasonable technical adjustments and improvements, to modify the services and functions provided by the Site); charge, modify or waive any fees required to use the Services where reasonably necessary; or offer opportunities to some or all users, at our sole discretion. We will seek to notify you by reasonable means of (i) any modifications that will have a material adverse effect on your use of the Services, taken as a whole; and (ii) any material increase in the fees charged by us to use the Services.<br/>
-          <br/>
-          <strong className="font-bold">2. Information Disclaimer.</strong> THE INFORMATION INCLUDING ANY, ADVICE AND RECOMMENDATIONS PROVIDED AS PART OF THE SERVICES IS INTENDED SOLELY FOR EDUCATIONAL AND INFORMATIONAL PURPOSES. IT IS NOT INTENDED AS MEDICAL OR HEALTHCARE ADVICE, OR TO BE USED FOR MEDICAL DIAGNOSIS OR TREATMENT, FOR ANY INDIVIDUAL PROBLEM. IT IS ALSO NOT INTENDED AS A SUBSTITUTE FOR PROFESSIONAL ADVICE AND SERVICES FROM A QUALIFIED HEALTHCARE PROVIDER FAMILIAR WITH YOUR UNIQUE FACTS. ALWAYS SEEK THE ADVICE OF YOUR DOCTOR OR OTHER QUALIFIED HEALTHCARE PROVIDER REGARDING ANY MEDICAL CONDITION AND BEFORE STARTING ANY NEW TREATMENT. YOUR USE OF THE SERVICES IS SUBJECT TO THE ADDITIONAL DISCLAIMERS AND CAVEATS THAT MAY APPEAR THROUGHOUT THE SERVICES.<br/>
-          <br/>
-          WE ASSUME NO RESPONSIBILITY FOR ANY CONSEQUENCE RELATING DIRECTLY OR INDIRECTLY TO ANY ACTION OR INACTION YOU TAKE BASED ON THE INFORMATION, OR OTHER MATERIAL PROVIDED AS PART OF THE SERVICES. WHILE WE STRIVE TO KEEP THE INFORMATION PROVIDED BY THE SERVICES TO BE ACCURATE, COMPLETE, AND UP TO DATE, WE DO NOT GIVE ANY ASSURANCES AND WILL NOT BE RESPONSIBLE FOR ANY DAMAGE OR LOSS RELATED TO THE ACCURACY, COMPLETENESS, OR TIMELINESS OF THE INFORMATION PROVIDED AS PART OF THE SERVICES.<br/>
-          <br/>
-          <strong className="font-bold">3. Information Submitted Through the Services.</strong> Your submission of information through the Services is governed by our Privacy Policy.<br/>
-          <br/>
-          <strong className="font-bold">4. Jurisdictional Issues.</strong> The Services may not be appropriate or available for use in some jurisdictions. Any use of the Services is at your own risk, and you must comply with all applicable laws, rules and regulations in doing so. We may limit the availability of the Services at any time, in whole or in part, to any person or geographic area that we choose, in our sole discretion, for valid reasons (e.g., to comply with relevant laws and regulatory requirements, to protect the security of the Services or to implement reasonable technical adjustments).<br/>
-          <br/>
-          <strong className="font-bold">5. Acceptable Use and Rules of Conduct.</strong> You must not:
+          {enFr(
+            <>
+              Last Updated: April 29, 2019<br/>
+              <br/>
+              Please read these Terms of Service (the “<span className="underline">Agreement</span>”) carefully. By clicking or tapping “OK” or “Agree” (or a similar term) in connection with this Agreement, or by using the Services (as defined below), you agree to this Agreement. We recommend that you print a copy of this Agreement for future reference. We retain the right to make changes, as outlined below.<br/>
+              This Agreement is between you and Janssen Inc. (“<span className="underline">Company</span>” or “<span className="underline">we</span>” or “<span className="underline">us</span>” or “<span className="underline">our</span>”) concerning your use of the Dosing Conversion Guides site located at invegasustennahcp.ca (the “<span className="underline">Site</span>”) the mobile software application in connection with which you are accessing this Agreement (the “<span className="underline">App</span>” or the “<span className="underline">Services</span>”).<br/>
+              <br/>
+              If you are not willing to accept the terms and conditions in the Agreement, we ask that you not access or use the Services or post or submit any materials on it or order any items from it. Please review our Privacy Policy located at <a href="http://www.janssen.com/canada/privacy" target="_blank" rel="noreferrer">http://www.janssen.com/canada/privacy</a> for details about what information we collect and how we use it.<br/>
+              <br/>
+              THIS SITE IS INTENDED FOR AND DIRECTED TO RESIDENTS OF CANADA. YOU AFFIRM THAT YOU ARE OF LEGAL AGE TO ENTER INTO THIS AGREEMENT.<br/>
+              IF YOU ARE USING THE SERVICES ON BEHALF OF, OR FOR THE BENEFIT OF, ANY ORGANIZATION WITH WHICH YOU ARE ASSOCIATED, THEN YOU AGREE TO THE TERMS OF THIS AGREEMENT ON BEHALF OF YOURSELF AND SUCH ORGANIZATION, AND YOU CONFIRM THAT YOU HAVE THE LEGAL AUTHORITY TO BIND SUCH ORGANIZATION TO THIS AGREEMENT.<br/>
+              References to “you” and “your” in this Agreement will refer to both you and any such organization.<br/>
+              <br/>
+              <strong className="font-bold">1. Our Right to Make Changes.</strong> We may change this Agreement from time to time (for any reason, such as changes in the functions or services offered by this Site or to reflect a change in the law) by notifying you of such changes by any reasonable means and by making available a revised Agreement through the Services. Any such changes will not apply to any dispute between you and us arising prior to the date on which we posted the revised Agreement incorporating such changes or otherwise notified you of such changes. Your clicking or tapping “OK” or “Agree” (or a similar term) in connection with this Agreement or your use of the Services following any changes will constitute your acceptance of such changes. The “Last Updated” legend above indicates when this Agreement was last changed.<br/>
+              To the extent permitted by applicable law, we may, at any time and without liability, modify or discontinue all or part of the Services (e.g., to reflect changes in the relevant laws, to protect the security of the Services or to implement reasonable technical adjustments and improvements, to modify the services and functions provided by the Site); charge, modify or waive any fees required to use the Services where reasonably necessary; or offer opportunities to some or all users, at our sole discretion. We will seek to notify you by reasonable means of (i) any modifications that will have a material adverse effect on your use of the Services, taken as a whole; and (ii) any material increase in the fees charged by us to use the Services.<br/>
+              <br/>
+              <strong className="font-bold">2. Information Disclaimer.</strong> THE INFORMATION INCLUDING ANY, ADVICE AND RECOMMENDATIONS PROVIDED AS PART OF THE SERVICES IS INTENDED SOLELY FOR EDUCATIONAL AND INFORMATIONAL PURPOSES. IT IS NOT INTENDED AS MEDICAL OR HEALTHCARE ADVICE, OR TO BE USED FOR MEDICAL DIAGNOSIS OR TREATMENT, FOR ANY INDIVIDUAL PROBLEM. IT IS ALSO NOT INTENDED AS A SUBSTITUTE FOR PROFESSIONAL ADVICE AND SERVICES FROM A QUALIFIED HEALTHCARE PROVIDER FAMILIAR WITH YOUR UNIQUE FACTS. ALWAYS SEEK THE ADVICE OF YOUR DOCTOR OR OTHER QUALIFIED HEALTHCARE PROVIDER REGARDING ANY MEDICAL CONDITION AND BEFORE STARTING ANY NEW TREATMENT. YOUR USE OF THE SERVICES IS SUBJECT TO THE ADDITIONAL DISCLAIMERS AND CAVEATS THAT MAY APPEAR THROUGHOUT THE SERVICES.<br/>
+              <br/>
+              WE ASSUME NO RESPONSIBILITY FOR ANY CONSEQUENCE RELATING DIRECTLY OR INDIRECTLY TO ANY ACTION OR INACTION YOU TAKE BASED ON THE INFORMATION, OR OTHER MATERIAL PROVIDED AS PART OF THE SERVICES. WHILE WE STRIVE TO KEEP THE INFORMATION PROVIDED BY THE SERVICES TO BE ACCURATE, COMPLETE, AND UP TO DATE, WE DO NOT GIVE ANY ASSURANCES AND WILL NOT BE RESPONSIBLE FOR ANY DAMAGE OR LOSS RELATED TO THE ACCURACY, COMPLETENESS, OR TIMELINESS OF THE INFORMATION PROVIDED AS PART OF THE SERVICES.<br/>
+              <br/>
+              <strong className="font-bold">3. Information Submitted Through the Services.</strong> Your submission of information through the Services is governed by our Privacy Policy.<br/>
+              <br/>
+              <strong className="font-bold">4. Jurisdictional Issues.</strong> The Services may not be appropriate or available for use in some jurisdictions. Any use of the Services is at your own risk, and you must comply with all applicable laws, rules and regulations in doing so. We may limit the availability of the Services at any time, in whole or in part, to any person or geographic area that we choose, in our sole discretion, for valid reasons (e.g., to comply with relevant laws and regulatory requirements, to protect the security of the Services or to implement reasonable technical adjustments).<br/>
+              <br/>
+              <strong className="font-bold">5. Acceptable Use and Rules of Conduct.</strong> You must not:
+            </>,
+            <>
+              Dernière mise à jour&nbsp;: <span className="nowrap">29 avril 2019</span><br/>
+              <br/>
+              Veuillez lire attentivement les présentes conditions d’utilisation <span className="nowrap">(l’{term("entente")}).</span> En cliquant ou en appuyant sur <span className="nowrap">« OK »</span> ou <span className="nowrap">« J’accepte »</span> (ou un terme similaire) en lien avec la présente entente, ou en utilisant les services (tel qu’il est défini ci-dessous), vous acceptez la présente entente. Nous vous recommandons d’imprimer une copie de la présente entente afin de pouvoir la consulter ultérieurement. Nous nous réservons le droit d’y apporter des modifications, tel qu’il est indiqué ci-dessous.<br/>
+              La présente entente est conclue entre vous et Janssen Inc. (la {term("société")}, {term("nous")}, {term("notre")} ou {term("nos")}) et porte sur votre utilisation du site Guides de conversion posologique à l’adresse invegasustennahcp.ca (le {term("site")}) ou de l’application logicielle mobile en lien avec laquelle vous accédez à la présente entente (l’{term("application")} ou collectivement, les {term("services")}).<br/>
+              <br/>
+              Si vous ne souhaitez pas accepter les conditions d’utilisation énoncées dans la présente entente, nous vous demandons de ne pas accéder aux services, utiliser les services, publier ou soumettre du matériel dans les services, ou encore commander quelque article que ce soit par l’intermédiaire des services. Veuillez consulter notre politique de confidentialité à l’adresse <a href="https://www.janssen.com/canada/fr/privacy" target="_blank" rel="noreferrer">http://www.janssen.com/canada/fr/privacy</a> pour en savoir plus sur les renseignements que nous recueillons et sur la façon dont nous les utilisons.<br/>
+              <br/>
+              CE SITE EST CONÇU POUR LES PERSONNES QUI RÉSIDENT AU CANADA ET S’ADRESSE À ELLES. VOUS AFFIRMEZ QUE VOUS AVEZ L’ÂGE LÉGAL POUR CONCLURE LA PRÉSENTE ENTENTE.<br/>
+              <br/>
+              SI VOUS UTILISEZ LES SERVICES AU NOM OU AU BÉNÉFICE DE TOUTE ORGANISATION À LAQUELLE VOUS ÊTES ASSOCIÉ, VOUS ACCEPTEZ LES CONDITIONS D’UTILISATION ÉNONCÉES DANS LA PRÉSENTE ENTENTE EN VOTRE NOM ET AU NOM DE CETTE ORGANISATION, ET VOUS CONFIRMEZ QUE VOUS ÊTES JURIDIQUEMENT AUTORISÉ À LIER CETTE ORGANISATION À LA PRÉSENTE ENTENTE. Les termes « vous » et « votre » dans la présente entente se rapportent à la fois à vous et à cette organisation.<br/>
+              <br/>
+              <strong className="font-bold">1. Our Right to Make Changes.</strong> We may change this Agreement from time to time (for any reason, such as changes in the functions or services offered by this Site or to reflect a change in the law) by notifying you of such changes by any reasonable means and by making available a revised Agreement through the Services. Any such changes will not apply to any dispute between you and us arising prior to the date on which we posted the revised Agreement incorporating such changes or otherwise notified you of such changes. Your clicking or tapping “OK” or “Agree” (or a similar term) in connection with this Agreement or your use of the Services following any changes will constitute your acceptance of such changes. The “Last Updated” legend above indicates when this Agreement was last changed.<br/>
+              To the extent permitted by applicable law, we may, at any time and without liability, modify or discontinue all or part of the Services (e.g., to reflect changes in the relevant laws, to protect the security of the Services or to implement reasonable technical adjustments and improvements, to modify the services and functions provided by the Site); charge, modify or waive any fees required to use the Services where reasonably necessary; or offer opportunities to some or all users, at our sole discretion. We will seek to notify you by reasonable means of (i) any modifications that will have a material adverse effect on your use of the Services, taken as a whole; and (ii) any material increase in the fees charged by us to use the Services.<br/>
+              <br/>
+              <strong className="font-bold">2. Information Disclaimer.</strong> THE INFORMATION INCLUDING ANY, ADVICE AND RECOMMENDATIONS PROVIDED AS PART OF THE SERVICES IS INTENDED SOLELY FOR EDUCATIONAL AND INFORMATIONAL PURPOSES. IT IS NOT INTENDED AS MEDICAL OR HEALTHCARE ADVICE, OR TO BE USED FOR MEDICAL DIAGNOSIS OR TREATMENT, FOR ANY INDIVIDUAL PROBLEM. IT IS ALSO NOT INTENDED AS A SUBSTITUTE FOR PROFESSIONAL ADVICE AND SERVICES FROM A QUALIFIED HEALTHCARE PROVIDER FAMILIAR WITH YOUR UNIQUE FACTS. ALWAYS SEEK THE ADVICE OF YOUR DOCTOR OR OTHER QUALIFIED HEALTHCARE PROVIDER REGARDING ANY MEDICAL CONDITION AND BEFORE STARTING ANY NEW TREATMENT. YOUR USE OF THE SERVICES IS SUBJECT TO THE ADDITIONAL DISCLAIMERS AND CAVEATS THAT MAY APPEAR THROUGHOUT THE SERVICES.<br/>
+              <br/>
+              WE ASSUME NO RESPONSIBILITY FOR ANY CONSEQUENCE RELATING DIRECTLY OR INDIRECTLY TO ANY ACTION OR INACTION YOU TAKE BASED ON THE INFORMATION, OR OTHER MATERIAL PROVIDED AS PART OF THE SERVICES. WHILE WE STRIVE TO KEEP THE INFORMATION PROVIDED BY THE SERVICES TO BE ACCURATE, COMPLETE, AND UP TO DATE, WE DO NOT GIVE ANY ASSURANCES AND WILL NOT BE RESPONSIBLE FOR ANY DAMAGE OR LOSS RELATED TO THE ACCURACY, COMPLETENESS, OR TIMELINESS OF THE INFORMATION PROVIDED AS PART OF THE SERVICES.<br/>
+              <br/>
+              <strong className="font-bold">3. Information Submitted Through the Services.</strong> Your submission of information through the Services is governed by our Privacy Policy.<br/>
+              <br/>
+              <strong className="font-bold">4. Jurisdictional Issues.</strong> The Services may not be appropriate or available for use in some jurisdictions. Any use of the Services is at your own risk, and you must comply with all applicable laws, rules and regulations in doing so. We may limit the availability of the Services at any time, in whole or in part, to any person or geographic area that we choose, in our sole discretion, for valid reasons (e.g., to comply with relevant laws and regulatory requirements, to protect the security of the Services or to implement reasonable technical adjustments).<br/>
+              <br/>
+              <strong className="font-bold">5. Acceptable Use and Rules of Conduct.</strong> You must not:
+            </>,
+          )}
         </p>
         <ul className="terms-bullet-list">
           <li><span>Post, transmit or otherwise make available through or in connection with the Services any materials that are or may be: (a) threatening, harassing, degrading, hateful, intimidating, or otherwise fail to respect the rights and dignity of others; (b) defamatory, libelous or fraudulent; (c) obscene, indecent, pornographic or otherwise objectionable; or (d) protected by copyright, trademark, trade secret, right of publicity or privacy or any other proprietary right, without the express prior written consent of the applicable owner.</span></li>

@@ -19,7 +19,7 @@ export default function Home({modal}) {
         <div className="flex-center">
           <Chevron heading={<h1 className="chevron-text home-header-size">{t('home.title')}</h1>} />
         </div>
-        <div className="buttons">
+        <section className="buttons">
           <Link className="btn left" to="/conversionguide1">
             <div className="ghost-arrow arrow-left"></div>
             <p>
@@ -33,7 +33,7 @@ export default function Home({modal}) {
             </p>
             <div className="ghost-arrow arrow-right"></div>
           </Link>
-        </div>
+        </section>
       </div>
     </div>
   )

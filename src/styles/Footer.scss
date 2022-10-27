@@ -53,6 +53,13 @@
   .imc-logo { height: 70px; }
 }
 
+@media all and (min-width: $large-screen-bp) {
+  .logos {
+    img { margin-right: 100px; }
+    .janssen-logo, .paab-logo, .imc-logo { height: calc(70px + 1.3vw); }
+  }  
+}
+
 @media screen and (max-width: $breakpoint) {
   .legal-logos-container {
     flex-direction: column;

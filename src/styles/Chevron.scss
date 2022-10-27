@@ -34,6 +34,14 @@
   // border-top: 45px solid $red; // bg color of triangle
 }
 
+// large screens
+@media all and (min-width: $large-screen-bp) {
+  .chevron {
+    /* height of chevron is border-top */
+    border-top-width: $chevron-triange-height;
+  }
+}
+
 @media all and (max-width: $chevron-header-bp) {
   .chevron-wrapper {
     position: revert;
@@ -53,8 +61,14 @@
   }
 }
 
-// When height is same or greater than width...
+// If the height is larger than the width the window is in portrait mode. 
+// If the width is larger than the height it’s in landscape mode.
 @media all and (orientation: portrait) {
+  .chevron-wrapper {
+    position: revert;
+    width: 85%;
+    margin: 0 auto;
+  }  
   .chevron {
     /* width is border left and right */
     border-left-width: $chevron-triangle-width-portait;

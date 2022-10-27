@@ -81,6 +81,15 @@ img.nav-logo {
   left: 20px;
 }
 
+// Large Screens
+@media all and (min-width: $large-screen-bp) {
+  .modal-button {
+    padding: 20px;
+    height: auto;
+    max-width: unset;
+  }  
+}
+
 // Desktop
 @media screen and (min-width: $nav-min-width-bp) {
   nav {

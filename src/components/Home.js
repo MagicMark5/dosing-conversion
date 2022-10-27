@@ -16,7 +16,7 @@ export default function Home({modal}) {
   return (
     <div className="home">
       <div className={modal ? "blur home-bg" : "home-bg"}>
-        <div className="flex-center">
+        <div className="flex-center" style={{ marginTop: "auto" }}>
           <Chevron heading={<h1 className="chevron-text home-header-size">{t('home.title')}</h1>} />
         </div>
         <section className="buttons">

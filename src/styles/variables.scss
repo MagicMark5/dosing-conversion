@@ -26,12 +26,16 @@ $trinza_gradient: linear-gradient(to right, #B01C2E 0%, #BC2237 49%, #F58220 66%
 $margins: 10%;
 
 // Breakpoints
-$chevron-header-bp: 1105px;
+$large-screen-bp: 2000px;
+$chevron-header-bp: 1105px; // 1105px old, 
 $breakpoint: 1030px;
 $nav-min-width-bp: 921px;
 $nav-max-width-bp: 920px;
 
 // Responsive font-sizes (minimum font-size is the value in px)
+$app-font-size: calc(12px + 0.75vw);
+$app-line-height: calc(16px + 0.75vw);
+// Chevron + Headings
 $heading-font-size: calc(14px + 2vw);
 $heading-line-height: calc(20px + 2vw);
 // Safety information button
@@ -58,6 +62,8 @@ $dose-card-shadow: -30px 0px 50px 0px rgba(0,0,0,0.1);
 // Chevron dimensions - Desktop
 $chevron-rectangle-width: 50%;
 $chevron-triangle-width: 25vmax;
+// For large screens
+$chevron-triange-height: 2.5vmax;
 
 // Chevron dimensions - Mobile
 $chevron-triangle-width-mobile: 42vmax;

@@ -26,8 +26,8 @@ $trinza_gradient: linear-gradient(to right, #B01C2E 0%, #BC2237 49%, #F58220 66%
 $margins: 10%;
 
 // Breakpoints
-$large-screen-bp: 2000px;
-$chevron-header-bp: 1105px; // 1105px old, 
+$large-screen-bp: 1920px; // 2000px old, 
+$chevron-header-bp: 1105px; 
 $breakpoint: 1030px;
 $nav-min-width-bp: 921px;
 $nav-max-width-bp: 920px;

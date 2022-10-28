@@ -1,10 +1,17 @@
 @import "./variables.scss";
 
 .modal {
+  position: fixed;
+  z-index: 1000;
+  top: 2vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 10px auto;  
   padding: 0;
-  max-width: 880px;
-  height: max-content;
-  margin: 10px auto;
+  max-width: 66%;
+  max-height: 100%;
+  overflow: scroll;
   background-color: white;
   border: 2px solid $red;
   border-radius: 9px;
@@ -19,13 +26,11 @@
 .modal-header-title {
   color: $orange;
   font-family: $font-bold;
-  font-size: 24px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
 .balance p {
-  font-size: 16px;
   width: 90%;
   line-height: 1.2em;
   color: $grey;
@@ -38,11 +43,11 @@
 .modal-footer {
   margin: 30px 0px;
   .modal-button {
-    font-size: 16px;
     width: auto;
     max-width: unset;
     height: auto;
     padding: 15px 20px;
+    margin: 30px;
   }
 }
 
@@ -54,22 +59,16 @@
   }
 }
 
-// Desktop
-@media screen and (min-width: $breakpoint) {
+// only allows max-content height for large enough screens to avoid scrolling/accessibility issue
+@media all and (min-width: $modal-bp-width) and (min-height: $modal-bp-height) {
   .modal {
-    position: fixed;
-    z-index: 1000;
-    top: 105px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 10px auto;
+    max-height: max-content;
   }
 }
 
-@media screen and (max-width: $breakpoint) {
+// For Mobile expand the width
+@media all and (max-width: $breakpoint) {
   .modal {
-    margin: 10px;
-    max-width: max-content;
+    max-width: 85%;
   }
 }

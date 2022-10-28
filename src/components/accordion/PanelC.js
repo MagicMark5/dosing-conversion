@@ -29,7 +29,7 @@ export default function PanelC() {
         <section className="maintenance">
           <div className="day-muscle">
             <div className="m-10-bot">
-              <label className="day">{enFr(t('guide1.panelC.monthly'), <span className="lh-1">{t('guide1.panelC.monthly_a')}<br/>{t('guide1.panelC.monthly_b')}</span>)}</label>
+              <label className="day">{enFr(t('guide1.panelC.monthly'), <span>{t('guide1.panelC.monthly_a')}<br/>{t('guide1.panelC.monthly_b')}</span>)}</label>
             </div>
             <label className="muscle">{t('guide1.panelC.delt_or_glut')}<sup>§</sup></label>
           </div>

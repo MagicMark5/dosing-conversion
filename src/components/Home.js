@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 
 import Chevron from './materials/Chevron';
 
-
 export default function Home({modal}) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage; // current language

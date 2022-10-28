@@ -50,14 +50,14 @@
       "1_week": "1 week",
       "4_days": "4 days",
       "alt_dose_100": "1 week +/- 4 days later, on day 8 administer the second initiation dose of 100 mg into the deltoid muscle.",
-      "foot_a": "See details about needle selection based on selected injection area and patient weight in the product monograph.",
+      "foot_a": "See details about needle selection based on selected injection area and patient weight in the Product Monograph.",
       "foot_b": "In order to avoid a missed dose"
     },
     "panelB": {
-      "h3": "Extended-release Tablets",
+      "h3": "Extended-Release Tablets",
       "span_a": "Following administration of the ",
       "span_b": " initiation regimen, patients previously stabilized on different doses of ",
-      "span_c": " Extended-release Tablets can attain similar paliperidone steady-state exposure during maintenance treatment with the ",
+      "span_c": " Extended-Release Tablets can attain similar paliperidone steady-state exposure during maintenance treatment with the ",
       "span_d": " doses displayed below.",
       "input_a": "If the ",
       "input_b": "once-daily",

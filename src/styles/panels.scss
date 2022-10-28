@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 article {
   display: flex;
@@ -13,42 +14,43 @@ article {
 
 // for panel A
 .panel-a-ol > li {
-  padding-left: 0.25em;
+  padding-left: 0.5em;
 }
 
 figure {
-  width: 80%;
-  margin: 0 auto;
+  margin: 0px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 // for panel A + C
 .day-muscle {
   font-family: $font-bold;
   text-align: center;
-  line-height: 0.9em;
   label {  
     text-transform: uppercase;
   }
   .day {
-    font-size: 24px;
-    line-height: 1em;
+    font-size: 1.3em;
     color: $orange;
     white-space: nowrap;
   }
   .muscle {
-    font-size: 16px;
-    color: $grey; // A1A3A6 in layout
+    color: $grey; // A1A3A6 in layout but too dim for AAA standards
   }
+}
+
+// Dose card images
+img.panelA-card {
+  width: 25%;
 }
 
 // For PanelA
 .join-label {
-  width: 15%;
+  width: 10%;
   text-align: center;
   color: #BE2034;
-  font-size: 24px;
+  font-size: 1.1em;
   font-weight: 700;
   hr {
     border-style: dotted none none;
@@ -63,14 +65,22 @@ figure {
   }
 }
 
+// For PanelB
+.panelB-p {
+  margin: 0 0 50px;
+  padding: 0;
+}
+.panelB-foot {
+  margin: 50px 0 0;
+}
+
 // For PanelC: INVEGA SUSTENNA® Monthly Maintenance Dosing
 article.maintenance {
   align-items: center;
   justify-content: center;
 }
-
+// Callout 
 header.maintenance {
-  width: 80%;
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -91,13 +101,12 @@ section.maintenance {
   align-items: center;
   justify-content: center;
   div.day-muscle {
-    width: 150px;
+    line-height: 0.8em;
     .day { 
       font-size: 1.1em;
     }
     .muscle {
       font-size: 0.8em;
-      line-height: 1em;
     }
     sup {
       font-size: 0.6em;
@@ -105,43 +114,45 @@ section.maintenance {
     }
   }
   figure {
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex-col;
+    align-items: flex-start;
     h4, footer {
       position: relative;
-      padding-left: 15px;
+      padding-left: 20px;
       color: $red;
       font-family: $font-bold;      
     }
     h4 {
-      font-size: 16px;
+      font-size: 0.8em;
       width: 96%;
       margin: 0;
       top: 15px;
     }
     footer {
       width: 96%;
-      bottom: 15px; 
+      bottom: 15px;
     }  
   }
 }
 
 .panel-C-footer {
-  padding-top: 30px;
+  padding: 30px 20px 20px;
 }
 
-img.maintenance-dose-card {
-  height: 150px;
-}
 
 @media (max-width: 1530px) {
+  // PanelA
   figure, 
   section.maintenance,
   header.maintenance {
     flex-direction: column;
   }
+  img.panelA-card {
+    margin: 10px 0;
+    width: 30vw;
+    min-width: 280px;
+  }
+  // PanelC
   section.maintenace {
     figure {
       align-items: flex-start;
@@ -181,11 +192,10 @@ img.maintenance-dose-card {
 }
 
 @media (max-width: 475px) {
-  img.maintenance-dose-card {
-    height: auto;
-    width: auto;
+  img.panelC-card {
+    width: 80vw;
     margin: 5px 0px;
-  }  
+  }
   figure > img {
     width: 80vw;
     position: relative;
@@ -193,6 +203,10 @@ img.maintenance-dose-card {
   }
   section.maintenance {
     width: 100%;
+    .day-muscle {
+      width: 150px;
+      margin-bottom: 20px;
+    }
     figure {
       width: 100%;
       align-items: unset;

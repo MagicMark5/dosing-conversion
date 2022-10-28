@@ -19,8 +19,6 @@ ol, ul {
 
 sup {
   font-size: 100%;
-  // font-size: 50%;
-  // line-height: 200%;
   vertical-align: text-top;
 }
 
@@ -129,6 +127,9 @@ table td:first-child {
 .m-10-bot {
   margin: 0px 0px 10px;
 }
+.m-0-auto {
+  margin: 0 auto;
+}
 
 .width-33p {
   width: 33%;
@@ -136,6 +137,13 @@ table td:first-child {
 .width-50p {
   width: 50%;
 }
+.width-80p {
+  width: 80%;
+}
+.width-100p {
+  width: 100%;
+}
+
 
 .flex-col {
   display: flex;
@@ -198,6 +206,9 @@ table td:first-child {
 @media screen and (min-width: $large-screen-bp) {
   .App {
     font-size: $app-font-size;
+  }
+  ol, ul {
+    padding-inline-start: 30px;
   }
 }
 

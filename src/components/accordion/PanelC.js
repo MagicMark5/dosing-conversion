@@ -16,45 +16,47 @@ export default function PanelC() {
 
   return (
     <article className="maintenance">
-      <header className="maintenance">
-        <img
-          src={enFr(seven_days, seven_days_fr)} 
-          alt={enFr("+/- 7 days", "+/- 7 jours")}
-        />
-        <p>
-          {t('guide1.panelC.p_a')}<strong><span className="nowrap">{t('guide1.panelC.seven_days')}</span>{enFr("", t('guide1.panelC.plus_minus'))}</strong>{t('guide1.panelC.p_b')}
-        </p>
-      </header>
-
-      <section className="maintenance">
-        <div className="day-muscle">
-          <div className="m-10-bot">
-            <label className="day">{enFr(t('guide1.panelC.monthly'), <span className="lh-1">{t('guide1.panelC.monthly_a')}<br/>{t('guide1.panelC.monthly_b')}</span>)}</label>
+      <div className="width-80p m-0-auto">
+        <header className="maintenance">
+          <img
+            src={enFr(seven_days, seven_days_fr)} 
+            alt={enFr("+/- 7 days", "+/- 7 jours")}
+          />
+          <p>
+            {t('guide1.panelC.p_a')}<strong><span className="nowrap">{t('guide1.panelC.seven_days')}</span>{enFr("", t('guide1.panelC.plus_minus'))}</strong>{t('guide1.panelC.p_b')}
+          </p>
+        </header>
+        <section className="maintenance">
+          <div className="day-muscle">
+            <div className="m-10-bot">
+              <label className="day">{enFr(t('guide1.panelC.monthly'), <span className="lh-1">{t('guide1.panelC.monthly_a')}<br/>{t('guide1.panelC.monthly_b')}</span>)}</label>
+            </div>
+            <label className="muscle">{t('guide1.panelC.delt_or_glut')}<sup>§</sup></label>
           </div>
-          <label className="muscle">{t('guide1.panelC.delt_or_glut')}<sup>§</sup></label>
-        </div>
 
-        <figure className="maintenance">
-          <h4>{t('guide1.panelC.h4_a')}</h4>
-          <img
-            className="maintenance-dose-card"
-            src={dose_maintenance_1}
-            alt={t('guide1.panelC.alt_card_a')}
-          />
-          <footer>
-            <small><sup>‖</sup> {t('guide1.panelC.card_foot')}</small>
-          </footer>
-        </figure>
+          <figure className="maintenance">
+            <h4>{t('guide1.panelC.h4_a')}</h4>
+            <img
+              className="width-100p panelC-card"
+              src={dose_maintenance_1}
+              alt={t('guide1.panelC.alt_card_a')}
+            />
+            <footer>
+              <small><sup>‖</sup> {t('guide1.panelC.card_foot')}</small>
+            </footer>
+          </figure>
 
-        <figure className="maintenance" style={{ paddingBottom: "16px" }}>
-          <h4>{t('guide1.panelC.h4_b')} <span className="nowrap">{t('guide1.panelC.sad')}</span></h4>
-          <img
-            className="maintenance-dose-card"
-            src={dose_maintenance_2}
-            alt={t('guide1.panelC.alt_card_b')}
-          />
-        </figure>       
-      </section>
+          <figure className="maintenance" style={{ paddingBottom: "16px" }}>
+            <h4>{t('guide1.panelC.h4_b')} <span className="nowrap">{t('guide1.panelC.sad')}</span></h4>
+            <img
+              className="width-100p panelC-card"
+              src={dose_maintenance_2}
+              alt={t('guide1.panelC.alt_card_b')}
+            />
+          </figure>       
+        </section>
+      </div>
+
 
       <footer className="panel-C-footer">
         <small>§ {t('guide1.panelC.foot_a')}</small>

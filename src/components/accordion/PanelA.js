@@ -40,7 +40,7 @@ export default function PanelA() {
         <img 
           src={enFr(dose_150, dose_150_fr)}
           alt={t('guide1.panelA.alt_dose_150')}
-          width={400}
+          className="panelA-card"
         />
 
         <div className="join-label">
@@ -52,7 +52,7 @@ export default function PanelA() {
         <img 
           src={enFr(dose_100, dose_100_fr)}
           alt={t('guide1.panelA.alt_dose_100')}
-          width={400}
+          className="panelA-card"
         />
 
         <div className="day-muscle">

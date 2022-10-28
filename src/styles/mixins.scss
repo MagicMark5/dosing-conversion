@@ -9,6 +9,11 @@
   justify-content: flex-end;
 }
 
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 // Page margin change
 @mixin change($margin) {
   .Dosing-section {

@@ -10,8 +10,9 @@ export default function PanelB({ doses }) {
 
   return (
     <article>
-      <span className="font-grey">{t('guide1.panelB.span_a')}{enFr(sustenna, d_sustenna)}{t('guide1.panelB.span_b')}{invega}{t('guide1.panelB.span_c')}{enFr(sustenna, d_sustenna)}{t('guide1.panelB.span_d')}</span>
-      <br/><br/>
+      <p className="panelB-p font-grey">
+        {t('guide1.panelB.span_a')}{enFr(sustenna, d_sustenna)}{t('guide1.panelB.span_b')}{invega}{t('guide1.panelB.span_c')}{enFr(sustenna, d_sustenna)}{t('guide1.panelB.span_d')}
+      </p>
       <DoseCalc
         inputLabel={<span>
                       {enFr(
@@ -26,14 +27,14 @@ export default function PanelB({ doses }) {
                         <><span className="nowrap">{t('d_apos')}<span className="font-red font-bold">{sustenna}</span></span></>,
                       )}
                       {t('guide1.panelB.output_b')}<span className="nowrap">{enFr("", t('est_colon'))}</span>
-                      <br/><br/>
+                      
                     </span>}
         doseIO={doses}
         bgOutput={'bg-peach'}
         colorOutput={'font-light-orange'}
       />
-      <br/><br/>
-      <footer>
+      
+      <footer className="panelB-foot">
         <small>‡ {t('guide1.panelB.foot_a')}</small>
         <small>
           {enFr(

@@ -43,7 +43,7 @@ export default function DosingInvegaSustenna({ reg, modal }) {
       fontColor: "font-light-orange",
     },
     "3 mg": {
-      value: <span>25<sup>‡</sup>-50 mg</span>,
+      value: <span>25<sup style={{ fontFamily: "Apex Sans" }}>‡</sup>-50 mg</span>,
       bgColor: "bg-red",
       fontColor: "font-red",
     }

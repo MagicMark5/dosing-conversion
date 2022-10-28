@@ -60,7 +60,6 @@ export default function PanelC() {
 
       <footer className="panel-C-footer">
         <small>§ {t('guide1.panelC.foot_a')}</small>
-        <br/>
         <small>{t('guide1.panelC.foot_b')} {mg(75)}, {t('guide1.panelC.foot_b2')} {enFr(mg("25-150"), mg("25 à 150"))}{t('guide1.panelC.foot_b3')} {mg(25)} {t('guide1.panelC.foot_b4')} {enFr(mg("50-150"), mg("50 à 150"))}{t('guide1.panelC.foot_b5')}<br/> {t('guide1.panelC.foot_b6')}</small>
       </footer>
     </article>

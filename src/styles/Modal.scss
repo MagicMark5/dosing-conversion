@@ -52,8 +52,7 @@
 }
 
 // very large screens
-@media screen and (min-width: $large-screen-bp) {
-  // might need to change size + position of modal for the screen (make it responsive for large and small)
+@media screen and (min-width: $large-screen-bp) { 
   .App {
     font-size: $app-font-size;
   }
@@ -63,6 +62,7 @@
 @media all and (min-width: $modal-bp-width) and (min-height: $modal-bp-height) {
   .modal {
     max-height: max-content;
+    height: -moz-max-content;
   }
 }
 

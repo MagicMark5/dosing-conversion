@@ -75,10 +75,6 @@
 img.nav-logo {
   height: 3.2vmax;
 }
-.sustenna-logo {
-  position: relative;
-  left: 20px;
-}
 
 // Large Screens
 @media all and (min-width: $large-screen-bp) {
@@ -150,7 +146,4 @@ img.nav-logo {
   .home-icon {
     height: 60px;
   }
-  .sustenna-logo {
-    position: revert;
-  }  
 }

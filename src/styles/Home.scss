@@ -37,8 +37,7 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  font-family: 'Apex Sans', 'Open Sans', 'Calibri', 'Arial';
-  font-weight: bold;
+  font-family: $font-bold;
   text-decoration: none;
   border-radius: 100px;
   border: 2px solid white;
@@ -91,6 +90,7 @@
 // large screens
 @media all and (min-width: $large-screen-bp) {
   .buttons {
+    width: 75%;
     margin-top: 100px;
   }
 }

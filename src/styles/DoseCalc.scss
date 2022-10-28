@@ -59,6 +59,7 @@
   }
 }
 
+// Styles for when the button is selected
 .selected {
   display: flex;
   align-items: center;
@@ -111,6 +112,9 @@
     }
   }
   .selected {
+    button {
+      left: 2px;
+    }    
     div.right-pointer {
       left: 16px;
       border-left-width: 15px;

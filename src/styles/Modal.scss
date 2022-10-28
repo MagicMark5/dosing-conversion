@@ -18,8 +18,7 @@
 
 .modal-header-title {
   color: $orange;
-  font-weight: 900;
-  font-family: 'Apex Sans', 'Open Sans', 'Arial';
+  font-family: $font-bold;
   font-size: 24px;
   margin: 40px auto;
   padding: 0 20px;
@@ -44,6 +43,14 @@
     max-width: unset;
     height: auto;
     padding: 15px 20px;
+  }
+}
+
+// very large screens
+@media screen and (min-width: $large-screen-bp) {
+  // might need to change size + position of modal for the screen (make it responsive for large and small)
+  .App {
+    font-size: $app-font-size;
   }
 }
 

@@ -132,7 +132,7 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                     <img src={icon_reminder} alt="" />
                     <p>
                       {enFr(
-                        <>Following the initial {trinza} dose, administer {trinza} every <span className='nowrap'>3 months.</span> Dose can be adjusted at this interval between <span className='nowrap'>175 mg – 525 mg</span> based on individual tolerability and/or efficacy.</>,
+                        <>Following the initial {trinza} dose, administer {trinza} every <span className='nowrap'>3 months.</span> Dose can be adjusted at this interval between <span className='nowrap'>175 mg–525 mg</span> based on individual tolerability and/or efficacy.</>,
                         <>Après la dose initiale {d_trinza}, administrer {trinza} tous les <span className='nowrap'>3 mois.</span> La dose peut être ajustée à cet intervalle entre <span className='nowrap'>175 mg et 525 mg</span> en fonction de la tolérabilité et/ou de l’efficacité propre à chaque patient.</>,
                       )}
                     </p>

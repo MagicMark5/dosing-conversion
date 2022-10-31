@@ -98,9 +98,7 @@ header.maintenance {
 }
 
 section.maintenance {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center-flex;
   div.day-muscle {
     line-height: 0.8em;
     .day { 
@@ -143,7 +141,6 @@ section.maintenance {
   }
 }
 
-
 @media (max-width: 1530px) {
   // PanelA
   figure, 
@@ -155,7 +152,7 @@ section.maintenance {
     margin: 10px 0;
     width: 30vw;
     min-width: 280px;
-  }
+  } 
   // PanelC
   section.maintenace {
     figure {
@@ -173,11 +170,16 @@ section.maintenance {
       font-size: 1.2em;
     }
   }
-  section.maintenance {
+  section.maintenance > figure > h4 {
+    padding-left: 15px;
     div.day-muscle {
       position: revert;
     }
-  }
+  }   
+  img.panelC-card {
+    width: 30vw;
+    min-width: 375px;
+  }  
   .day-muscle {
     position: relative;
     right: 20px;
@@ -198,6 +200,7 @@ section.maintenance {
   img.panelC-card {
     width: 80vw;
     margin: 5px 0px;
+    min-width: unset;
   }
   figure > img {
     width: 80vw;

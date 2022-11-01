@@ -23,6 +23,10 @@
   }
 }
 
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
 .modal-header-title {
   color: $orange;
   font-family: $font-bold;

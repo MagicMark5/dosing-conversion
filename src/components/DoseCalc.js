@@ -10,7 +10,6 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
   const output = Object.values(doseIO);
 
   function doseChange(e) {
-    e.target.blur(); // remove focus outline after click
     let index = inputs.indexOf(e.target.innerHTML);
     setDose(index);
   }

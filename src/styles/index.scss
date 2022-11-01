@@ -52,6 +52,12 @@ a {
   outline: 3px solid black;
 }
 
+// remove outlines and focus rings on buttons and various elements for users that are NOT navigating via keyboard (i.e., via touch or mouse click).
+:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
 // Don't show focus outlines while things are being clicked
 *:active {
   outline: none;

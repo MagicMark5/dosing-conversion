@@ -23,17 +23,9 @@ export default function Nav({ modal, toggle, closeModal, }) {
   const path = useLocation().pathname.split("/");
   const page = path[path.length - 1]; // current page
 
-
-  const toggleModal = (e) => {
-    // remove focus from safety information button after click
-    e.target.blur(); 
+  const toggleModal = () => {
     toggle();
   };
-
-  const handleHomeClick = (e) => {
-    // remove focus on a.home-link element after click
-    e.nativeEvent.path[1].blur();
-  }
 
   return (
     <nav>
@@ -62,7 +54,7 @@ export default function Nav({ modal, toggle, closeModal, }) {
         </button>
       </div>
       <div className={modal ? "blur desktop-row" : "desktop-row"}>
-        <Link className="home-link" to="/" onClick={handleHomeClick}>
+        <Link className="home-link" to="/">
           <img className="home-icon" src={home} alt={t('nav.home')} aria-label={t('nav.home')} role="button" />
         </Link>
         <div className="nav-btn">

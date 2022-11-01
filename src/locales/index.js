@@ -12,9 +12,8 @@ i18next
   .use(initReactI18next)
   .use(HttpApi) // Registering the back-end plugin
   .init({
-    //lng: 'en', // if you're using a language detector, do not define the lng option
     fallbackLng: "en",
-    debug: dev, // console.log the config info and events
+    debug: false, // console.log the config info and events
     backend: {
       loadPath: `${dev ? `http://localhost:3000` : `https://magicmark5.github.io`}${path}/locales/{{lng}}/{{ns}}.json`
    }

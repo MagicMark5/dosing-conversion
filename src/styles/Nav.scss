@@ -72,7 +72,12 @@
 }
 
 // Logos for sustenna and trinza
-img.nav-logo {
+img.nav-logo.sustenna-logo {
+  height: 3.5vmax;
+  position: relative;
+  bottom: 8px;
+}
+img.nav-logo.trinza-logo {
   height: 3.2vmax;
 }
 

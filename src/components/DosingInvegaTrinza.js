@@ -71,7 +71,7 @@ export default function DosingInvegaTrinza({ reg, modal }) {
         <h2 className='font-red font-bold'>
           {enFr(
             <>{t('switching_from')}{sustenna} {enFr("to", "à partir")} {trinza}</>,
-            <>{t('switching_from')}{trinza} {enFr("to", "à partir")} {sustenna}</>,
+            <>{t('switching_from')}{trinza} {enFr("to", "à partir")} {d_sustenna}</>,
           )}
         </h2>
         <header className="sustenna-to-trinza">

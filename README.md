@@ -1,3 +1,23 @@
+# To run in development mode
+
+1. Ensure you have node.js and npm installed on your system: 
+
+To check, in command line or command prompt run the command:
+
+`node --version`
+
+This project was developed using node version v18.9.1
+
+`npm --version`
+
+and npm version 8.19.1
+
+2. Run `npm install` to install dependencies (all are listed in package.json)
+
+3. Run `npm start` to start the project.
+
+The browser should automatically open the project. If it does not, go to the url: `http://localhost:3000`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

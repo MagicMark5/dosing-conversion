@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dosing-conversion/static/css/main.7a99c07d.css",
-    "main.js": "/dosing-conversion/static/js/main.c58af5bd.js",
+    "main.css": "/dosing-conversion/static/css/main.5e19e0e6.css",
+    "main.js": "/dosing-conversion/static/js/main.d8efba1a.js",
     "static/media/bg-main.png": "/dosing-conversion/static/media/bg-main.b1b404ce51a110bd3648.png",
     "static/media/ApexSansBook.woff": "/dosing-conversion/static/media/ApexSansBook.6f1749548e5e4964716c.woff",
     "static/media/ApexSansBook-Regular.woff": "/dosing-conversion/static/media/ApexSansBook-Regular.13d6a8f45cac8068bdca.woff",
@@ -29,11 +29,11 @@
     "static/media/icon_syringe.png": "/dosing-conversion/static/media/icon_syringe.f7f85aa8a38f18abb83e.png",
     "index.html": "/dosing-conversion/index.html",
     "static/media/getFetch.cjs": "/dosing-conversion/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.7a99c07d.css.map": "/dosing-conversion/static/css/main.7a99c07d.css.map",
-    "main.c58af5bd.js.map": "/dosing-conversion/static/js/main.c58af5bd.js.map"
+    "main.5e19e0e6.css.map": "/dosing-conversion/static/css/main.5e19e0e6.css.map",
+    "main.d8efba1a.js.map": "/dosing-conversion/static/js/main.d8efba1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a99c07d.css",
-    "static/js/main.c58af5bd.js"
+    "static/css/main.5e19e0e6.css",
+    "static/js/main.d8efba1a.js"
   ]
 }

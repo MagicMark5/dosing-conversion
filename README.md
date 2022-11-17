@@ -18,6 +18,12 @@ and npm version 8.19.1
 
 The browser should automatically open the project. If it does not, go to the url: `http://localhost:3000`.
 
+4. To compile the code for hosting (to be served). 
+
+Run `npm run build`
+
+This will create a folder called `build` which contains everything that needs to be served. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -23,10 +23,12 @@
     color: $grey;
     font-size: 0.8em;
   }
-  button {
+  input[type=radio] {
     cursor: pointer;
-    border: 0;
-    background-color: #FFF;
+  }
+  label {
+    cursor: pointer;
+    margin-right: 0.5em;
   }
   .currentLang {
     font-weight: bold;

@@ -44,35 +44,40 @@ export default function Nav({ modal, toggle, closeModal }) {
           alt=""
         />
       </div>
-      <div className="language-switcher">
-        <button 
-          className={lang === 'en' ? `currentLang` : ``} 
-          type="submit" 
-          onClick={() => { i18n.changeLanguage('en') }} 
-          disabled={ lang === 'en'}
-          aria-label="English"
-        >
-          EN
-        </button>
+      <form className="language-switcher">
+        <input
+          id="en"
+          onChange={() => { i18n.changeLanguage('en'); }}
+          checked={lang === 'en'}
+          type="radio"
+          name="English"
+          aria-label="English"/>
+        <label
+          htmlFor="en" 
+          className={lang === 'en' ? `currentLang` : ``}>
+            EN
+        </label>
         <span>|</span>
-        <button 
-          className={lang === 'fr' ? `currentLang` : ``} 
-          type="submit" 
-          onClick={() => { i18n.changeLanguage('fr') }} 
-          disabled={ lang === 'fr' }
-          aria-label="French"
-        >
-          FR
-        </button>
-      </div>
+        <input
+          id="fr"
+          onChange={() => { i18n.changeLanguage('fr'); }}
+          checked={lang === 'fr'}
+          type="radio"
+          name="French"
+          aria-label="French"/>
+        <label 
+          htmlFor="fr" 
+          className={lang === 'fr' ? `currentLang` : ``}>
+            FR
+        </label>
+      </form>
       <div className={modal ? "blur desktop-row" : "desktop-row"}>
         <Link className="home-link" to="/">
           <img 
             className="home-icon" 
             src={home} 
             alt={t('nav.home')} 
-            aria-label={t('nav.home')} 
-            role="button"
+            aria-label={t('nav.home')}
           />
         </Link>
         <div className="nav-btn">

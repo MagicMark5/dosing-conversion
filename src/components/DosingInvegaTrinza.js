@@ -16,7 +16,6 @@ import {
   Accordion,
   AccordionItem,
   AccordionItemHeading,
-  AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 
@@ -90,14 +89,14 @@ export default function DosingInvegaTrinza({ reg, modal }) {
         <Accordion preExpanded={['trinza']}>
           <AccordionItem uuid={'trinza'}>
             <AccordionItemHeading>
-              <AccordionItemButton className='accordion__button panelD-button'>
+              <div class="accordion__button panelD-button" id="accordion__heading-trinza" aria-disabled="true" aria-controls="accordion__panel-trinza" data-accordion-component="AccordionItemButton">
                 <strong>
                   {enFr(
                     <>Recommended {trinza} dosing</>,
                     <>Posologie recommandée {d_trinza}</>,
                   )}
                 </strong>
-              </AccordionItemButton>
+              </div>
             </AccordionItemHeading>
             <AccordionItemPanel className='panelD'>
               <article className='sustenna-to-trinza'>
@@ -108,7 +107,7 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                     <p>{t('guide2.text_1a')} {trinza} {t('guide2.text_1b')} {enFr(sustenna, d_sustenna)}{enFr(" dose.", ".")}</p>
                   </div>
                   <div className='icon-text-pair'>
-                    <img src={enFr(icon_days, seven_days_fr)} alt={enFr("+/- 7 days", "+/- 7 jours")} />
+                    <img src={enFr(icon_days, seven_days_fr)} alt="" />
                     <p>
                       {enFr(
                         <>{trinza} may be administered <span className='nowrap'>+/- 7 days</span> {t('guide2.text_3a')} {sustenna} dose.</>,

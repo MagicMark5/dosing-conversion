@@ -20,7 +20,7 @@ export default function PanelC() {
         <header className="maintenance">
           <img
             src={enFr(seven_days, seven_days_fr)} 
-            alt={enFr("+/- 7 days", "+/- 7 jours")}
+            alt=""
           />
           <p>
             {t('guide1.panelC.p_a')}<strong><span className="nowrap">{t('guide1.panelC.seven_days')}</span>{enFr("", t('guide1.panelC.plus_minus'))}</strong>{t('guide1.panelC.p_b')}

@@ -23,7 +23,7 @@ export default function BalanceTrinza() {
       <p>
         {trinza}{t('modal.p_3a')} {trinza} {t('modal.p_3b')} {lang === "fr" ? qu_sustenna : sustenna} {t('modal.p_3c')} {lang === "fr" ? d_sustenna : sustenna} {t('modal.p_3d')} {trinza}.
         <br/><br/>
-        <ProductMonograph />
+        <ProductMonograph anchorId={"trinza_pm"} />
       </p>
     </section>
   )

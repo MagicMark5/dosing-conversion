@@ -17,11 +17,14 @@ function App() {
   const [modal, setModal] = useState(true);
   const toggle = () => setModal(!modal);
   
-  const reg = <sup>&reg;</sup>; // ®
+  // ®
+  const reg = <sup>&reg;</sup>;
   
   const closeModal = () => {
     setModal(false);
     window.scrollTo(0,0);
+    const open_modal_btn = document.getElementById('modal_open');
+    open_modal_btn.focus();
   };
   
   return (

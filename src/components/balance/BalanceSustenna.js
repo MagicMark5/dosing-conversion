@@ -23,7 +23,7 @@ export default function BalanceSustenna() {
         <br/><br/>
         {sustenna} {t('modal.p_2a')}
         <br/><br/>
-        <ProductMonograph />
+        <ProductMonograph anchorId={"sustenna_pm"} />
       </p>
     </section>    
   )

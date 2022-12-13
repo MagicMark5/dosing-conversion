@@ -8,15 +8,16 @@ import { useTranslation } from "react-i18next";
 export default function Modal({ show, closeModal }) {
   const { t } = useTranslation();
 
-  const reg = <sup>&reg;</sup>; // ®
+  // ®
+  const reg = <sup>&reg;</sup>;
 
   return (
     <>
       { show &&
-          <div 
+          <div
             id="safety_info"
-            className="modal" 
-            role="dialog" 
+            className="modal"
+            role="dialog"
             aria-modal="true"
             aria-labelledby="safety_info_label">
             <h3 id="safety_info_label" aria-level="1" className="modal-header-title">{t("modal.title")}</h3>
@@ -24,7 +25,7 @@ export default function Modal({ show, closeModal }) {
             <br/>
             <BalanceTrinza reg={reg} />
             <footer className="modal-footer">
-              <button className="modal-button continue-button" onClick={() => closeModal()}>
+              <button autoFocus={true} id="modal_continue" className="modal-button continue-button" onClick={() => closeModal()}>
                 {t("modal.continue")}
               </button>
             </footer>

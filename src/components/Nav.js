@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { trapFocus } from "../helpers/trapFocus";
 import TranslationContext from '../context/TranslationContext';
-// import { useState } from "react";
 import "../styles/Nav.scss";
 // design images
 import home from "../assets/home.png";
@@ -16,21 +16,33 @@ import trinza from "../assets/trinza.png";
 import trinza_fr from "../assets/trinza_fr.png";
 
 
-export default function Nav({ modal, toggle, closeModal, }) {
+export default function Nav({ modal, toggle, closeModal }) {
   const { t, i18n } = useTranslation();
-  const { enFr } = useContext(TranslationContext); // brand names with non-breaking spaces
-  const lang = i18n.resolvedLanguage; // current language
+  // brand names with non-breaking spaces
+  const { enFr } = useContext(TranslationContext);
+  // current language
+  const lang = i18n.resolvedLanguage;
   const path = useLocation().pathname.split("/");
-  const page = path[path.length - 1]; // current page
+  // current page
+  const page = path[path.length - 1];
 
   const toggleModal = () => {
     toggle();
   };
 
+  // After first render select <Modal/> element and trap tab focus inside it
+  useEffect(() => {
+    const modal = document.getElementById('safety_info');
+    if (modal) trapFocus(modal, 'a#sustenna_pm, a#trinza_pm, button#modal_continue', closeModal);
+  }, [closeModal]);
+
   return (
     <nav>
       <div className={modal ? "blur toprow" : "toprow"}>
-        <img src={topLine} alt="" />
+        <img 
+          src={topLine} 
+          alt=""
+        />
       </div>
       <div className="language-switcher">
         <button 
@@ -55,10 +67,16 @@ export default function Nav({ modal, toggle, closeModal, }) {
       </div>
       <div className={modal ? "blur desktop-row" : "desktop-row"}>
         <Link className="home-link" to="/">
-          <img className="home-icon" src={home} alt={t('nav.home')} aria-label={t('nav.home')} role="button" />
+          <img 
+            className="home-icon" 
+            src={home} 
+            alt={t('nav.home')} 
+            aria-label={t('nav.home')} 
+            role="button"
+          />
         </Link>
         <div className="nav-btn">
-          <button className="modal-button si-button" onClick={toggleModal}>
+          <button id="modal_open" className="modal-button si-button" onClick={toggleModal}>
             {t("safety_info")}
           </button>
         </div>

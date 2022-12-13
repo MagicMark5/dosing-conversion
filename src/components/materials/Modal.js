@@ -13,8 +13,13 @@ export default function Modal({ show, closeModal }) {
   return (
     <>
       { show &&
-          <div className="modal">
-            <h3 className="modal-header-title">{t("modal.title")}</h3>
+          <div 
+            id="safety_info"
+            className="modal" 
+            role="dialog" 
+            aria-modal="true"
+            aria-labelledby="safety_info_label">
+            <h3 id="safety_info_label" className="modal-header-title">{t("modal.title")}</h3>
             <BalanceSustenna reg={reg} />
             <br/>
             <BalanceTrinza reg={reg} />

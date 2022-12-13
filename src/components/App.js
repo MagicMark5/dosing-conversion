@@ -1,15 +1,19 @@
-import '../styles/App.scss';
 import { Routes, Route } from "react-router-dom";
 import { useState } from 'react';
+// Custom components
 import Layout from './Layout';
 import Home from './Home';
 import DosingInvegaSustenna from './DosingInvegaSustenna';
 import DosingInvegaTrinza from './DosingInvegaTrinza';
 import TermsOfUse from './TermsOfUse';
-import useLanguage from '../hooks/useLanguage';
-import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async"; // Helmet allows us to change the index.html <head>
+// Helmet allows us to change the index.html <head>
+import { Helmet } from "react-helmet-async";
+// Provides Translation context and hooks to entire app
 import TranslationProvider from '../context/TranslationProvider';
+import { useTranslation } from "react-i18next";
+import useLanguage from '../hooks/useLanguage';
+// stylesheet
+import '../styles/App.scss';
 
 function App() {
   useLanguage();
@@ -22,8 +26,10 @@ function App() {
   
   const closeModal = () => {
     setModal(false);
+    // scroll to top of page when modal is closed
     window.scrollTo(0,0);
     const open_modal_btn = document.getElementById('modal_open');
+    // As per Essentials accesibility scan: ensure safety info button gets focus when modal is closed
     open_modal_btn.focus();
   };
   

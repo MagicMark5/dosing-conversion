@@ -31,6 +31,8 @@
 // Give panelD a different bg gradient (on the /conversionguide2 page)
 .panelD-button {
   background: $trinza_gradient;
+  // remove the button-like behaviour for panelD since it is always open
+  cursor: auto;
 }
 
 .accordion__button:focus {
@@ -58,10 +60,6 @@
 // remove the open/close icon for panelD
 .panelD-button:after {
   display: none;
-}
-// remove the button-like behaviour for panelD since it is always open
-.panelD-button {
-  cursor: auto;
 }
 .panelD-button:focus {
   outline: none;

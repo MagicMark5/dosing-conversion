@@ -13,35 +13,45 @@ import paab_fr from "../assets/paab_fr.png";
 
 export default function Footer({modal}) {
   const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage; // current language
-  const { enFr, d_trinza, d_sustenna, sustenna, trinza } = useContext(TranslationContext); // brand names with non-breaking spaces
+  // current language
+  const lang = i18n.resolvedLanguage;
+  // brand names with non-breaking spaces
+  const { enFr, d_trinza, d_sustenna, sustenna, trinza } = useContext(TranslationContext);
   const bar = <span>&nbsp;|&nbsp;</span>;
 
   return (
     <footer className={modal ? "blur page-footer" : "page-footer"}>
       <img className="footer-divider" src={divider} alt="" />
       <div className='legal-logos-container'>
-        <p className="legal">
-          <strong>{t('footer.refs')}</strong>
-          1.&nbsp;{enFr(
-            <>{sustenna} {t('footer.pm')}</>, // en
-            <> {t('footer.pm_a')} {d_sustenna}. {t('footer.pm_b')}</> // fr
-          )}
-          2.&nbsp;{enFr(
-            <>{trinza} {t('footer.pm')}</>, // en
-            <> {t('footer.pm_a')} {d_trinza}. {t('footer.pm_b')}</> // fr
-          )}
-          <br/><br/>
-          © 2022 Janssen Inc. {bar} {t('footer.tm')}<br/><br/>
-          <a href={t('footer.pp_url')} target="_blank" rel="noreferrer">{t('footer.pp')}</a> {bar} <Link to="/terms-of-use">{t('footer.terms')}</Link><br/><br/>
-          Janssen Inc.<br/>
-          19 Green Belt Drive {bar} <span className='nowrap'>{t('footer.city')}</span>  M3C&nbsp;1L9<br/>
-          <a href={t('footer.company_url')} rel="noreferrer" target="_blank">www.janssen.com/canada{lang === 'fr' && '/fr'}</a>
-          <span className='legal mobile project-code'>
-            <br/><br/>
-            CP-312685{enFr("E", "F")}
-          </span>
-        </p>
+        <div className="legal">
+          <p className='references'>
+            <strong>{t('footer.refs')}</strong>
+            1.&nbsp;{enFr(
+              // en
+              <>{sustenna} {t('footer.pm')}</>,
+              // fr
+              <> {t('footer.pm_a')} {d_sustenna}. {t('footer.pm_b')}</>
+            )}
+            2.&nbsp;{enFr(
+              // en
+              <>{trinza} {t('footer.pm')}</>,
+              // fr
+              <> {t('footer.pm_a')} {d_trinza}. {t('footer.pm_b')}</>
+            )}
+          </p>
+
+          <p className='janssen-legal'>© 2022 Janssen Inc. {bar} {t('footer.tm')}</p>
+
+          <p className='footer-links'><a href={t('footer.pp_url')} target="_blank" rel="noreferrer">{t('footer.pp')}</a> {bar} <Link to="/terms-of-use">{t('footer.terms')}</Link></p>
+          
+          <p className='janssen-footer'>
+            Janssen Inc.<br/>
+            19 Green Belt Drive {bar} <span className='nowrap'>{t('footer.city')}</span>  M3C&nbsp;1L9<br/>
+            <a href={t('footer.company_url')} rel="noreferrer" target="_blank">www.janssen.com/canada{lang === 'fr' && '/fr'}</a><br/>
+            {/* This project code is only shown for mobile */}
+            <span className='legal mobile project-code'>CP-312685{enFr("E", "F")}</span>
+          </p>
+        </div>
         <div className="logos">
           <img alt={t('footer.imc')}
             className="imc-logo"
@@ -57,6 +67,7 @@ export default function Footer({modal}) {
           />
         </div>
       </div>
+      {/* This project code is only shown for desktop */}
       <div className='legal desktop project-code'>
         CP-312685{enFr("E", "F")}
       </div>

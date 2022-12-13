@@ -19,7 +19,7 @@ export default function Modal({ show, closeModal }) {
             role="dialog" 
             aria-modal="true"
             aria-labelledby="safety_info_label">
-            <h3 id="safety_info_label" className="modal-header-title">{t("modal.title")}</h3>
+            <h3 id="safety_info_label" aria-level="1" className="modal-header-title">{t("modal.title")}</h3>
             <BalanceSustenna reg={reg} />
             <br/>
             <BalanceTrinza reg={reg} />

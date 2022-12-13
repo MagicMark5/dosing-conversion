@@ -14,7 +14,7 @@ export default function BalanceSustenna() {
   
   return (
     <section className="balance">
-      <h3 className="font-red font-bold">   
+      <h3 aria-level="2" className="font-red font-bold">   
         {lang === "en" && <>{sustenna} <span className="nowrap">{t('safety_info')}</span></>}
         {lang === "fr" && <>{t('safety_info')} {d_sustenna}</>}
       </h3>

@@ -29,10 +29,12 @@ $margins: 10%;
 $large-screen-bp: 1920px; 
 $modal-bp-width: 1200px;
 $modal-bp-height: 900px;
-$chevron-header-bp: 1105px; 
-$breakpoint: 1030px;
+$chevron-header-bp: 1105px;
+// mobile/desktop bp for switching order of header logo images
 $nav-min-width-bp: 921px;
 $nav-max-width-bp: 920px;
+// mobile/desktop bp for switching project code placement in footer
+$breakpoint: 1030px;
 
 // Responsive font-sizes (minimum font-size is the value in px)
 $app-font-size: calc(12px + 0.75vw);

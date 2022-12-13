@@ -80,13 +80,22 @@ export default function Nav({ modal, toggle, closeModal }) {
             aria-label={t('nav.home')}
           />
         </Link>
+
+        <div className="logos-for-desktop">
+          <img className="nav-logo sustenna-logo" src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
+          {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}
+        </div>
+
         <div className="nav-btn">
           <button id="modal_open" className="modal-button si-button" onClick={toggleModal}>
             {t("safety_info")}
           </button>
         </div>
-        <img className="nav-logo sustenna-logo" src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
-        {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}
+
+        <div className="logos-for-mobile">
+          <img className="nav-logo sustenna-logo" src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
+          {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}          
+        </div>        
       </div>
       <Modal show={modal} closeModal={closeModal}/>
     </nav>

@@ -101,22 +101,31 @@ img.nav-logo.trinza-logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    div.nav-btn {
-      order: 1;
-    }
+  }
+  .logos-for-desktop {
+    margin: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     .sustenna-logo {
-      margin-left: 8%;
-      margin-right: 10px;
+      position: relative;
+      right: 35px;
     }
     .trinza-logo {
-      margin-left: 10px;
-      margin-right: 4%;
-    }
+      position: relative;
+      left: 90px;
+    }    
+  }
+  .logos-for-mobile {
+    display: none;
   }
 }
 
 // Mobile
 @media all and (max-width: $nav-max-width-bp) {
+  .logos-for-desktop {
+    display: none;
+  }
   .desktop-row {
     display: flex;
     align-items: center;
@@ -136,6 +145,16 @@ img.nav-logo.trinza-logo {
       margin: 10px auto 15px;
       height: 9.5vmin;
     }
+    .logos-for-mobile {
+      width: 100%;
+      display: flex;
+      .sustenna-logo {
+        margin-right: 2%;
+      }
+      .trinza-logo {
+        margin-left: 2%;
+      }
+    }    
   }
   div.nav-btn {
     display: flex;

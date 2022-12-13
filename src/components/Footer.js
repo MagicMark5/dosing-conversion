@@ -17,7 +17,7 @@ export default function Footer({modal}) {
   const lang = i18n.resolvedLanguage;
   // brand names with non-breaking spaces
   const { enFr, d_trinza, d_sustenna, sustenna, trinza } = useContext(TranslationContext);
-  const bar = <span>&nbsp;|&nbsp;</span>;
+  const bar = <span aria-hidden="true">&nbsp;|&nbsp;</span>;
 
   return (
     <footer className={modal ? "blur page-footer" : "page-footer"}>

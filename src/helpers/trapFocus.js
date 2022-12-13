@@ -35,10 +35,6 @@ const trapFocus = function(element, focusableSelectors, escCallback) {
         }
       }
   });
-
-
-
-
 };
 
 export { trapFocus };

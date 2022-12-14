@@ -20,6 +20,5 @@ export default function useLanguage() {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
 
-
   return lang;
 }

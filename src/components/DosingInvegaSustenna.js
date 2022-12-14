@@ -15,14 +15,20 @@ import {
 } from 'react-accessible-accordion';
 
 import ChevronHeader from './materials/ChevronHeader';
+// accordion children
 import PanelA from './accordion/PanelA';
 import PanelB from './accordion/PanelB';
 import PanelC from './accordion/PanelC';
+// custom hooks;
+import useFootnoteRefs from '../hooks/useFootnoteRefs';
 
 
-export default function DosingInvegaSustenna({ reg, modal }) {
+export default function DosingInvegaSustenna({ modal }) {
   const { t } = useTranslation();
-  const { enFr, invega, sustenna, d_sustenna } = useContext(TranslationContext); // brand name strings
+  // brand name strings
+  const { enFr, invega, sustenna, d_sustenna } = useContext(TranslationContext);
+  // url parts to use in footnote links
+  const { base_url, page } = useFootnoteRefs();
 
   // Blur focus outline after a click
   const blurTarget = (e) => e.target.blur();
@@ -43,7 +49,7 @@ export default function DosingInvegaSustenna({ reg, modal }) {
       fontColor: "font-light-orange",
     },
     "3 mg": {
-      value: <span>25<sup style={{ fontFamily: "Apex Sans" }}>‡</sup>-50 mg</span>,
+      value: <span>25<sup style={{ fontFamily: "Apex Sans" }}><a id="footnote-doubledagger-ref" href={`${base_url}/#/${page}#footnote_doubledagger`} aria-describedby="footnote_doubledagger" aria-label="To double dagger footnote">‡</a></sup>-50 mg</span>,
       bgColor: "bg-red",
       fontColor: "font-red",
     }

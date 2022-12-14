@@ -5,10 +5,26 @@ article {
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
+  a {
+    text-decoration: none;
+  }
   footer {
     display: flex; 
     flex-direction: column;
     font-size: 0.8em;
+    h3 {
+      font-size: 0;
+      margin: 0;
+      visibility: hidden;
+    }
+    ul {
+      list-style: none;
+      padding-inline-start: 0;
+      margin-block-end: 0;
+      li {
+        line-height: 1em;
+      }
+    }
   }
 }
 

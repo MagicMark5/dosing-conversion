@@ -3,10 +3,15 @@ import DoseCalc from "../DoseCalc";
 import { useTranslation } from "react-i18next";
 import { useContext } from 'react';
 import TranslationContext from '../../context/TranslationContext';
+// custom hooks
+import useFootnoteRefs from "../../hooks/useFootnoteRefs";
 
 export default function PanelB({ doses }) {
   const { t } = useTranslation();
-  const { enFr, invega, sustenna, d_sustenna } = useContext(TranslationContext); // brand name strings
+  // brand name strings
+  const { enFr, invega, sustenna, d_sustenna } = useContext(TranslationContext);
+  // url parts to use for footnote refs
+  const { base_url, page } = useFootnoteRefs();
 
   return (
     <article>
@@ -27,7 +32,6 @@ export default function PanelB({ doses }) {
                         <><span className="nowrap">{t('d_apos')}<span className="font-red font-bold">{sustenna}</span></span></>,
                       )}
                       {t('guide1.panelB.output_b')}<span className="nowrap">{enFr("", t('est_colon'))}</span>
-                      
                     </span>}
         doseIO={doses}
         bgOutput={'bg-peach'}
@@ -35,13 +39,18 @@ export default function PanelB({ doses }) {
       />
       
       <footer className="panelB-foot">
-        <small>‡ {t('guide1.panelB.foot_a')}</small>
-        <small>
-          {enFr(
-            <span>{t('adapted_from')}{sustenna} {t('product_m')}</span>,
-            <span>{t('product_m')} {d_sustenna}</span>,
-          )}.
-        </small>
+        <h3 id="panelB-footnote-label">Footnotes</h3>
+        <ul>
+          <li><small id="footnote_doubledagger"><a href={`${base_url}/#/${page}#footnote-doubledagger-ref`} aria-label="Back to content">‡</a> {t('guide1.panelB.foot_a')}</small></li>
+          <li>
+            <small>
+              {enFr(
+                <span>{t('adapted_from')}{sustenna} {t('product_m')}</span>,
+                <span>{t('product_m')} {d_sustenna}</span>,
+              )}.
+            </small>
+          </li>
+        </ul>
       </footer>
     </article>
   )

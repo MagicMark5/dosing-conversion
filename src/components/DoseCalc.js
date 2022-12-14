@@ -37,6 +37,8 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
                 <button 
                   onClick={doseChange} 
                   className={dose !== index ? color : ''}
+                  role="tab"
+                  aria-selected={dose === index}
                   >
                   {input}
                 </button>

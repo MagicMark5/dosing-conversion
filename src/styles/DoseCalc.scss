@@ -1,6 +1,7 @@
 @import "./variables.scss";
 
 .DoseCalc {
+  caption { visibility: hidden; }
   border-collapse: collapse;
   max-width: 80%;
   margin: 0 auto;

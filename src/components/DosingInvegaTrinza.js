@@ -89,7 +89,7 @@ export default function DosingInvegaTrinza({ reg, modal }) {
         <Accordion preExpanded={['trinza']}>
           <AccordionItem uuid={'trinza'}>
             <AccordionItemHeading>
-              <div class="accordion__button panelD-button" id="accordion__heading-trinza" aria-disabled="true" aria-controls="accordion__panel-trinza" data-accordion-component="AccordionItemButton">
+              <div className="accordion__button panelD-button" id="accordion__heading-trinza" aria-disabled="true" aria-controls="accordion__panel-trinza" data-accordion-component="AccordionItemButton">
                 <strong>
                   {enFr(
                     <>Recommended {trinza} dosing</>,

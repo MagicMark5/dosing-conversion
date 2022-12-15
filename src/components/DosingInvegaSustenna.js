@@ -68,7 +68,7 @@ export default function DosingInvegaSustenna({ modal }) {
           bgRight={'bg-header-red'}
         />
         <section className="Dosing-section">
-          <h2 className="font-orange font-bold">
+          <h2 className="font-orange font-bold" id="heading__oral_AS_to_sustenna">
             {t('guide1.h2_a')} {sustenna} {t('guide1.h2_b')}
           </h2>
           <p>

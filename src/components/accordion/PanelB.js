@@ -36,6 +36,7 @@ export default function PanelB({ doses }) {
         doseIO={doses}
         bgOutput={'bg-peach'}
         colorOutput={'font-light-orange'}
+        ariaLabel={'heading__oral_AS_to_sustenna'}
       />
       
       <footer className="panelB-foot">

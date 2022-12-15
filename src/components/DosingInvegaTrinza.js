@@ -160,7 +160,8 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                       doseIO={doses}
                       bgOutput={'bg-light-blue'}
                       colorOutput={'font-dark-blue'}
-                      colWidth={'width-50p'}
+                      colWidth={50}
+                      ariaLabel={'accordion__heading-trinza'}
                     />
                     <div className='calc-footer'>
                       <small>

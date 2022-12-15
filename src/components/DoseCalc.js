@@ -11,7 +11,10 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
 
   function doseChange(e) {
     let index = inputs.indexOf(e.target.innerHTML);
+    // let doseOutputEl = document.getElementById('dose_output');
     setDose(index);
+    // make the element with this id fosusable e.g. <input/>
+    // doseOutputEl.focus();
   }
   
   return (
@@ -26,9 +29,12 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
           </th>
         </tr>
         {inputs.map((input, index, inputs) => {
-          const bg = doseIO[input].bgColor; // class name for background-color
-          const color = doseIO[input].fontColor; // class name for font color
+          // class name for background-color
+          const bg = doseIO[input].bgColor; 
+          // class name for font color
+          const color = doseIO[input].fontColor;
           const array = bg.split("-");
+          // color for the triangle div that points to the next column
           const pointColor = array[array.length - 1];
           
           return (
@@ -46,6 +52,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
               </td>
               {index === 0 && (
                 <td rowSpan={inputs.length} className={`output-cell ${bgOutput} ${colorOutput}`} style={{ borderTop: 0 }}>
+                  {/* Content of this cell is updated based on which dose is selected in the left column */}
                   {output[dose].value}
                 </td>
               )}

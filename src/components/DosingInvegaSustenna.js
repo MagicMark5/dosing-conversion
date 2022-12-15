@@ -21,6 +21,7 @@ import PanelB from './accordion/PanelB';
 import PanelC from './accordion/PanelC';
 // custom hooks;
 import useFootnoteRefs from '../hooks/useFootnoteRefs';
+import { Helmet } from 'react-helmet-async';
 
 
 export default function DosingInvegaSustenna({ modal }) {
@@ -56,69 +57,74 @@ export default function DosingInvegaSustenna({ modal }) {
   };
   
   return (
-    <main className={`nav-shadow ${modal ? "blur" : ""}`}>
-      <ChevronHeader
-        bgLeft={'bg-header-orange'}
-        text={<>{t('guide1.h1_a')}{sustenna} {enFr("", " à partir ")}<span className='nowrap'>{t('guide1.h1_b')}</span></>}
-        bgRight={'bg-header-red'}
-      />
-      <section className="Dosing-section">
-        <h2 className="font-orange font-bold">
-          {t('guide1.h2_a')} {sustenna} {t('guide1.h2_b')}
-        </h2>
-        <p>
-          {t('guide1.p1_a')}{sustenna}.
-          <br/><br/>
-          {t('guide1.p2_a')}{enFr(sustenna, d_sustenna)}{t('guide1.p2_b')}{enFr("", d_sustenna)}{enFr("", t('guide1.p2_c'))}
-          <br/><br/>
-          {t('guide1.p3')}
-        </p>
-        
-          <Accordion 
-            allowMultipleExpanded={true} 
-            allowZeroExpanded={true}
-          >
-            <AccordionItem>
-              <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
-                <AccordionItemButton>
-                  {enFr(
-                    <span>{t('switching_from')} {t('guide1.panelA.h3')}</span>,
-                    <span>{t('switching_from')} {sustenna} à partir d’autres {t('guide1.panelA.h3')}</span>
-                  )}
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <PanelA />
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
-                <AccordionItemButton>
-                  {enFr(
-                      <span>{t('switching_from')} {invega} {t('guide1.panelB.h3')}</span>,
-                      <span>{t('switching_from')} {sustenna} à partir de comprimés {invega} à {t('guide1.panelB.h3')}</span>,
-                  )}
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <PanelB doses={doses} />
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
-                <AccordionItemButton>
-                  {enFr(
-                    <span>{sustenna} {t('guide1.panelC.h3')}</span>,
-                    <span>{t('guide1.panelC.h3')} {d_sustenna}</span>,
-                  )}
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <PanelC />
-              </AccordionItemPanel>
-            </AccordionItem>              
-        </Accordion>
-      </section>      
-    </main>
+    <>
+      <Helmet>
+        <title>{t("title_sustenna")}</title>
+      </Helmet>
+      <main className={`nav-shadow ${modal ? "blur" : ""}`}>
+        <ChevronHeader
+          bgLeft={'bg-header-orange'}
+          text={<>{t('guide1.h1_a')}{sustenna} {enFr("", " à partir ")}<span className='nowrap'>{t('guide1.h1_b')}</span></>}
+          bgRight={'bg-header-red'}
+        />
+        <section className="Dosing-section">
+          <h2 className="font-orange font-bold">
+            {t('guide1.h2_a')} {sustenna} {t('guide1.h2_b')}
+          </h2>
+          <p>
+            {t('guide1.p1_a')}{sustenna}.
+            <br/><br/>
+            {t('guide1.p2_a')}{enFr(sustenna, d_sustenna)}{t('guide1.p2_b')}{enFr("", d_sustenna)}{enFr("", t('guide1.p2_c'))}
+            <br/><br/>
+            {t('guide1.p3')}
+          </p>
+          
+            <Accordion 
+              allowMultipleExpanded={true} 
+              allowZeroExpanded={true}
+            >
+              <AccordionItem>
+                <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
+                  <AccordionItemButton>
+                    {enFr(
+                      <span>{t('switching_from')} {t('guide1.panelA.h3')}</span>,
+                      <span>{t('switching_from')} {sustenna} à partir d’autres {t('guide1.panelA.h3')}</span>
+                    )}
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <PanelA />
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
+                  <AccordionItemButton>
+                    {enFr(
+                        <span>{t('switching_from')} {invega} {t('guide1.panelB.h3')}</span>,
+                        <span>{t('switching_from')} {sustenna} à partir de comprimés {invega} à {t('guide1.panelB.h3')}</span>,
+                    )}
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <PanelB doses={doses} />
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading onClick={blurTarget} aria-level={ariaLevel}>
+                  <AccordionItemButton>
+                    {enFr(
+                      <span>{sustenna} {t('guide1.panelC.h3')}</span>,
+                      <span>{t('guide1.panelC.h3')} {d_sustenna}</span>,
+                    )}
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <PanelC />
+                </AccordionItemPanel>
+              </AccordionItem>              
+          </Accordion>
+        </section>      
+      </main>
+    </>
   )
 };

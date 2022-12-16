@@ -65,7 +65,7 @@ export default function PanelC() {
       <footer className="panel-C-footer">
         <h3 id="panelC-footnote-label">Footnotes</h3>
         <ul>
-          <li><small id="footnote_section"><a href={`${base_url}/#/${page}#footnote-section-ref`} aria-label="Back to content">§</a> {t('guide1.panelC.foot_a')}</small></li>
+          <li><small id="footnote_section"><a href={`${base_url}/#/${page}#footnote-section-ref`} aria-label="Section footnote">§</a> {t('guide1.panelC.foot_a')}</small></li>
           <li>
             <small>{t('guide1.panelC.foot_b')} {mg(75)}, {t('guide1.panelC.foot_b2')} {enFr(mg("25-150"), mg("25 à 150"))}{t('guide1.panelC.foot_b3')} {mg(25)} {t('guide1.panelC.foot_b4')} {enFr(mg("50-150"), mg("50 à 150"))}{t('guide1.panelC.foot_b5')}<br/> {t('guide1.panelC.foot_b6')}</small>
           </li>

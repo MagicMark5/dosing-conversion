@@ -26,13 +26,14 @@ export default function PanelB({ doses }) {
                       )}
                     </span>}
         outputLabel={<span>
-                      {t('guide1.panelB.output_a')}
                       {enFr(
-                        <><span className="font-red font-bold">{sustenna}</span></>,
-                        <><span className="nowrap">{t('d_apos')}<span className="font-red font-bold">{sustenna}</span></span></>,
+                        <>{t('guide1.panelB.output_a')}<span className="font-red font-bold">{sustenna}</span>{t('guide1.panelB.output_b')}</>,
+                        <>{t('guide1.panelB.output_a')}<span className="nowrap">{t('d_apos')}<span className="font-red font-bold">{sustenna}</span></span>{t('guide1.panelB.output_b')}</>,
                       )}
-                      {t('guide1.panelB.output_b')}<span className="nowrap">{enFr("", t('est_colon'))}</span>
+                      <span className="nowrap">{enFr("", t('est_colon'))}</span>
                     </span>}
+        ariaLabelInput={t('guide1.panelB.aria_input_prefix')}
+        ariaLabelOutput={t('guide1.panelB.aria_output_prefix')}
         doseIO={doses}
         bgOutput={'bg-peach'}
         colorOutput={'font-light-orange'}
@@ -42,7 +43,7 @@ export default function PanelB({ doses }) {
       <footer className="panelB-foot">
         <h3 id="panelB-footnote-label">Footnotes</h3>
         <ul>
-          <li><small id="footnote_doubledagger"><a href={`${base_url}/#/${page}#footnote-doubledagger-ref`} aria-label="Back to content">‡</a> {t('guide1.panelB.foot_a')}</small></li>
+          <li><small id="footnote_doubledagger"><a href={`${base_url}/#/${page}#footnote-doubledagger-ref`} aria-label="Double dagger footnote">‡</a> {t('guide1.panelB.foot_a')}</small></li>
           <li>
             <small>
               {enFr(

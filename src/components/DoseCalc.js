@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import "../styles/DoseCalcDiv.scss";
 
-export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, colorOutput, colWidth, ariaLabel }) {
+export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, colorOutput, colWidth, ariaLabel, ariaLabelOutput, ariaLabelInput }) {
   // state for index of dose selected
   const [ dose, setDose ] = useState(0);
 
@@ -93,7 +93,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
                   id={`tab-${index}`}
                   onClick={doseChange}>
                     {/* Ensure screen readers say the "column" heading but is not visible */}
-                    <span className="sr-only">{inputLabel}</span>
+                    <span className="sr-only">{ariaLabelInput}</span>
                     {/* Visible number of input mg as the tab will be element of focus */}
                     <span id={`span-${index}`} className={dose !== index ? `${color} focus` : `focus`}>{input}</span>
                 </button>
@@ -111,9 +111,9 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
                 role="tabpanel" 
                 aria-labelledby={`tab-${index}`}>                
                 {/* Ensure screen readers say the "column" heading but is not visible */}
-                <span className="sr-only">{outputLabel}</span>
+                <span className="sr-only">{ariaLabelOutput}</span>
                 {/* Visible number of mg output value */}
-                <span>{output[dose].value}</span>                
+                <span>{output[dose].value}</span>      
               </div>
             )
           })}

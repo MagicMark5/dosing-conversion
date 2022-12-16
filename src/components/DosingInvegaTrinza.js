@@ -157,6 +157,8 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                                       <>Instaurer <span className='font-bold font-trinza-blue nowrap'>INVEGA TRINZA®</span> à la dose <span className='nowrap'>suivante :</span></>,
                                     )}
                                   </span>}
+                      ariaLabelInput={t('guide2.aria_input_prefix')}
+                      ariaLabelOutput={t('guide2.aria_output_prefix')}
                       doseIO={doses}
                       bgOutput={'bg-light-blue'}
                       colorOutput={'font-dark-blue'}

@@ -68,7 +68,9 @@
       "output_a": "The once-monthly ",
       "output_b": " maintenance dose needed to attain similar steady-state paliperidone exposure during maintenance treatment is:",
       "foot_a": "Note: 25 mg dose is not available in Canada",
-      "foot_b": ""
+      "foot_b": "",
+      "aria_input_prefix": "If the once-daily Invega® dose is:",
+      "aria_output_prefix": "The once-monthly Invega Sustenna® maintenance dose needed to attain similar steady-state paliperidone exposure during maintenance treatment is:"
     },
     "panelC": {
       "h3": "Monthly Maintenance Dosing",
@@ -100,7 +102,9 @@
     "text_1a": "Initiate",
     "text_1b": "in place of the next scheduled",
     "text_2a": "dose should be based on the previous",
-    "text_3a": "from the next scheduled"
+    "text_3a": "from the next scheduled",
+    "aria_input_prefix": "If the last Invega Sustenna® dose is:",
+    "aria_output_prefix": "Initiate Invega Trinza® at the following dose:"
   },
   "footer": {
     "refs": "References: ",

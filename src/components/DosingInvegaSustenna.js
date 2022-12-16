@@ -50,7 +50,7 @@ export default function DosingInvegaSustenna({ modal }) {
       fontColor: "font-light-orange",
     },
     "3 mg": {
-      value: <span>25<sup style={{ fontFamily: "Apex Sans" }}><a id="footnote-doubledagger-ref" href={`${base_url}/#/${page}#footnote_doubledagger`} aria-describedby="footnote_doubledagger" aria-label="To double dagger footnote">‡</a></sup>-50 mg</span>,
+      value: <span>25<sup style={{ fontFamily: "Apex Sans" }}><a id="footnote-doubledagger-ref" href={`${base_url}/#/${page}#footnote_doubledagger`} aria-describedby="footnote_doubledagger" aria-label="To double dagger footnote">‡</a></sup><span aria-hidden={true}>-</span><span className='sr-only' aria-label="to">to</span>50 mg</span>,
       bgColor: "bg-red",
       fontColor: "font-red",
     }

@@ -85,8 +85,8 @@ export default function PanelA() {
       <footer>
         <h3 id="panelA-footnote-label">Footnotes</h3>
         <ul>
-          <li><small id="footnote_asterisk"><a href={`${base_url}/#/${page}#footnote-asterisk-ref`} aria-label="Back to content">*</a> {t('guide1.panelA.foot_a')}</small></li>
-          <li><small id="footnote_dagger"><a href={`${base_url}/#/${page}#footnote-dagger-ref`} aria-label="Back to content">†</a> {t('guide1.panelA.foot_b')}</small></li>
+          <li><small id="footnote_asterisk"><a href={`${base_url}/#/${page}#footnote-asterisk-ref`} aria-label="Asterisk footnote">*</a> {t('guide1.panelA.foot_a')}</small></li>
+          <li><small id="footnote_dagger"><a href={`${base_url}/#/${page}#footnote-dagger-ref`} aria-label="Dagger footnote">†</a> {t('guide1.panelA.foot_b')}</small></li>
           <li>
             <small>
               {enFr(

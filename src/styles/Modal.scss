@@ -71,7 +71,8 @@
   .modal {
     max-height: max-content;
     height: -moz-max-content;
-    font-size: 0.8em;
+    // need to reduce font-size by 10% here because bottom of modal gets cut off when copy grows with large screens
+    font-size: 0.9em;
   }
 }
 

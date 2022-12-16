@@ -10,6 +10,7 @@ import TranslationContext from '../../context/TranslationContext';
 // custom hooks
 import useFootnoteRefs from "../../hooks/useFootnoteRefs";
 
+// "Switching from Other Oral Antipsychotics" 1st panel
 export default function PanelA() {
   const { t } = useTranslation();
   // brand name strings
@@ -24,13 +25,15 @@ export default function PanelA() {
         <li>{t('guide1.panelA.li_1')}</li>
         <li>{t('guide1.panelA.initiate')}{sustenna}{t('guide1.panelA.li_2')}</li>
       </ol>
-
+      {/* Day-Muscle flow diagram */}
       <figure>
         <div className="day-muscle">
           <div className="m-10-bot">
+            {/* "Day 1" label */}
             <label className="day">{t('guide1.panelA.day', { numOfDays: 1 })}</label>
           </div>
-          <label className="muscle" aria-describedby="footnote_asterisk">            
+          {/* "Deltoid Muscle*" label with footer link */}
+          <label className="muscle" aria-describedby="footnote_asterisk">
             {enFr(
               <span>
                 {t('guide1.panelA.delt')}<br/>{t('guide1.panelA.muscle')}
@@ -43,13 +46,13 @@ export default function PanelA() {
             <br/>
           </label>
         </div>
-
+        {/* Deltoid Muscle 150mg dosing card design: "On Day 1, administer the initiation dose of 150 mg into the deltoid muscle." */}
         <img 
           src={enFr(dose_150, dose_150_fr)}
           alt={t('guide1.panelA.alt_dose_150')}
           className="panelA-card"
         />
-
+        {/* Center dotted line divider with labels above and below: "1 Week ---- +/- 4 days" */}
         <div className="join-label">
           <label className="font-bold nowrap uppercase">{t('guide1.panelA.1_week')}</label>
           <hr />
@@ -57,17 +60,19 @@ export default function PanelA() {
             <span>+/-</span> {t('guide1.panelA.4_days')}<sup><a id="footnote-dagger-ref" href={`${base_url}/#/${page}#footnote_dagger`} aria-describedby="footnote_dagger" aria-label="To dagger footnote">&dagger;</a></sup>
           </label>
         </div>
-
+        {/* Deltoid Muscle 100mg dosing card design: "1 week +/- 4 days later, on day 8 administer the second initiation dose of 100 mg into the deltoid muscle." */}
         <img 
           src={enFr(dose_100, dose_100_fr)}
           alt={t('guide1.panelA.alt_dose_100')}
           className="panelA-card"
         />
-
+        {/* End label: Day and muscle */}
         <div className="day-muscle">
           <div className="m-10-bot">
+            {/* "Day 8" label */}
             <label className="day">{t('guide1.panelA.day', { numOfDays: 8 })}</label>
           </div>
+          {/* "Deltoid Muscle*" label with footer link */}
           <label className="muscle">            
             {enFr(
               <span>
@@ -80,7 +85,6 @@ export default function PanelA() {
           </label>
         </div>
       </figure>
-      
       <br/>
       <footer>
         <h3 id="panelA-footnote-label">Footnotes</h3>

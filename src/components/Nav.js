@@ -32,7 +32,7 @@ export default function Nav({ modal, toggle, closeModal }) {
     toggle();
   };
 
-  // After first render select <Modal/> element and trap tab focus inside it
+  // After first render we select the <Modal/> element and trap tab focus inside it
   useEffect(() => {
     const modal = document.getElementById('safety_info');
     if (modal) trapFocus(modal, 'a#sustenna_pm, a#trinza_pm, button#modal_continue', closeModal);
@@ -48,6 +48,7 @@ export default function Nav({ modal, toggle, closeModal }) {
           />
         </div>
         <form className="language-switcher">
+          { /* EN radio button and label */ }
           <input
             id="en"
             onFocus={() => { setLangFocus("en") }}
@@ -65,6 +66,7 @@ export default function Nav({ modal, toggle, closeModal }) {
           </label>
           { /* hide the "|" from screen readers so it is not read aloud */ }
           <span aria-hidden="true">|</span>
+          { /* FR radio button and label */ }
           <input
             id="fr"
             onFocus={() => { setLangFocus("fr") }}
@@ -82,6 +84,7 @@ export default function Nav({ modal, toggle, closeModal }) {
           </label>
         </form>
         <div className={modal ? "blur desktop-row" : "desktop-row"}>
+          { /* Home Icon internal link */ }
           <Link className="home-link" to="/">
             <img 
               className="home-icon" 
@@ -90,20 +93,22 @@ export default function Nav({ modal, toggle, closeModal }) {
               aria-label={t('nav.home')}
             />
           </Link>
-
+          { /* Logos that are only shown for desktop */ }
           <div className="logos-for-desktop">
             <img className="nav-logo sustenna-logo" style={{right: page === "conversionguide1" ? "15px" : "35px"}} src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
+            { /* Do not render trinza logo when we are on page 2 */ }
             {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}
           </div>
-
+          { /* Safety Info modal button */ }
           <div className="nav-btn">
             <button id="modal_open" className="modal-button si-button" onClick={toggleModal}>
               {t("safety_info")}
             </button>
           </div>
-
+          { /* Logos that are only shown on mobile */ }
           <div className="logos-for-mobile">
             <img className="nav-logo sustenna-logo" src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
+            { /* Do not render trinza logo when we are on page 2 */ }
             {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}          
           </div>        
         </div>

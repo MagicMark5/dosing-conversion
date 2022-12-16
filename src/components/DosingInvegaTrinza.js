@@ -1,3 +1,4 @@
+// custom components
 import DoseCalc from './DoseCalc';
 import ChevronHeader from './materials/ChevronHeader';
 // Stylesheets
@@ -11,17 +12,18 @@ import icon_days from '../assets/icon_days.png';
 import seven_days_fr from '../assets/seven_days_fr.png';
 import icon_reminder from '../assets/icon_reminder.png';
 import icon_syringe from '../assets/icon_syringe.png';
-// Accordion 
+// Accordion
 import {
   Accordion,
   AccordionItem,
   AccordionItemHeading,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-
+// react and react hooks/packages
 import { useTranslation } from "react-i18next";
 import { useContext } from 'react';
 import { Helmet } from "react-helmet-async";
+// en/fr context
 import TranslationContext from '../context/TranslationContext';
 
 export default function DosingInvegaTrinza({ reg, modal }) {
@@ -29,8 +31,11 @@ export default function DosingInvegaTrinza({ reg, modal }) {
   const { t } = useTranslation();
   const { enFr, sustenna, trinza, d_sustenna, d_trinza, qu_sustenna } = useContext(TranslationContext); // brand name strings  
   
-  // Conversions of doses
+  // Conversions of doses from sustenna to trinza
+  // The key is the dose "If the last INVEGA SUSTENNA® dose is:"
+  // The value is the corresponding dose "Initiate INVEGA TRINZA® at the following dose:"
   // The last word of the snake-case css class must be the color
+  // font color is used for the font color of the dose when unselected and then is inverted with background when selected
   const doses = {
     "50 mg": {
       value: "175 mg",
@@ -90,10 +95,12 @@ export default function DosingInvegaTrinza({ reg, modal }) {
             </p>
           </header>
 
-          {/* Accordion that is always expanded */}
+          {/* Accordion that is always expanded, this accordion only has 1 item */}
           <Accordion preExpanded={['trinza']}>
             <AccordionItem uuid={'trinza'}>
+              {/* Panel Heading */ }
               <AccordionItemHeading>
+                {/* Removed the button role on this heading because panel is always open */ }
                 <div className="accordion__button panelD-button" id="accordion__heading-trinza" aria-disabled="true" aria-controls="accordion__panel-trinza" data-accordion-component="AccordionItemButton">
                   <strong>
                     {enFr(
@@ -103,9 +110,10 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                   </strong>
                 </div>
               </AccordionItemHeading>
+              {/* Panel Content */ }
               <AccordionItemPanel className='panelD'>
                 <article className='sustenna-to-trinza'>
-                  
+                  {/* 2x2 grid of icon-text (<img/> and <p>): first row */ }
                   <div className='icon-text-wrapper'>
                     <div className='icon-text-pair'>
                       <img src={icon_calendar} alt="" />
@@ -119,9 +127,9 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                           <>{trinza} peut être administré jusqu’à <span className='nowrap'>7 jours</span> {t('guide2.text_3a')} {d_sustenna}.</>,
                         )}
                       </p>
-                    </div>             
+                    </div>
                   </div>
-
+                  {/* 2x2 grid of icon-text (<img/> and <p>): second row */ }
                   <div className='icon-text-wrapper'>
                     <div className='icon-text-pair'>
                       <img src={icon_syringe} alt="" />
@@ -141,8 +149,8 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                         )}
                       </p>
                     </div>                  
-                  </div>                
-
+                  </div>
+                  {/* Wrapper for Dose calculator - tabs */ }
                   <div className='sustenna-to-trinza-calc'>
                     <DoseCalc
                       inputLabel={<span>
@@ -165,6 +173,7 @@ export default function DosingInvegaTrinza({ reg, modal }) {
                       colWidth={50}
                       ariaLabel={'accordion__heading-trinza'}
                     />
+                    {/* Calculator footer */ }
                     <div className='calc-footer'>
                       <small>
                         {enFr(
@@ -182,4 +191,4 @@ export default function DosingInvegaTrinza({ reg, modal }) {
       </main>
     </>
   )
-};
+}

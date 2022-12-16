@@ -34,6 +34,13 @@
   // remove the button-like behaviour for panelD since it is always open
   cursor: auto;
 }
+// remove the open/close icon for panelD
+.panelD-button:after {
+  display: none;
+}
+.panelD-button:focus {
+  outline: none;
+}
 
 .accordion__button:focus {
   outline-offset: 10px;
@@ -57,13 +64,7 @@
   transform: rotate(45deg);
 }
 
-// remove the open/close icon for panelD
-.panelD-button:after {
-  display: none;
-}
-.panelD-button:focus {
-  outline: none;
-}
+
 
 .accordion__button[aria-expanded='true']::after,
 .accordion__button[aria-selected='true']::after {

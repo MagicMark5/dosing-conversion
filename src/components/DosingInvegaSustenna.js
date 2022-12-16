@@ -1,11 +1,10 @@
 import '../styles/Dosing.scss';
 import '../styles/AccessibleAccordion.scss';
 import '../styles/panels.scss';
-
 import { useTranslation } from "react-i18next";
 import { useContext } from 'react';
+import { Helmet } from 'react-helmet-async';
 import TranslationContext from '../context/TranslationContext';
-
 import {
   Accordion,
   AccordionItem,
@@ -13,7 +12,6 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-
 import ChevronHeader from './materials/ChevronHeader';
 // accordion children
 import PanelA from './accordion/PanelA';
@@ -21,23 +19,26 @@ import PanelB from './accordion/PanelB';
 import PanelC from './accordion/PanelC';
 // custom hooks;
 import useFootnoteRefs from '../hooks/useFootnoteRefs';
-import { Helmet } from 'react-helmet-async';
 
-
+// This component is the main component for the /conversionguide1 route
 export default function DosingInvegaSustenna({ modal }) {
+  // translation from en <-> fr strings 
   const { t } = useTranslation();
   // brand name strings
   const { enFr, invega, sustenna, d_sustenna } = useContext(TranslationContext);
-  // url parts to use in footnote links
+  // url parts to use in internal footnote links
+  // Clicking a footnote inline will scroll the page to the footnote
+  // Clicking a footnote in footnotes list will bring you back to where it is inline
   const { base_url, page } = useFootnoteRefs();
 
   // Blur focus outline after a click
-  const blurTarget = (e) => e.target.blur();
-
+  const blurTarget = e => e.target.blur();
+  // Accordion headings are treated as h3 
   const ariaLevel = 3;
 
   // conversions of once-daily INVEGA dose to Once-monthly Sustenna maintenance dose
   // The last word of the snake-case css class must be the color (see DoseCalc.js)
+  // font color is used for the font color of the dose when unselected and then is inverted with background color when selected
   const doses = {
     "12 mg": {
       value: "150 mg",
@@ -50,12 +51,14 @@ export default function DosingInvegaSustenna({ modal }) {
       fontColor: "font-light-orange",
     },
     "3 mg": {
+      // Screen reader will read "25 to 50mg" and then go through the coded values and footnote
       value: <span aria-label="25 to 50 mg">25<sup style={{ fontFamily: "Apex Sans" }}><a id="footnote-doubledagger-ref" href={`${base_url}/#/${page}#footnote_doubledagger`} aria-describedby="footnote_doubledagger" aria-label="To double dagger footnote">‡</a></sup><span aria-hidden={true}>-</span><span className='sr-only' aria-label="to">to</span>50 mg</span>,
       bgColor: "bg-red",
       fontColor: "font-red",
     }
   };
   
+  // We use Helmet to change the html page title for this route
   return (
     <>
       <Helmet>
@@ -127,4 +130,4 @@ export default function DosingInvegaSustenna({ modal }) {
       </main>
     </>
   )
-};
+}

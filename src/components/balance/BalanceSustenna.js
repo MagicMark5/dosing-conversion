@@ -3,14 +3,13 @@ import TranslationContext from "../../context/TranslationContext";
 import ProductMonograph from "./ProductMonograph";
 import { useTranslation } from "react-i18next";
 
+// This component is used in the "Safety Information" <Modal/>
 export default function BalanceSustenna() {
   const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage; // current language
-  const { 
-    sustenna,
-    d_sustenna,
-    qu_sustenna,
-  } = useContext(TranslationContext);
+  // current language
+  const lang = i18n.resolvedLanguage;
+  // formatted brand names
+  const { sustenna, d_sustenna, qu_sustenna } = useContext(TranslationContext);
   
   return (
     <section className="balance">

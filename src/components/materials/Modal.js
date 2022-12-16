@@ -20,10 +20,13 @@ export default function Modal({ show, closeModal }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="safety_info_label">
+            {/* Modal heading - needs to be treated as h1 by screen readers but requires less css overrides as an h3 */}
             <h3 id="safety_info_label" aria-level="1" className="modal-header-title">{t("modal.title")}</h3>
+            {/* Balance copy for each brand */}
             <BalanceSustenna reg={reg} />
             <br/>
             <BalanceTrinza reg={reg} />
+            {/* "Continue to website" button closes modal  */}
             <footer className="modal-footer">
               <button autoFocus={true} id="modal_continue" className="modal-button continue-button" onClick={() => closeModal()}>
                 {t("modal.continue")}
@@ -33,4 +36,4 @@ export default function Modal({ show, closeModal }) {
       }
     </>
   )  
-};
+}

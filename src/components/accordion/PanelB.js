@@ -1,11 +1,11 @@
 import DoseCalc from "../DoseCalc";
-
 import { useTranslation } from "react-i18next";
 import { useContext } from 'react';
 import TranslationContext from '../../context/TranslationContext';
 // custom hooks
 import useFootnoteRefs from "../../hooks/useFootnoteRefs";
 
+// "Switch from INVEGA Extended-Release Tablets" 2nd Panel on /conversionguide1 page
 export default function PanelB({ doses }) {
   const { t } = useTranslation();
   // brand name strings
@@ -18,6 +18,8 @@ export default function PanelB({ doses }) {
       <p className="panelB-p font-grey">
         {t('guide1.panelB.span_a')}{enFr(sustenna, d_sustenna)}{t('guide1.panelB.span_b')}{invega}{t('guide1.panelB.span_c')}{enFr(sustenna, d_sustenna)}{t('guide1.panelB.span_d')}
       </p>
+      {/* First dosing "calculator" tab list that uses the {doses} object prop for each input/output */}
+      {/* Inputs are treated as tabs, the output is treated as tab panel */}
       <DoseCalc
         inputLabel={<span>
                       {enFr(
@@ -39,7 +41,6 @@ export default function PanelB({ doses }) {
         colorOutput={'font-light-orange'}
         ariaLabel={'heading__oral_AS_to_sustenna'}
       />
-      
       <footer className="panelB-foot">
         <h3 id="panelB-footnote-label">Footnotes</h3>
         <ul>

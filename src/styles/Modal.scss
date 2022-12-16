@@ -3,7 +3,7 @@
 .modal {
   position: fixed;
   z-index: 1000;
-  top: 2vh;
+  top: 5vh;
   bottom: 0;
   left: 0;
   right: 0;
@@ -71,6 +71,7 @@
   .modal {
     max-height: max-content;
     height: -moz-max-content;
+    font-size: 0.8em;
   }
 }
 

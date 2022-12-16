@@ -7,6 +7,7 @@ export default function DoseCalc({ inputLabel, outputLabel, doseIO, bgOutput, co
   const [ dose, setDose ] = useState(0);
 
   const inputs = Object.keys(doseIO);
+  // ids of tab buttons are zero indexed as i.e. tab-0, tab-1, tab-2, etc.
   const inputIds = inputs.map((input, index) => `tab-${index}`);
   const output = Object.values(doseIO);
 

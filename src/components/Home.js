@@ -13,7 +13,7 @@ export default function Home({modal}) {
   const { sustenna, trinza, d_sustenna } = useContext(TranslationContext); // brand names with non-breaking spaces
 
   return (
-    <div className="home">
+    <main className="home">
       <div className={modal ? "blur home-bg" : "home-bg"}>
         <div className="flex-center" style={{ marginTop: "auto" }}>
           <Chevron heading={<h1 aria-hidden={modal} className="chevron-text home-header-size">{t('home.title')}</h1>} />
@@ -34,6 +34,6 @@ export default function Home({modal}) {
           </Link>
         </section>
       </div>
-    </div>
+    </main>
   )
 }

@@ -39,74 +39,76 @@ export default function Nav({ modal, toggle, closeModal }) {
   }, [closeModal]);
 
   return (
-    <nav>
-      <div className={modal ? "blur toprow" : "toprow"}>
-        <img 
-          src={topLine} 
-          alt=""
-        />
-      </div>
-      <form className="language-switcher">
-        <input
-          id="en"
-          onFocus={() => { setLangFocus("en") }}
-          onChange={() => { i18n.changeLanguage('en'); }}
-          checked={lang === 'en'}
-          type="radio"
-          name="Language"
-          value="English"
-          aria-current={langFocus === 'en'}
-          aria-label="English"/>
-        <label
-          htmlFor="en"
-          className={lang === 'en' ? `currentLang` : ``}>
-            EN
-        </label>
-        { /* hide the "|" from screen readers so it is not read aloud */ }
-        <span aria-hidden="true">|</span>
-        <input
-          id="fr"
-          onFocus={() => { setLangFocus("fr") }}
-          onChange={() => { i18n.changeLanguage('fr'); }}
-          checked={lang === 'fr'}
-          type="radio"
-          name="Language"
-          value="French"
-          aria-current={langFocus === 'fr'}
-          aria-label="French"/>
-        <label 
-          htmlFor="fr" 
-          className={lang === 'fr' ? `currentLang` : ``}>
-            FR
-        </label>
-      </form>
-      <div className={modal ? "blur desktop-row" : "desktop-row"}>
-        <Link className="home-link" to="/">
+    <header role="banner">
+      <nav>
+        <div className={modal ? "blur toprow" : "toprow"}>
           <img 
-            className="home-icon" 
-            src={home} 
-            alt={t('nav.home')} 
-            aria-label={t('nav.home')}
+            src={topLine} 
+            alt=""
           />
-        </Link>
-
-        <div className="logos-for-desktop">
-          <img className="nav-logo sustenna-logo" src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
-          {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}
         </div>
+        <form className="language-switcher">
+          <input
+            id="en"
+            onFocus={() => { setLangFocus("en") }}
+            onChange={() => { i18n.changeLanguage('en'); }}
+            checked={lang === 'en'}
+            type="radio"
+            name="Language"
+            value="English"
+            aria-current={langFocus === 'en'}
+            aria-label="English"/>
+          <label
+            htmlFor="en"
+            className={lang === 'en' ? `currentLang` : ``}>
+              EN
+          </label>
+          { /* hide the "|" from screen readers so it is not read aloud */ }
+          <span aria-hidden="true">|</span>
+          <input
+            id="fr"
+            onFocus={() => { setLangFocus("fr") }}
+            onChange={() => { i18n.changeLanguage('fr'); }}
+            checked={lang === 'fr'}
+            type="radio"
+            name="Language"
+            value="French"
+            aria-current={langFocus === 'fr'}
+            aria-label="French"/>
+          <label 
+            htmlFor="fr" 
+            className={lang === 'fr' ? `currentLang` : ``}>
+              FR
+          </label>
+        </form>
+        <div className={modal ? "blur desktop-row" : "desktop-row"}>
+          <Link className="home-link" to="/">
+            <img 
+              className="home-icon" 
+              src={home} 
+              alt={t('nav.home')} 
+              aria-label={t('nav.home')}
+            />
+          </Link>
 
-        <div className="nav-btn">
-          <button id="modal_open" className="modal-button si-button" onClick={toggleModal}>
-            {t("safety_info")}
-          </button>
+          <div className="logos-for-desktop">
+            <img className="nav-logo sustenna-logo" style={{right: page === "conversionguide1" ? "15px" : "35px"}} src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
+            {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}
+          </div>
+
+          <div className="nav-btn">
+            <button id="modal_open" className="modal-button si-button" onClick={toggleModal}>
+              {t("safety_info")}
+            </button>
+          </div>
+
+          <div className="logos-for-mobile">
+            <img className="nav-logo sustenna-logo" src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
+            {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}          
+          </div>        
         </div>
-
-        <div className="logos-for-mobile">
-          <img className="nav-logo sustenna-logo" src={enFr(sustenna, sustenna_fr)} alt={t('nav.alt_sustenna')} />
-          {page !== "conversionguide1" && <img className="nav-logo trinza-logo" src={enFr(trinza, trinza_fr)} alt={t('nav.alt_trinza')} />}          
-        </div>        
-      </div>
-      <Modal show={modal} closeModal={closeModal}/>
-    </nav>
+        <Modal show={modal} closeModal={closeModal}/>
+      </nav>
+    </header>
   )
 }

@@ -42,7 +42,11 @@ export default function Footer({modal}) {
 
           <p className='janssen-legal'>© 2022 Janssen Inc. {bar} {t('footer.tm')}</p>
 
-          <p className='footer-links'><a href={t('footer.pp_url')} target="_blank" rel="noreferrer">{t('footer.pp')}</a> {bar} <Link to="/terms-of-use">{t('footer.terms')}</Link></p>
+          <ul className='footer-links'>
+            <li><a href={t('footer.pp_url')} target="_blank" rel="noreferrer">{t('footer.pp')}</a></li>
+            <li aria-hidden={true} style={{ padding: "0px 4px" }}>{bar}</li>
+            <li><Link to="/terms-of-use">{t('footer.terms')}</Link></li>
+          </ul>
           
           <p className='janssen-footer'>
             Janssen Inc.<br/>

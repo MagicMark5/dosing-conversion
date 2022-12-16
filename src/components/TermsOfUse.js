@@ -91,7 +91,7 @@ export default function TermsOfUse({ modal }) {
               </>,
             )}
           </p>
-          <ul className="terms-bullet-list">
+          <ul  className="terms-bullet-list">
             {enFr(
               <>
                 <li><span>Post, transmit or otherwise make available through or in connection with the Services any materials that are or may be: (a) threatening, harassing, degrading, hateful, intimidating, or otherwise fail to respect the rights and dignity of others; (b) defamatory, libelous or fraudulent; (c) obscene, indecent, pornographic or otherwise objectionable; or (d) protected by copyright, trademark, trade secret, right of publicity or privacy or any other proprietary right, without the express prior written consent of the applicable owner.</span></li>

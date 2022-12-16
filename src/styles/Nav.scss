@@ -148,11 +148,15 @@ img.nav-logo.trinza-logo {
     .logos-for-mobile {
       width: 100%;
       display: flex;
+      justify-content: center;
+      align-items: center;
       .sustenna-logo {
         margin-right: 2%;
+        margin: 0.5em auto;
       }
       .trinza-logo {
         margin-left: 2%;
+        margin: 0.5em auto;
       }
     }    
   }

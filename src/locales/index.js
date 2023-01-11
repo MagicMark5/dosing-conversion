@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 // For backend
 import HttpApi from "i18next-http-backend";
 
+const dev = process.env.NODE_ENV === "development";
 const path = process.env.PUBLIC_URL;
 
 i18next
@@ -14,7 +15,8 @@ i18next
     fallbackLng: "en",
     debug: false, // console.log the config info and events
     backend: {
-      loadPath: `${path}/locales/{{lng}}/{{ns}}.json`
+      loadPath: `${dev ? `http://localhost:3000` : `https://magicmark5.github.io`}${path}/locales/{{lng}}/{{ns}}.json`
+      // loadPath: `${path}/locales/{{lng}}/{{ns}}.json`
    }
   });
 

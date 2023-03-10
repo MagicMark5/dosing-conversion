@@ -12,14 +12,13 @@ export default function useLanguage() {
   const lang = new URLSearchParams(params).get("lang");
 
   // changes the 'lang' attribute of the html tag whenever the language is changed
-  i18n.on('languageChanged', (lng) => { 
+  i18n.on('languageChanged', lng => { 
     document.documentElement.setAttribute('lang', lng);
   });
 
   useEffect(() => {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
-
 
   return lang;
 }

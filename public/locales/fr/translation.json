@@ -1,5 +1,8 @@
 {
   "htmlTitle": "Guides de conversion posologique d’Invega Sustenna®",
+  "title_sustenna": "Guide de conversion posologique pour le passage à Invega Sustenna® à partir d’antipsychotiques oraux",
+  "title_trinza": "Guide de conversion posologique pour le passage à Invega Trinza® à partir d’Invega Sustenna®",
+  "title_terms": "Guides de conversion posologique d’Invega Sustenna® - Conditions d’utilisation",
   "modal": {
     "title": "Renseignements importants sur l’innocuité",
     "p_1a": "(palmitate de palipéridone) est indiqué pour le traitement de la schizophrénie chez les patients adultes. Des essais cliniques contrôlés ont montré ",
@@ -65,7 +68,9 @@
       "output_a": "La dose d’entretien mensuelle ",
       "output_b": " nécessaire pour atteindre une exposition similaire à la palipéridone à l’état d’équilibre durant le traitement d’entretien ",
       "foot_a": "Remarque : La dose de 25 mg n’est pas offerte au Canada.",
-      "foot_b": ""
+      "foot_b": "",
+      "aria_input_prefix": "Si la dose quotidienne d’Invega® est :",
+      "aria_output_prefix": "La dose d’entretien mensuelle d’Invega Sustenna® nécessaire pour atteindre une exposition similaire à la palipéridone à l’état d’équilibre durant le traitement d’entretien est :"
     },
     "panelC": {
       "h3": "Dose d’entretien mensuelle",
@@ -99,7 +104,9 @@
     "text_1a": "Instaurer ",
     "text_1b": "à la date prévue de la prochaine dose",
     "text_2a": "doit être établie en fonction de la dose précédente",
-    "text_3a": "avant ou après la date prévue de la prochaine dose"
+    "text_3a": "avant ou après la date prévue de la prochaine dose",
+    "aria_input_prefix": "Si la dernière dose d’Invega Sustenna® est de :",
+    "aria_output_prefix": "Instaurer Invega Trinza® à la dose suivante :"
   },  
   "footer": {
     "refs": "Références : ",

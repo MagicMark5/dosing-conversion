@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export default function Layout({ modal, toggle, closeModal }) {
   // Outlet will render whichever route is selected
-  // Components in Layout will wil render in every route
+  // Components in Layout will render in every route
   return (
     <>
       <Nav modal={modal} toggle={toggle} closeModal={closeModal} />

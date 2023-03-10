@@ -1,0 +1,157 @@
+@import "./variables.scss";
+
+.DoseCalc {
+  max-width: 80%;
+  margin: 0 auto;
+  box-shadow: $dose-calc-shadow;
+
+  .table-headings {
+    display: flex;
+    width: 100%;
+    h4 {
+      box-sizing: border-box;
+      border-right: 2px solid #EBECEC;
+      vertical-align: top;
+      color: #6D6E71;
+      -webkit-box-shadow: $bottom-border-shadow;
+      -moz-box-shadow: $bottom-border-shadow;
+      box-shadow: $bottom-border-shadow;
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+    h4:last-child {
+      border-right: 0px;
+    }
+  }
+
+  .table-data {
+    display: flex;
+    .input-dose {
+      border-right: 2px solid #EBECEC;
+      border-bottom: 2px solid #EBECEC;
+      button {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 5px 0px;
+        width: 95%;
+        font-family: $font-bold;
+        background-color: inherit;
+        border: 0;
+      }
+    }
+    .input-dose.not-selected {
+      padding: 10px 0px;
+    }
+    .input-dose:last-child {
+      border-top: 0;
+      border-bottom: 0px;
+    }
+  }
+}
+
+.input-dose button {
+  font-size: 1.3em;
+}
+
+.label {
+  padding: 20px;
+}
+
+.output-cell {
+  text-align: center;
+  font-size: 3em;
+  font-family: $font-bold;
+  box-shadow: $output-cell-top-shadow;
+  sup {
+    font-size: 60%;
+    vertical-align: super;
+    font-family: $font-bold;
+  }
+}
+
+// When the tab is selected
+.selected {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  button {
+    position: relative;
+    left: 12px;
+    color: #fff
+  }
+  div.right-pointer {
+    position: relative;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-top: $pointer-height solid transparent;
+    border-bottom: $pointer-height solid transparent;
+  }
+  // colors of the pointers
+  .red {
+    border-left: $pointer-width solid $red;
+  }
+  .orange {
+    border-left: $pointer-width solid $light_orange;
+  }
+  .grey {
+    border-left: $pointer-width solid $light_grey;
+  }
+  .blue {
+    border-left: $pointer-width solid $blue_trinza;
+  }
+}
+
+[role="tabpanel"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+[role="tabpanel"].is-hidden {
+  display: none;
+}
+
+// Screen reader only
+.sr-only {
+  font-size: 0;
+}
+
+@media all and (max-width: $breakpoint) {
+  .DoseCalc {
+    max-width: 99%;
+    h4 {
+      font-size: 14px;
+    }
+    .width-33p {
+      min-width: 80px;
+    }
+    .width-50p {
+      width: 25%;
+      min-width: 100px;
+    }
+    .width-50p:last-child {
+      width: 75%;
+    }    
+    .label {
+      padding: 10px;
+    }
+    .input-dose button {
+      font-size: 1em;
+    }
+    .output-cell {
+      font-size: 2em;
+    }
+  }
+  .selected {
+    button {
+      left: 2px;
+    }    
+    div.right-pointer {
+      left: 15px;
+      border-left-width: 15px;
+    }
+  }
+}

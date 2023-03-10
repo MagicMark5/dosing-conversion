@@ -25,6 +25,12 @@ ul.terms-bullet-list {
   }
 }
 
+.terms-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+
 @media all and (max-width: $breakpoint) {
   .terms {
     margin: 0 5%;

@@ -5,8 +5,7 @@
     "npm": ">=8.0.0 <9.7.0",
     "node": "18.x"
   },
-  "private": true,
-  "homepage": "https://magicmark5.github.io/#/dosing-conversion",
+  "homepage": "https://magicmark5.github.io/dosing-conversion",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
